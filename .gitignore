@@ -1,0 +1,17 @@
+# design iteration screenshots (regenerable; ~20 MB)
+design/shots/
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# node
+node_modules/
+
+# local tooling and scratch
+.impeccable/hook.cache.json
+.wrangler/
+.DS_Store
+*.log

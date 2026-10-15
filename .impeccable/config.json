@@ -1,0 +1,35 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "site/draft-b.html"
+        ],
+        "createdAt": "2026-10-15T19:29:38.400Z",
+        "reason": "agent decided: the only #66bbee text is the aria-hidden .zig dividers, zigzag rules drawn with v glyphs, not readable text"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "site/index.html"
+        ],
+        "createdAt": "2026-10-15T19:49:43.766Z",
+        "reason": "agent decided: .sheet padding is set with clamp(2.25rem,5vw,3.5rem) which the detector does not evaluate; screenshot site/shots/c2-desktop.png shows a ~56px inset on every side"
+      },
+      {
+        "rule": "wide-tracking",
+        "value": "*",
+        "files": [
+          "site/index.html"
+        ],
+        "createdAt": "2026-10-15T20:03:50.538Z",
+        "reason": "agent decided: both findings persist in a scratch copy with every letter-spacing in the file capped at .05em (sed test, 2026-10-15), so they are not produced by the page's tracking rules"
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+You are building a bilingual lexicon pack for a "diglot weave" browser extension that swaps single English words inside English web prose for their {LANG_NAME} equivalents. Readers see the {LANG_NAME} word in an otherwise English sentence, so each entry must be the translation of the DOMINANT everyday sense of the English lemma in the given part of speech, as it appears in ordinary English web text (news, Wikipedia, blogs).
+
+For each input item (English lemma + POS) return one JSON object with these fields:
+
+Common to all entries:
+- "lemma": the English lemma, copied exactly.
+- "pos": the POS, copied exactly (NOUN, VERB, ADJ, ADV, CONJ, PHRASE).
+- "target": the {LANG_NAME} translation of the dominant sense. Nouns: bare singular, no article. Adjectives: masculine singular (Spanish/French) or the uninflected predicative form (German). Verbs: infinitive. Adverbs/connectors: the word. Phrases: the natural {LANG_NAME} equivalent phrase. Single word only for NOUN/ADJ/VERB/ADV/CONJ; if the dominant sense needs a multi-word expression, give it anyway but set "multiword": true.
+- "dominant_sense_covers_90pct": true if this one translation is right for roughly 90% or more of the English uses of this lemma in this POS in ordinary web prose; false if the lemma frequently needs different translations (e.g. English "time" NOUN = tiempo/vez/hora; "get" VERB; "right" ADJ = correcto/derecho).
+- "ambiguity_note": "" when true above; otherwise one short line naming the competing senses and their translations.
+- "english_sense": a 3-6 word gloss of the English sense you translated.
+
+NOUN entries also:
+- "gender": "m", "f" (and "n" for German).
+- "plural": the plural form.
+- "genitive_sg": (German only) genitive singular form of the noun (e.g. "Hauses", "Frau"), "" for other languages.
+- "dative_pl": (German only) dative plural form (e.g. "Kindern", "Frauen"), "" for other languages.
+
+ADJ entries also:
+- "adj_forms": for Spanish/French an object {"m_sg","f_sg","m_pl","f_pl"}; for German an object {"base": predicative form, "stem": the attributive stem to which endings -e/-en/-er/-es attach, e.g. "hoch" -> "hoh", "teuer" -> "teur", "dunkel" -> "dunkl", "gut" -> "gut"}. For German also set "attributive_note": "attributive endings depend on case, gender, number and article".
+- "prenominal": true if in {LANG_NAME} this adjective normally goes BEFORE the noun (Spanish/French short adjectives like gran/buen/nuevo, grand/petit/bon; German adjectives are always prenominal so always true for German), false otherwise.
+
+VERB entries also:
+- "infinitive": the infinitive (same as target).
+- "present": {"1sg","2sg","3sg","1pl","2pl","3pl"} present indicative forms, using tú/tu/du for 2sg and vosotros/vous/ihr for 2pl. For French include the pronoun-less form only (e.g. "pense", "penses", "pense", "pensons", "pensez", "pensent"). For reflexive-only verbs give the forms without the reflexive pronoun and set "reflexive": true.
+
+Rules:
+- Pick the sense an English reader of general web prose would most often mean. Do not pick rare or technical senses.
+- Spelling must be correct and complete with accents/umlauts/ß.
+- Output a JSON array only, no prose, no markdown fences, one object per input item, in the same order as the input.
+
+Input items (JSON):
+{ITEMS_JSON}

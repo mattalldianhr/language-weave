@@ -1,0 +1,115 @@
+# English multiword expressions (one per line, lowercase). A swap whose span overlaps an
+# occurrence of any of these is blocked in the "MWE blocklist" analysis (report.py).
+# Built from the judged failures plus common fixed expressions (coordinator follow-up #3).
+a lot
+a lot of
+a lot more
+as well
+as well as
+in order to
+as part of
+part of
+give rise to
+gave rise to
+take place
+took place
+takes place
+at least
+in fact
+on the model of
+more than
+less than
+no longer
+as soon as
+in the end
+at the end of
+at the beginning of
+at the same time
+on the other hand
+in addition
+as a result
+for example
+for instance
+in general
+at first
+by the way
+each other
+of course
+keep quiet
+take time
+takes time
+a number of
+the number of
+in terms of
+in the case of
+in case of
+on the basis of
+with respect to
+in spite of
+as long as
+as far as
+in front of
+on top of
+in the middle of
+in the face of
+in light of
+in the light of
+make sense
+makes sense
+make sure
+take part
+take care
+play a role
+plays a role
+played a role
+in the first place
+at the time
+of the day
+of the time
+over time
+the rest of
+a great deal
+a bit
+kind of
+sort of
+around the world
+all over the world
+after all
+first of all
+for the first time
+in the meantime
+in particular
+in other words
+such as
+rather than
+instead of
+in the course of
+in the long term
+in the short term
+in the long run
+in the form of
+at that point
+at this point
+on the grounds
+on the ground
+the way
+by way of
+in a way
+in the way
+right now
+so far
+to date
+at present
+in turn
+in return
+in place
+in power
+in charge
+in common
+at work
+at home
+at hand
+on hand
+to be able to
+be able to
+the same

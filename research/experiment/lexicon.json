@@ -1,0 +1,9226 @@
+{
+ "content": [
+  {
+   "lemma": "just",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 41,
+   "zipf": 6.43,
+   "synsets": {
+    "ADV": 6
+   },
+   "corpus_pos_counts": {
+    "ADJ": 2,
+    "ADV": 113
+   },
+   "corpus_count": 115
+  },
+  {
+   "lemma": "like",
+   "class": "content",
+   "pos": [
+    "VERB",
+    "ADJ"
+   ],
+   "wordfreq_rank": 42,
+   "zipf": 6.41,
+   "synsets": {
+    "VERB": 5,
+    "ADJ": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 1,
+    "VERB": 18,
+    "ADJ": 22
+   },
+   "corpus_count": 41
+  },
+  {
+   "lemma": "more",
+   "class": "content",
+   "pos": [
+    "ADJ",
+    "ADV"
+   ],
+   "wordfreq_rank": 49,
+   "zipf": 6.36,
+   "synsets": {
+    "ADJ": 2,
+    "ADV": 2
+   },
+   "corpus_pos_counts": {
+    "NOUN": 1,
+    "ADJ": 269,
+    "ADV": 328
+   },
+   "corpus_count": 598
+  },
+  {
+   "lemma": "there",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 57,
+   "zipf": 6.31,
+   "synsets": {
+    "ADV": 3
+   },
+   "corpus_pos_counts": {
+    "ADV": 49
+   },
+   "corpus_count": 49
+  },
+  {
+   "lemma": "time",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 60,
+   "zipf": 6.29,
+   "synsets": {
+    "NOUN": 10
+   },
+   "corpus_pos_counts": {
+    "NOUN": 368,
+    "VERB": 2
+   },
+   "corpus_count": 370
+  },
+  {
+   "lemma": "new",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 65,
+   "zipf": 6.25,
+   "synsets": {
+    "ADJ": 11
+   },
+   "corpus_pos_counts": {
+    "ADJ": 271,
+    "ADV": 1
+   },
+   "corpus_count": 272
+  },
+  {
+   "lemma": "people",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 66,
+   "zipf": 6.25,
+   "synsets": {
+    "NOUN": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 319
+   },
+   "corpus_count": 319
+  },
+  {
+   "lemma": "now",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 72,
+   "zipf": 6.18,
+   "synsets": {
+    "ADV": 7
+   },
+   "corpus_pos_counts": {
+    "ADV": 95
+   },
+   "corpus_count": 95
+  },
+  {
+   "lemma": "other",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "ADJ"
+   ],
+   "wordfreq_rank": 73,
+   "zipf": 6.16,
+   "synsets": {
+    "NOUN": 0,
+    "ADJ": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 66,
+    "ADJ": 467
+   },
+   "corpus_count": 533
+  },
+  {
+   "lemma": "good",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 78,
+   "zipf": 6.12,
+   "synsets": {
+    "ADJ": 21
+   },
+   "corpus_pos_counts": {
+    "NOUN": 8,
+    "ADJ": 180
+   },
+   "corpus_count": 188
+  },
+  {
+   "lemma": "only",
+   "class": "content",
+   "pos": [
+    "ADJ",
+    "ADV"
+   ],
+   "wordfreq_rank": 79,
+   "zipf": 6.12,
+   "synsets": {
+    "ADJ": 2,
+    "ADV": 7
+   },
+   "corpus_pos_counts": {
+    "ADJ": 34,
+    "ADV": 206
+   },
+   "corpus_count": 240
+  },
+  {
+   "lemma": "know",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 84,
+   "zipf": 6.1,
+   "synsets": {
+    "VERB": 11
+   },
+   "corpus_pos_counts": {
+    "VERB": 282
+   },
+   "corpus_count": 282
+  },
+  {
+   "lemma": "see",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 85,
+   "zipf": 6.1,
+   "synsets": {
+    "VERB": 24
+   },
+   "corpus_pos_counts": {
+    "VERB": 154
+   },
+   "corpus_count": 154
+  },
+  {
+   "lemma": "make",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 87,
+   "zipf": 6.08,
+   "synsets": {
+    "VERB": 49
+   },
+   "corpus_pos_counts": {
+    "NOUN": 2,
+    "VERB": 402
+   },
+   "corpus_count": 404
+  },
+  {
+   "lemma": "think",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 89,
+   "zipf": 6.08,
+   "synsets": {
+    "VERB": 13
+   },
+   "corpus_pos_counts": {
+    "NOUN": 2,
+    "VERB": 106
+   },
+   "corpus_count": 108
+  },
+  {
+   "lemma": "then",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 91,
+   "zipf": 6.07,
+   "synsets": {
+    "ADV": 3
+   },
+   "corpus_pos_counts": {
+    "ADV": 165
+   },
+   "corpus_count": 165
+  },
+  {
+   "lemma": "back",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB",
+    "ADV"
+   ],
+   "wordfreq_rank": 93,
+   "zipf": 6.04,
+   "synsets": {
+    "NOUN": 9,
+    "VERB": 10,
+    "ADV": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 12,
+    "VERB": 10,
+    "ADJ": 1,
+    "ADV": 47
+   },
+   "corpus_count": 70
+  },
+  {
+   "lemma": "want",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 96,
+   "zipf": 6.04,
+   "synsets": {
+    "VERB": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 2,
+    "VERB": 75,
+    "ADJ": 1
+   },
+   "corpus_count": 78
+  },
+  {
+   "lemma": "go",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 98,
+   "zipf": 6.03,
+   "synsets": {
+    "VERB": 30
+   },
+   "corpus_pos_counts": {
+    "NOUN": 1,
+    "VERB": 112
+   },
+   "corpus_count": 113
+  },
+  {
+   "lemma": "well",
+   "class": "content",
+   "pos": [
+    "ADJ",
+    "ADV"
+   ],
+   "wordfreq_rank": 99,
+   "zipf": 6.03,
+   "synsets": {
+    "ADJ": 3,
+    "ADV": 13
+   },
+   "corpus_pos_counts": {
+    "NOUN": 2,
+    "ADJ": 52,
+    "ADV": 198
+   },
+   "corpus_count": 252
+  },
+  {
+   "lemma": "say",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 100,
+   "zipf": 5.89,
+   "synsets": {
+    "VERB": 11
+   },
+   "corpus_pos_counts": {
+    "NOUN": 3,
+    "VERB": 146
+   },
+   "corpus_count": 149
+  },
+  {
+   "lemma": "way",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 101,
+   "zipf": 6.01,
+   "synsets": {
+    "NOUN": 12
+   },
+   "corpus_pos_counts": {
+    "NOUN": 156,
+    "ADV": 1
+   },
+   "corpus_count": 157
+  },
+  {
+   "lemma": "very",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 106,
+   "zipf": 6.0,
+   "synsets": {
+    "ADV": 2
+   },
+   "corpus_pos_counts": {
+    "ADJ": 5,
+    "ADV": 123
+   },
+   "corpus_count": 128
+  },
+  {
+   "lemma": "even",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 108,
+   "zipf": 5.99,
+   "synsets": {
+    "ADV": 4
+   },
+   "corpus_pos_counts": {
+    "ADV": 159
+   },
+   "corpus_count": 159
+  },
+  {
+   "lemma": "here",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 111,
+   "zipf": 5.97,
+   "synsets": {
+    "ADV": 4
+   },
+   "corpus_pos_counts": {
+    "ADV": 36
+   },
+   "corpus_count": 36
+  },
+  {
+   "lemma": "need",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 112,
+   "zipf": 5.97,
+   "synsets": {
+    "NOUN": 4,
+    "VERB": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 12,
+    "VERB": 80
+   },
+   "corpus_count": 92
+  },
+  {
+   "lemma": "really",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 113,
+   "zipf": 5.97,
+   "synsets": {
+    "ADV": 4
+   },
+   "corpus_pos_counts": {
+    "ADV": 33
+   },
+   "corpus_count": 33
+  },
+  {
+   "lemma": "right",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "ADJ"
+   ],
+   "wordfreq_rank": 115,
+   "zipf": 5.96,
+   "synsets": {
+    "NOUN": 8,
+    "ADJ": 14
+   },
+   "corpus_pos_counts": {
+    "NOUN": 118,
+    "ADJ": 31,
+    "ADV": 5
+   },
+   "corpus_count": 154
+  },
+  {
+   "lemma": "work",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 116,
+   "zipf": 5.96,
+   "synsets": {
+    "NOUN": 7,
+    "VERB": 27
+   },
+   "corpus_pos_counts": {
+    "NOUN": 297,
+    "VERB": 148
+   },
+   "corpus_count": 445
+  },
+  {
+   "lemma": "year",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 117,
+   "zipf": 5.96,
+   "synsets": {
+    "NOUN": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 376
+   },
+   "corpus_count": 376
+  },
+  {
+   "lemma": "day",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 120,
+   "zipf": 5.95,
+   "synsets": {
+    "NOUN": 10
+   },
+   "corpus_pos_counts": {
+    "NOUN": 119
+   },
+   "corpus_count": 119
+  },
+  {
+   "lemma": "too",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 121,
+   "zipf": 5.95,
+   "synsets": {
+    "ADV": 2
+   },
+   "corpus_pos_counts": {
+    "ADV": 52
+   },
+   "corpus_count": 52
+  },
+  {
+   "lemma": "still",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 127,
+   "zipf": 5.92,
+   "synsets": {
+    "ADV": 4
+   },
+   "corpus_pos_counts": {
+    "ADV": 93
+   },
+   "corpus_count": 93
+  },
+  {
+   "lemma": "take",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 128,
+   "zipf": 5.92,
+   "synsets": {
+    "VERB": 42
+   },
+   "corpus_pos_counts": {
+    "NOUN": 4,
+    "VERB": 204
+   },
+   "corpus_count": 208
+  },
+  {
+   "lemma": "never",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 132,
+   "zipf": 5.91,
+   "synsets": {
+    "ADV": 2
+   },
+   "corpus_pos_counts": {
+    "ADV": 60
+   },
+   "corpus_count": 60
+  },
+  {
+   "lemma": "life",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 134,
+   "zipf": 5.89,
+   "synsets": {
+    "NOUN": 14
+   },
+   "corpus_pos_counts": {
+    "NOUN": 106
+   },
+   "corpus_count": 106
+  },
+  {
+   "lemma": "world",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 136,
+   "zipf": 5.89,
+   "synsets": {
+    "NOUN": 8
+   },
+   "corpus_pos_counts": {
+    "NOUN": 177
+   },
+   "corpus_count": 177
+  },
+  {
+   "lemma": "great",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 138,
+   "zipf": 5.88,
+   "synsets": {
+    "ADJ": 6
+   },
+   "corpus_pos_counts": {
+    "ADJ": 195
+   },
+   "corpus_count": 195
+  },
+  {
+   "lemma": "last",
+   "class": "content",
+   "pos": [
+    "VERB",
+    "ADJ"
+   ],
+   "wordfreq_rank": 141,
+   "zipf": 5.86,
+   "synsets": {
+    "VERB": 2,
+    "ADJ": 9
+   },
+   "corpus_pos_counts": {
+    "NOUN": 1,
+    "VERB": 27,
+    "ADJ": 69,
+    "ADV": 5
+   },
+   "corpus_count": 102
+  },
+  {
+   "lemma": "love",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 147,
+   "zipf": 5.82,
+   "synsets": {
+    "NOUN": 6,
+    "VERB": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 13,
+    "VERB": 23
+   },
+   "corpus_count": 36
+  },
+  {
+   "lemma": "man",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 148,
+   "zipf": 5.82,
+   "synsets": {
+    "NOUN": 11
+   },
+   "corpus_pos_counts": {
+    "NOUN": 88
+   },
+   "corpus_count": 88
+  },
+  {
+   "lemma": "home",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "ADV"
+   ],
+   "wordfreq_rank": 149,
+   "zipf": 5.81,
+   "synsets": {
+    "NOUN": 9,
+    "ADV": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 35,
+    "ADV": 5
+   },
+   "corpus_count": 40
+  },
+  {
+   "lemma": "long",
+   "class": "content",
+   "pos": [
+    "ADJ",
+    "ADV"
+   ],
+   "wordfreq_rank": 150,
+   "zipf": 5.81,
+   "synsets": {
+    "ADJ": 9,
+    "ADV": 2
+   },
+   "corpus_pos_counts": {
+    "NOUN": 1,
+    "ADJ": 78,
+    "ADV": 79
+   },
+   "corpus_count": 158
+  },
+  {
+   "lemma": "look",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 151,
+   "zipf": 5.81,
+   "synsets": {
+    "VERB": 10
+   },
+   "corpus_pos_counts": {
+    "NOUN": 4,
+    "VERB": 41
+   },
+   "corpus_count": 45
+  },
+  {
+   "lemma": "use",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 153,
+   "zipf": 5.81,
+   "synsets": {
+    "NOUN": 7,
+    "VERB": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 128,
+    "VERB": 642
+   },
+   "corpus_count": 770
+  },
+  {
+   "lemma": "same",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 155,
+   "zipf": 5.8,
+   "synsets": {
+    "ADJ": 4
+   },
+   "corpus_pos_counts": {
+    "ADJ": 115
+   },
+   "corpus_count": 115
+  },
+  {
+   "lemma": "come",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 161,
+   "zipf": 5.78,
+   "synsets": {
+    "VERB": 21
+   },
+   "corpus_pos_counts": {
+    "VERB": 131
+   },
+   "corpus_count": 131
+  },
+  {
+   "lemma": "part",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 162,
+   "zipf": 5.78,
+   "synsets": {
+    "NOUN": 12
+   },
+   "corpus_pos_counts": {
+    "NOUN": 164
+   },
+   "corpus_count": 164
+  },
+  {
+   "lemma": "state",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 163,
+   "zipf": 5.78,
+   "synsets": {
+    "NOUN": 8,
+    "VERB": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 128,
+    "VERB": 30
+   },
+   "corpus_count": 158
+  },
+  {
+   "lemma": "always",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 167,
+   "zipf": 5.76,
+   "synsets": {
+    "ADV": 5
+   },
+   "corpus_pos_counts": {
+    "ADV": 55
+   },
+   "corpus_count": 55
+  },
+  {
+   "lemma": "find",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 169,
+   "zipf": 5.76,
+   "synsets": {
+    "VERB": 16
+   },
+   "corpus_pos_counts": {
+    "VERB": 205
+   },
+   "corpus_count": 205
+  },
+  {
+   "lemma": "help",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 171,
+   "zipf": 5.75,
+   "synsets": {
+    "NOUN": 4,
+    "VERB": 8
+   },
+   "corpus_pos_counts": {
+    "NOUN": 15,
+    "VERB": 83
+   },
+   "corpus_count": 98
+  },
+  {
+   "lemma": "high",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 172,
+   "zipf": 5.75,
+   "synsets": {
+    "ADJ": 7
+   },
+   "corpus_pos_counts": {
+    "NOUN": 2,
+    "ADJ": 272,
+    "ADV": 8
+   },
+   "corpus_count": 282
+  },
+  {
+   "lemma": "little",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 173,
+   "zipf": 5.75,
+   "synsets": {
+    "ADJ": 8
+   },
+   "corpus_pos_counts": {
+    "ADJ": 50,
+    "ADV": 2
+   },
+   "corpus_count": 52
+  },
+  {
+   "lemma": "old",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 174,
+   "zipf": 5.75,
+   "synsets": {
+    "ADJ": 8
+   },
+   "corpus_pos_counts": {
+    "ADJ": 83
+   },
+   "corpus_count": 83
+  },
+  {
+   "lemma": "since",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 175,
+   "zipf": 5.75,
+   "synsets": {
+    "ADV": 0
+   },
+   "corpus_pos_counts": {
+    "ADV": 6
+   },
+   "corpus_count": 6
+  },
+  {
+   "lemma": "own",
+   "class": "content",
+   "pos": [
+    "VERB",
+    "ADJ"
+   ],
+   "wordfreq_rank": 178,
+   "zipf": 5.74,
+   "synsets": {
+    "VERB": 1,
+    "ADJ": 1
+   },
+   "corpus_pos_counts": {
+    "VERB": 12,
+    "ADJ": 79
+   },
+   "corpus_count": 91
+  },
+  {
+   "lemma": "thing",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 179,
+   "zipf": 5.72,
+   "synsets": {
+    "NOUN": 12
+   },
+   "corpus_pos_counts": {
+    "NOUN": 88
+   },
+   "corpus_count": 88
+  },
+  {
+   "lemma": "game",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 182,
+   "zipf": 5.72,
+   "synsets": {
+    "NOUN": 11
+   },
+   "corpus_pos_counts": {
+    "NOUN": 215
+   },
+   "corpus_count": 215
+  },
+  {
+   "lemma": "give",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 185,
+   "zipf": 5.71,
+   "synsets": {
+    "VERB": 44
+   },
+   "corpus_pos_counts": {
+    "VERB": 159
+   },
+   "corpus_count": 159
+  },
+  {
+   "lemma": "house",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 186,
+   "zipf": 5.71,
+   "synsets": {
+    "NOUN": 12
+   },
+   "corpus_pos_counts": {
+    "NOUN": 22,
+    "VERB": 1
+   },
+   "corpus_count": 23
+  },
+  {
+   "lemma": "place",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 187,
+   "zipf": 5.71,
+   "synsets": {
+    "NOUN": 16,
+    "VERB": 16
+   },
+   "corpus_pos_counts": {
+    "NOUN": 77,
+    "VERB": 28
+   },
+   "corpus_count": 105
+  },
+  {
+   "lemma": "school",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 188,
+   "zipf": 5.71,
+   "synsets": {
+    "NOUN": 7
+   },
+   "corpus_pos_counts": {
+    "NOUN": 77,
+    "ADJ": 1
+   },
+   "corpus_count": 78
+  },
+  {
+   "lemma": "again",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 189,
+   "zipf": 5.7,
+   "synsets": {
+    "ADV": 1
+   },
+   "corpus_pos_counts": {
+    "ADV": 50
+   },
+   "corpus_count": 50
+  },
+  {
+   "lemma": "next",
+   "class": "content",
+   "pos": [
+    "ADJ",
+    "ADV"
+   ],
+   "wordfreq_rank": 190,
+   "zipf": 5.7,
+   "synsets": {
+    "ADJ": 3,
+    "ADV": 1
+   },
+   "corpus_pos_counts": {
+    "ADJ": 44,
+    "ADV": 5
+   },
+   "corpus_count": 49
+  },
+  {
+   "lemma": "end",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 196,
+   "zipf": 5.68,
+   "synsets": {
+    "NOUN": 14,
+    "VERB": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 93,
+    "VERB": 63
+   },
+   "corpus_count": 156
+  },
+  {
+   "lemma": "show",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 199,
+   "zipf": 5.68,
+   "synsets": {
+    "NOUN": 4,
+    "VERB": 12
+   },
+   "corpus_pos_counts": {
+    "NOUN": 13,
+    "VERB": 94
+   },
+   "corpus_count": 107
+  },
+  {
+   "lemma": "big",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 200,
+   "zipf": 5.67,
+   "synsets": {
+    "ADJ": 13
+   },
+   "corpus_pos_counts": {
+    "ADJ": 64
+   },
+   "corpus_count": 64
+  },
+  {
+   "lemma": "feel",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 201,
+   "zipf": 5.67,
+   "synsets": {
+    "VERB": 13
+   },
+   "corpus_pos_counts": {
+    "NOUN": 2,
+    "VERB": 19
+   },
+   "corpus_count": 21
+  },
+  {
+   "lemma": "sure",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 202,
+   "zipf": 5.67,
+   "synsets": {
+    "ADJ": 9
+   },
+   "corpus_pos_counts": {
+    "ADJ": 12
+   },
+   "corpus_count": 12
+  },
+  {
+   "lemma": "team",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 203,
+   "zipf": 5.67,
+   "synsets": {
+    "NOUN": 2
+   },
+   "corpus_pos_counts": {
+    "NOUN": 150
+   },
+   "corpus_count": 150
+  },
+  {
+   "lemma": "ever",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 204,
+   "zipf": 5.66,
+   "synsets": {
+    "ADV": 3
+   },
+   "corpus_pos_counts": {
+    "ADV": 30
+   },
+   "corpus_count": 30
+  },
+  {
+   "lemma": "family",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 205,
+   "zipf": 5.66,
+   "synsets": {
+    "NOUN": 8
+   },
+   "corpus_pos_counts": {
+    "NOUN": 79
+   },
+   "corpus_count": 79
+  },
+  {
+   "lemma": "keep",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 206,
+   "zipf": 5.66,
+   "synsets": {
+    "VERB": 22
+   },
+   "corpus_pos_counts": {
+    "VERB": 72
+   },
+   "corpus_count": 72
+  },
+  {
+   "lemma": "put",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 209,
+   "zipf": 5.66,
+   "synsets": {
+    "VERB": 9
+   },
+   "corpus_pos_counts": {
+    "VERB": 36
+   },
+   "corpus_count": 36
+  },
+  {
+   "lemma": "money",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 210,
+   "zipf": 5.64,
+   "synsets": {
+    "NOUN": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 31
+   },
+   "corpus_count": 31
+  },
+  {
+   "lemma": "free",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 211,
+   "zipf": 5.63,
+   "synsets": {
+    "ADJ": 9
+   },
+   "corpus_pos_counts": {
+    "VERB": 12,
+    "ADJ": 120
+   },
+   "corpus_count": 132
+  },
+  {
+   "lemma": "away",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 214,
+   "zipf": 5.62,
+   "synsets": {
+    "ADV": 11
+   },
+   "corpus_pos_counts": {
+    "NOUN": 1,
+    "ADV": 40
+   },
+   "corpus_count": 41
+  },
+  {
+   "lemma": "leave",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 215,
+   "zipf": 5.34,
+   "synsets": {
+    "VERB": 14
+   },
+   "corpus_pos_counts": {
+    "VERB": 58
+   },
+   "corpus_count": 58
+  },
+  {
+   "lemma": "number",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 216,
+   "zipf": 5.62,
+   "synsets": {
+    "NOUN": 11
+   },
+   "corpus_pos_counts": {
+    "NOUN": 170,
+    "VERB": 4
+   },
+   "corpus_count": 174
+  },
+  {
+   "lemma": "city",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 217,
+   "zipf": 5.61,
+   "synsets": {
+    "NOUN": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 74
+   },
+   "corpus_count": 74
+  },
+  {
+   "lemma": "lot",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 219,
+   "zipf": 5.61,
+   "synsets": {
+    "NOUN": 7
+   },
+   "corpus_pos_counts": {
+    "NOUN": 58
+   },
+   "corpus_count": 58
+  },
+  {
+   "lemma": "name",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 220,
+   "zipf": 5.61,
+   "synsets": {
+    "NOUN": 6,
+    "VERB": 9
+   },
+   "corpus_pos_counts": {
+    "NOUN": 107,
+    "VERB": 35
+   },
+   "corpus_count": 142
+  },
+  {
+   "lemma": "night",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 221,
+   "zipf": 5.61,
+   "synsets": {
+    "NOUN": 8
+   },
+   "corpus_pos_counts": {
+    "NOUN": 8
+   },
+   "corpus_count": 8
+  },
+  {
+   "lemma": "play",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 222,
+   "zipf": 5.61,
+   "synsets": {
+    "NOUN": 17,
+    "VERB": 35
+   },
+   "corpus_pos_counts": {
+    "NOUN": 93,
+    "VERB": 224
+   },
+   "corpus_count": 317
+  },
+  {
+   "lemma": "company",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 224,
+   "zipf": 5.6,
+   "synsets": {
+    "NOUN": 9
+   },
+   "corpus_pos_counts": {
+    "NOUN": 55
+   },
+   "corpus_count": 55
+  },
+  {
+   "lemma": "few",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 226,
+   "zipf": 5.6,
+   "synsets": {
+    "ADJ": 1
+   },
+   "corpus_pos_counts": {
+    "ADJ": 93
+   },
+   "corpus_count": 93
+  },
+  {
+   "lemma": "real",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 229,
+   "zipf": 5.6,
+   "synsets": {
+    "ADJ": 9
+   },
+   "corpus_pos_counts": {
+    "ADJ": 21,
+    "ADV": 1
+   },
+   "corpus_count": 22
+  },
+  {
+   "lemma": "call",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 231,
+   "zipf": 5.51,
+   "synsets": {
+    "VERB": 28
+   },
+   "corpus_pos_counts": {
+    "NOUN": 18,
+    "VERB": 229
+   },
+   "corpus_count": 247
+  },
+  {
+   "lemma": "different",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 232,
+   "zipf": 5.59,
+   "synsets": {
+    "ADJ": 5
+   },
+   "corpus_pos_counts": {
+    "ADJ": 147
+   },
+   "corpus_count": 147
+  },
+  {
+   "lemma": "set",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 234,
+   "zipf": 5.59,
+   "synsets": {
+    "NOUN": 13,
+    "VERB": 25
+   },
+   "corpus_pos_counts": {
+    "NOUN": 40,
+    "VERB": 74
+   },
+   "corpus_count": 114
+  },
+  {
+   "lemma": "government",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 240,
+   "zipf": 5.57,
+   "synsets": {
+    "NOUN": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 137,
+    "ADJ": 1
+   },
+   "corpus_count": 138
+  },
+  {
+   "lemma": "group",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 241,
+   "zipf": 5.57,
+   "synsets": {
+    "NOUN": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 122,
+    "VERB": 3
+   },
+   "corpus_count": 125
+  },
+  {
+   "lemma": "public",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 243,
+   "zipf": 5.57,
+   "synsets": {
+    "ADJ": 2
+   },
+   "corpus_pos_counts": {
+    "NOUN": 9,
+    "ADJ": 123
+   },
+   "corpus_count": 132
+  },
+  {
+   "lemma": "top",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB",
+    "ADJ"
+   ],
+   "wordfreq_rank": 244,
+   "zipf": 5.57,
+   "synsets": {
+    "NOUN": 11,
+    "VERB": 10,
+    "ADJ": 1
+   },
+   "corpus_pos_counts": {
+    "NOUN": 27,
+    "VERB": 9,
+    "ADJ": 30
+   },
+   "corpus_count": 66
+  },
+  {
+   "lemma": "woman",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 245,
+   "zipf": 5.35,
+   "synsets": {
+    "NOUN": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 125
+   },
+   "corpus_count": 125
+  },
+  {
+   "lemma": "business",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 246,
+   "zipf": 5.56,
+   "synsets": {
+    "NOUN": 9
+   },
+   "corpus_pos_counts": {
+    "NOUN": 38
+   },
+   "corpus_count": 38
+  },
+  {
+   "lemma": "care",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 247,
+   "zipf": 5.56,
+   "synsets": {
+    "NOUN": 6,
+    "VERB": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 14,
+    "VERB": 17
+   },
+   "corpus_count": 31
+  },
+  {
+   "lemma": "start",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 248,
+   "zipf": 5.56,
+   "synsets": {
+    "VERB": 14
+   },
+   "corpus_pos_counts": {
+    "NOUN": 12,
+    "VERB": 114
+   },
+   "corpus_count": 126
+  },
+  {
+   "lemma": "system",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 249,
+   "zipf": 5.56,
+   "synsets": {
+    "NOUN": 9
+   },
+   "corpus_pos_counts": {
+    "NOUN": 164
+   },
+   "corpus_count": 164
+  },
+  {
+   "lemma": "week",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 251,
+   "zipf": 5.56,
+   "synsets": {
+    "NOUN": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 25
+   },
+   "corpus_count": 25
+  },
+  {
+   "lemma": "already",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 253,
+   "zipf": 5.55,
+   "synsets": {
+    "ADV": 1
+   },
+   "corpus_pos_counts": {
+    "ADV": 47
+   },
+   "corpus_count": 47
+  },
+  {
+   "lemma": "case",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 255,
+   "zipf": 5.55,
+   "synsets": {
+    "NOUN": 20
+   },
+   "corpus_pos_counts": {
+    "NOUN": 75
+   },
+   "corpus_count": 75
+  },
+  {
+   "lemma": "person",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 257,
+   "zipf": 5.55,
+   "synsets": {
+    "NOUN": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 44
+   },
+   "corpus_count": 44
+  },
+  {
+   "lemma": "today",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 258,
+   "zipf": 5.55,
+   "synsets": {
+    "NOUN": 2
+   },
+   "corpus_pos_counts": {
+    "NOUN": 48
+   },
+   "corpus_count": 48
+  },
+  {
+   "lemma": "change",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 259,
+   "zipf": 5.54,
+   "synsets": {
+    "NOUN": 10,
+    "VERB": 10
+   },
+   "corpus_pos_counts": {
+    "NOUN": 175,
+    "VERB": 57
+   },
+   "corpus_count": 232
+  },
+  {
+   "lemma": "full",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 262,
+   "zipf": 5.54,
+   "synsets": {
+    "ADJ": 8
+   },
+   "corpus_pos_counts": {
+    "ADJ": 48
+   },
+   "corpus_count": 48
+  },
+  {
+   "lemma": "live",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 263,
+   "zipf": 5.54,
+   "synsets": {
+    "VERB": 7
+   },
+   "corpus_pos_counts": {
+    "VERB": 90,
+    "ADJ": 5,
+    "ADV": 6
+   },
+   "corpus_count": 101
+  },
+  {
+   "lemma": "point",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 265,
+   "zipf": 5.54,
+   "synsets": {
+    "NOUN": 26,
+    "VERB": 14
+   },
+   "corpus_pos_counts": {
+    "NOUN": 112,
+    "VERB": 17
+   },
+   "corpus_count": 129
+  },
+  {
+   "lemma": "read",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 266,
+   "zipf": 5.54,
+   "synsets": {
+    "VERB": 11
+   },
+   "corpus_pos_counts": {
+    "NOUN": 2,
+    "VERB": 67
+   },
+   "corpus_count": 69
+  },
+  {
+   "lemma": "tell",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 268,
+   "zipf": 5.53,
+   "synsets": {
+    "VERB": 8
+   },
+   "corpus_pos_counts": {
+    "VERB": 28
+   },
+   "corpus_count": 28
+  },
+  {
+   "lemma": "bad",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 270,
+   "zipf": 5.53,
+   "synsets": {
+    "ADJ": 14
+   },
+   "corpus_pos_counts": {
+    "ADJ": 39
+   },
+   "corpus_count": 39
+  },
+  {
+   "lemma": "hard",
+   "class": "content",
+   "pos": [
+    "ADJ",
+    "ADV"
+   ],
+   "wordfreq_rank": 273,
+   "zipf": 5.53,
+   "synsets": {
+    "ADJ": 12,
+    "ADV": 10
+   },
+   "corpus_pos_counts": {
+    "ADJ": 50,
+    "ADV": 17
+   },
+   "corpus_count": 67
+  },
+  {
+   "lemma": "mean",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 274,
+   "zipf": 5.53,
+   "synsets": {
+    "NOUN": 1,
+    "VERB": 7
+   },
+   "corpus_pos_counts": {
+    "NOUN": 14,
+    "VERB": 104,
+    "ADJ": 1
+   },
+   "corpus_count": 119
+  },
+  {
+   "lemma": "once",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 275,
+   "zipf": 5.53,
+   "synsets": {
+    "ADV": 3
+   },
+   "corpus_pos_counts": {
+    "ADV": 29
+   },
+   "corpus_count": 29
+  },
+  {
+   "lemma": "support",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 276,
+   "zipf": 5.53,
+   "synsets": {
+    "NOUN": 11,
+    "VERB": 11
+   },
+   "corpus_pos_counts": {
+    "NOUN": 57,
+    "VERB": 77
+   },
+   "corpus_count": 134
+  },
+  {
+   "lemma": "include",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 278,
+   "zipf": 5.21,
+   "synsets": {
+    "VERB": 4
+   },
+   "corpus_pos_counts": {
+    "VERB": 427
+   },
+   "corpus_count": 427
+  },
+  {
+   "lemma": "music",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 279,
+   "zipf": 5.52,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 180
+   },
+   "corpus_count": 180
+  },
+  {
+   "lemma": "power",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 280,
+   "zipf": 5.52,
+   "synsets": {
+    "NOUN": 9
+   },
+   "corpus_pos_counts": {
+    "NOUN": 129,
+    "VERB": 7
+   },
+   "corpus_count": 136
+  },
+  {
+   "lemma": "stop",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 283,
+   "zipf": 5.52,
+   "synsets": {
+    "NOUN": 11,
+    "VERB": 11
+   },
+   "corpus_pos_counts": {
+    "NOUN": 6,
+    "VERB": 24,
+    "ADJ": 1
+   },
+   "corpus_count": 31
+  },
+  {
+   "lemma": "water",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 284,
+   "zipf": 5.52,
+   "synsets": {
+    "NOUN": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 135,
+    "VERB": 1
+   },
+   "corpus_count": 136
+  },
+  {
+   "lemma": "base",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 285,
+   "zipf": 5.05,
+   "synsets": {
+    "NOUN": 20,
+    "VERB": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 51,
+    "VERB": 128
+   },
+   "corpus_count": 179
+  },
+  {
+   "lemma": "believe",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 286,
+   "zipf": 5.51,
+   "synsets": {
+    "VERB": 5
+   },
+   "corpus_pos_counts": {
+    "VERB": 47
+   },
+   "corpus_count": 47
+  },
+  {
+   "lemma": "head",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 288,
+   "zipf": 5.51,
+   "synsets": {
+    "NOUN": 33,
+    "VERB": 9
+   },
+   "corpus_pos_counts": {
+    "NOUN": 56,
+    "VERB": 12
+   },
+   "corpus_count": 68
+  },
+  {
+   "lemma": "national",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 290,
+   "zipf": 5.51,
+   "synsets": {
+    "ADJ": 7
+   },
+   "corpus_pos_counts": {
+    "NOUN": 1,
+    "ADJ": 55
+   },
+   "corpus_count": 56
+  },
+  {
+   "lemma": "small",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 291,
+   "zipf": 5.51,
+   "synsets": {
+    "ADJ": 10
+   },
+   "corpus_pos_counts": {
+    "ADJ": 135
+   },
+   "corpus_count": 135
+  },
+  {
+   "lemma": "white",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "ADJ"
+   ],
+   "wordfreq_rank": 293,
+   "zipf": 5.51,
+   "synsets": {
+    "NOUN": 12,
+    "ADJ": 12
+   },
+   "corpus_pos_counts": {
+    "NOUN": 5,
+    "ADJ": 45
+   },
+   "corpus_count": 50
+  },
+  {
+   "lemma": "far",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 295,
+   "zipf": 5.5,
+   "synsets": {
+    "ADV": 5
+   },
+   "corpus_pos_counts": {
+    "ADJ": 2,
+    "ADV": 108
+   },
+   "corpus_count": 110
+  },
+  {
+   "lemma": "job",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 296,
+   "zipf": 5.5,
+   "synsets": {
+    "NOUN": 13
+   },
+   "corpus_pos_counts": {
+    "NOUN": 10
+   },
+   "corpus_count": 10
+  },
+  {
+   "lemma": "side",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 297,
+   "zipf": 5.5,
+   "synsets": {
+    "NOUN": 12
+   },
+   "corpus_pos_counts": {
+    "NOUN": 90,
+    "ADJ": 1
+   },
+   "corpus_count": 91
+  },
+  {
+   "lemma": "try",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 299,
+   "zipf": 5.5,
+   "synsets": {
+    "VERB": 9
+   },
+   "corpus_pos_counts": {
+    "NOUN": 4,
+    "VERB": 96
+   },
+   "corpus_count": 100
+  },
+  {
+   "lemma": "actually",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 302,
+   "zipf": 5.49,
+   "synsets": {
+    "ADV": 4
+   },
+   "corpus_pos_counts": {
+    "ADV": 24
+   },
+   "corpus_count": 24
+  },
+  {
+   "lemma": "later",
+   "class": "content",
+   "pos": [
+    "ADJ",
+    "ADV"
+   ],
+   "wordfreq_rank": 304,
+   "zipf": 5.49,
+   "synsets": {
+    "ADJ": 9,
+    "ADV": 3
+   },
+   "corpus_pos_counts": {
+    "ADJ": 30,
+    "ADV": 125
+   },
+   "corpus_count": 155
+  },
+  {
+   "lemma": "less",
+   "class": "content",
+   "pos": [
+    "ADJ",
+    "ADV"
+   ],
+   "wordfreq_rank": 305,
+   "zipf": 5.49,
+   "synsets": {
+    "ADJ": 3,
+    "ADV": 2
+   },
+   "corpus_pos_counts": {
+    "ADJ": 67,
+    "ADV": 66
+   },
+   "corpus_count": 133
+  },
+  {
+   "lemma": "line",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 306,
+   "zipf": 5.49,
+   "synsets": {
+    "NOUN": 30
+   },
+   "corpus_pos_counts": {
+    "NOUN": 38,
+    "VERB": 1
+   },
+   "corpus_count": 39
+  },
+  {
+   "lemma": "order",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 307,
+   "zipf": 5.49,
+   "synsets": {
+    "NOUN": 15,
+    "VERB": 9
+   },
+   "corpus_pos_counts": {
+    "NOUN": 52,
+    "VERB": 11
+   },
+   "corpus_count": 63
+  },
+  {
+   "lemma": "party",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 308,
+   "zipf": 5.49,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 40,
+    "ADJ": 1
+   },
+   "corpus_count": 41
+  },
+  {
+   "lemma": "run",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 309,
+   "zipf": 5.49,
+   "synsets": {
+    "VERB": 41
+   },
+   "corpus_pos_counts": {
+    "NOUN": 3,
+    "VERB": 61
+   },
+   "corpus_count": 64
+  },
+  {
+   "lemma": "service",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 311,
+   "zipf": 5.49,
+   "synsets": {
+    "NOUN": 15
+   },
+   "corpus_pos_counts": {
+    "NOUN": 75,
+    "VERB": 1
+   },
+   "corpus_count": 76
+  },
+  {
+   "lemma": "country",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 313,
+   "zipf": 5.48,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 187
+   },
+   "corpus_count": 187
+  },
+  {
+   "lemma": "open",
+   "class": "content",
+   "pos": [
+    "VERB",
+    "ADJ"
+   ],
+   "wordfreq_rank": 314,
+   "zipf": 5.48,
+   "synsets": {
+    "VERB": 11,
+    "ADJ": 21
+   },
+   "corpus_pos_counts": {
+    "VERB": 24,
+    "ADJ": 33
+   },
+   "corpus_count": 57
+  },
+  {
+   "lemma": "season",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 315,
+   "zipf": 5.48,
+   "synsets": {
+    "NOUN": 3,
+    "VERB": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 45,
+    "VERB": 5
+   },
+   "corpus_count": 50
+  },
+  {
+   "lemma": "child",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 318,
+   "zipf": 5.3,
+   "synsets": {
+    "NOUN": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 71
+   },
+   "corpus_count": 71
+  },
+  {
+   "lemma": "general",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "ADJ"
+   ],
+   "wordfreq_rank": 320,
+   "zipf": 5.47,
+   "synsets": {
+    "NOUN": 3,
+    "ADJ": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 10,
+    "ADJ": 44
+   },
+   "corpus_count": 54
+  },
+  {
+   "lemma": "area",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 325,
+   "zipf": 5.46,
+   "synsets": {
+    "NOUN": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 121,
+    "VERB": 1
+   },
+   "corpus_count": 122
+  },
+  {
+   "lemma": "black",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 326,
+   "zipf": 5.46,
+   "synsets": {
+    "ADJ": 14
+   },
+   "corpus_pos_counts": {
+    "NOUN": 5,
+    "ADJ": 46,
+    "ADV": 1
+   },
+   "corpus_count": 52
+  },
+  {
+   "lemma": "follow",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 328,
+   "zipf": 5.14,
+   "synsets": {
+    "VERB": 24
+   },
+   "corpus_pos_counts": {
+    "NOUN": 1,
+    "VERB": 104
+   },
+   "corpus_count": 105
+  },
+  {
+   "lemma": "law",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 329,
+   "zipf": 5.46,
+   "synsets": {
+    "NOUN": 7
+   },
+   "corpus_pos_counts": {
+    "NOUN": 90
+   },
+   "corpus_count": 90
+  },
+  {
+   "lemma": "together",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 331,
+   "zipf": 5.46,
+   "synsets": {
+    "ADV": 6
+   },
+   "corpus_pos_counts": {
+    "ADV": 33
+   },
+   "corpus_count": 33
+  },
+  {
+   "lemma": "war",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "ADJ"
+   ],
+   "wordfreq_rank": 332,
+   "zipf": 5.46,
+   "synsets": {
+    "NOUN": 4,
+    "ADJ": 0
+   },
+   "corpus_pos_counts": {
+    "NOUN": 59,
+    "ADJ": 7
+   },
+   "corpus_count": 66
+  },
+  {
+   "lemma": "whole",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 333,
+   "zipf": 5.46,
+   "synsets": {
+    "ADJ": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 2,
+    "ADJ": 21
+   },
+   "corpus_count": 23
+  },
+  {
+   "lemma": "car",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 334,
+   "zipf": 5.45,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 9
+   },
+   "corpus_count": 9
+  },
+  {
+   "lemma": "face",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 335,
+   "zipf": 5.45,
+   "synsets": {
+    "NOUN": 13,
+    "VERB": 9
+   },
+   "corpus_pos_counts": {
+    "NOUN": 14,
+    "VERB": 38
+   },
+   "corpus_count": 52
+  },
+  {
+   "lemma": "kind",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 337,
+   "zipf": 5.45,
+   "synsets": {
+    "NOUN": 1
+   },
+   "corpus_pos_counts": {
+    "NOUN": 75,
+    "ADJ": 1,
+    "ADV": 1
+   },
+   "corpus_count": 77
+  },
+  {
+   "lemma": "maybe",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 338,
+   "zipf": 5.45,
+   "synsets": {
+    "ADV": 1
+   },
+   "corpus_pos_counts": {
+    "ADV": 8
+   },
+   "corpus_count": 8
+  },
+  {
+   "lemma": "president",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 340,
+   "zipf": 5.45,
+   "synsets": {
+    "NOUN": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 19
+   },
+   "corpus_count": 19
+  },
+  {
+   "lemma": "story",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 341,
+   "zipf": 5.45,
+   "synsets": {
+    "NOUN": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 29
+   },
+   "corpus_count": 29
+  },
+  {
+   "lemma": "course",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 343,
+   "zipf": 5.44,
+   "synsets": {
+    "NOUN": 9
+   },
+   "corpus_pos_counts": {
+    "NOUN": 22,
+    "ADV": 1
+   },
+   "corpus_count": 23
+  },
+  {
+   "lemma": "health",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 345,
+   "zipf": 5.44,
+   "synsets": {
+    "NOUN": 2
+   },
+   "corpus_pos_counts": {
+    "NOUN": 39
+   },
+   "corpus_count": 39
+  },
+  {
+   "lemma": "hope",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 346,
+   "zipf": 5.44,
+   "synsets": {
+    "NOUN": 6,
+    "VERB": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 3,
+    "VERB": 6
+   },
+   "corpus_count": 9
+  },
+  {
+   "lemma": "important",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 347,
+   "zipf": 5.44,
+   "synsets": {
+    "ADJ": 5
+   },
+   "corpus_pos_counts": {
+    "ADJ": 95
+   },
+   "corpus_count": 95
+  },
+  {
+   "lemma": "least",
+   "class": "content",
+   "pos": [
+    "ADJ",
+    "ADV"
+   ],
+   "wordfreq_rank": 348,
+   "zipf": 5.44,
+   "synsets": {
+    "ADJ": 1,
+    "ADV": 1
+   },
+   "corpus_pos_counts": {
+    "ADJ": 39,
+    "ADV": 22
+   },
+   "corpus_count": 61
+  },
+  {
+   "lemma": "news",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 350,
+   "zipf": 5.44,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 26
+   },
+   "corpus_count": 26
+  },
+  {
+   "lemma": "able",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 352,
+   "zipf": 5.43,
+   "synsets": {
+    "ADJ": 4
+   },
+   "corpus_pos_counts": {
+    "ADJ": 59
+   },
+   "corpus_count": 59
+  },
+  {
+   "lemma": "book",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 353,
+   "zipf": 5.43,
+   "synsets": {
+    "NOUN": 11
+   },
+   "corpus_pos_counts": {
+    "NOUN": 63,
+    "VERB": 2
+   },
+   "corpus_count": 65
+  },
+  {
+   "lemma": "early",
+   "class": "content",
+   "pos": [
+    "ADJ",
+    "ADV"
+   ],
+   "wordfreq_rank": 354,
+   "zipf": 5.43,
+   "synsets": {
+    "ADJ": 6,
+    "ADV": 3
+   },
+   "corpus_pos_counts": {
+    "ADJ": 227,
+    "ADV": 30
+   },
+   "corpus_count": 257
+  },
+  {
+   "lemma": "friend",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 355,
+   "zipf": 5.37,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 34
+   },
+   "corpus_count": 34
+  },
+  {
+   "lemma": "information",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 357,
+   "zipf": 5.43,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 49
+   },
+   "corpus_count": 49
+  },
+  {
+   "lemma": "local",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 358,
+   "zipf": 5.43,
+   "synsets": {
+    "ADJ": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 2,
+    "ADJ": 75
+   },
+   "corpus_count": 77
+  },
+  {
+   "lemma": "post",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB",
+    "ADJ"
+   ],
+   "wordfreq_rank": 360,
+   "zipf": 5.43,
+   "synsets": {
+    "NOUN": 11,
+    "VERB": 12,
+    "ADJ": 0
+   },
+   "corpus_pos_counts": {
+    "NOUN": 50,
+    "VERB": 8,
+    "ADJ": 10
+   },
+   "corpus_count": 68
+  },
+  {
+   "lemma": "video",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 363,
+   "zipf": 5.43,
+   "synsets": {
+    "NOUN": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 30
+   },
+   "corpus_count": 30
+  },
+  {
+   "lemma": "young",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 364,
+   "zipf": 5.43,
+   "synsets": {
+    "ADJ": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 5,
+    "ADJ": 85
+   },
+   "corpus_count": 90
+  },
+  {
+   "lemma": "ago",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 365,
+   "zipf": 5.42,
+   "synsets": {
+    "ADV": 1
+   },
+   "corpus_pos_counts": {
+    "ADV": 36
+   },
+   "corpus_count": 36
+  },
+  {
+   "lemma": "social",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 367,
+   "zipf": 5.42,
+   "synsets": {
+    "ADJ": 6
+   },
+   "corpus_pos_counts": {
+    "ADJ": 94
+   },
+   "corpus_count": 94
+  },
+  {
+   "lemma": "talk",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 368,
+   "zipf": 5.42,
+   "synsets": {
+    "NOUN": 5,
+    "VERB": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 6,
+    "VERB": 15
+   },
+   "corpus_count": 21
+  },
+  {
+   "lemma": "court",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 370,
+   "zipf": 5.41,
+   "synsets": {
+    "NOUN": 11
+   },
+   "corpus_pos_counts": {
+    "NOUN": 69
+   },
+   "corpus_count": 69
+  },
+  {
+   "lemma": "fact",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 371,
+   "zipf": 5.41,
+   "synsets": {
+    "NOUN": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 27
+   },
+   "corpus_count": 27
+  },
+  {
+   "lemma": "guy",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 373,
+   "zipf": 5.4,
+   "synsets": {
+    "NOUN": 3,
+    "VERB": 2
+   },
+   "corpus_pos_counts": {
+    "NOUN": 2
+   },
+   "corpus_count": 2
+  },
+  {
+   "lemma": "hand",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 375,
+   "zipf": 5.41,
+   "synsets": {
+    "NOUN": 14
+   },
+   "corpus_pos_counts": {
+    "NOUN": 73,
+    "VERB": 4
+   },
+   "corpus_count": 77
+  },
+  {
+   "lemma": "level",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 377,
+   "zipf": 5.41,
+   "synsets": {
+    "NOUN": 8
+   },
+   "corpus_pos_counts": {
+    "NOUN": 147
+   },
+   "corpus_count": 147
+  },
+  {
+   "lemma": "mind",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 378,
+   "zipf": 5.41,
+   "synsets": {
+    "NOUN": 7,
+    "VERB": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 12,
+    "VERB": 5
+   },
+   "corpus_count": 17
+  },
+  {
+   "lemma": "often",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 379,
+   "zipf": 5.41,
+   "synsets": {
+    "ADV": 3
+   },
+   "corpus_pos_counts": {
+    "ADV": 261
+   },
+   "corpus_count": 261
+  },
+  {
+   "lemma": "single",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 380,
+   "zipf": 5.41,
+   "synsets": {
+    "ADJ": 7
+   },
+   "corpus_pos_counts": {
+    "VERB": 1,
+    "ADJ": 51,
+    "ADV": 1
+   },
+   "corpus_count": 53
+  },
+  {
+   "lemma": "become",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 381,
+   "zipf": 5.4,
+   "synsets": {
+    "VERB": 4
+   },
+   "corpus_pos_counts": {
+    "VERB": 259
+   },
+   "corpus_count": 259
+  },
+  {
+   "lemma": "body",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 382,
+   "zipf": 5.4,
+   "synsets": {
+    "NOUN": 11
+   },
+   "corpus_pos_counts": {
+    "NOUN": 77
+   },
+   "corpus_count": 77
+  },
+  {
+   "lemma": "control",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 384,
+   "zipf": 5.4,
+   "synsets": {
+    "NOUN": 11,
+    "VERB": 8
+   },
+   "corpus_pos_counts": {
+    "NOUN": 65,
+    "VERB": 30
+   },
+   "corpus_count": 95
+  },
+  {
+   "lemma": "death",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 385,
+   "zipf": 5.4,
+   "synsets": {
+    "NOUN": 8
+   },
+   "corpus_pos_counts": {
+    "NOUN": 96
+   },
+   "corpus_count": 96
+  },
+  {
+   "lemma": "food",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 386,
+   "zipf": 5.4,
+   "synsets": {
+    "NOUN": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 66
+   },
+   "corpus_count": 66
+  },
+  {
+   "lemma": "hour",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 388,
+   "zipf": 5.18,
+   "synsets": {
+    "NOUN": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 47
+   },
+   "corpus_count": 47
+  },
+  {
+   "lemma": "office",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 389,
+   "zipf": 5.4,
+   "synsets": {
+    "NOUN": 7
+   },
+   "corpus_pos_counts": {
+    "NOUN": 16
+   },
+   "corpus_count": 16
+  },
+  {
+   "lemma": "pay",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 390,
+   "zipf": 5.4,
+   "synsets": {
+    "VERB": 11
+   },
+   "corpus_pos_counts": {
+    "NOUN": 2,
+    "VERB": 48
+   },
+   "corpus_count": 50
+  },
+  {
+   "lemma": "problem",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 391,
+   "zipf": 5.4,
+   "synsets": {
+    "NOUN": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 105
+   },
+   "corpus_count": 105
+  },
+  {
+   "lemma": "south",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "ADJ",
+    "ADV"
+   ],
+   "wordfreq_rank": 392,
+   "zipf": 5.4,
+   "synsets": {
+    "NOUN": 5,
+    "ADJ": 1,
+    "ADV": 1
+   },
+   "corpus_pos_counts": {
+    "NOUN": 11,
+    "ADJ": 11,
+    "ADV": 9
+   },
+   "corpus_count": 31
+  },
+  {
+   "lemma": "true",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 393,
+   "zipf": 5.4,
+   "synsets": {
+    "ADJ": 12
+   },
+   "corpus_pos_counts": {
+    "ADJ": 23
+   },
+   "corpus_count": 23
+  },
+  {
+   "lemma": "almost",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 395,
+   "zipf": 5.39,
+   "synsets": {
+    "ADV": 1
+   },
+   "corpus_pos_counts": {
+    "ADV": 65
+   },
+   "corpus_count": 65
+  },
+  {
+   "lemma": "history",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 397,
+   "zipf": 5.39,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 74
+   },
+   "corpus_count": 74
+  },
+  {
+   "lemma": "large",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 399,
+   "zipf": 5.39,
+   "synsets": {
+    "ADJ": 7
+   },
+   "corpus_pos_counts": {
+    "ADJ": 237
+   },
+   "corpus_count": 237
+  },
+  {
+   "lemma": "lose",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 400,
+   "zipf": 5.08,
+   "synsets": {
+    "VERB": 11
+   },
+   "corpus_pos_counts": {
+    "VERB": 57
+   },
+   "corpus_count": 57
+  },
+  {
+   "lemma": "research",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 402,
+   "zipf": 5.39,
+   "synsets": {
+    "NOUN": 2
+   },
+   "corpus_pos_counts": {
+    "NOUN": 52,
+    "VERB": 1
+   },
+   "corpus_count": 53
+  },
+  {
+   "lemma": "room",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 403,
+   "zipf": 5.39,
+   "synsets": {
+    "NOUN": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 18
+   },
+   "corpus_count": 18
+  },
+  {
+   "lemma": "university",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 407,
+   "zipf": 5.39,
+   "synsets": {
+    "NOUN": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 11
+   },
+   "corpus_count": 11
+  },
+  {
+   "lemma": "win",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 408,
+   "zipf": 5.39,
+   "synsets": {
+    "NOUN": 2,
+    "VERB": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 10,
+    "VERB": 57
+   },
+   "corpus_count": 67
+  },
+  {
+   "lemma": "wrong",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 409,
+   "zipf": 5.39,
+   "synsets": {
+    "ADJ": 9
+   },
+   "corpus_pos_counts": {
+    "ADJ": 13
+   },
+   "corpus_count": 13
+  },
+  {
+   "lemma": "girl",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 413,
+   "zipf": 5.38,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 10
+   },
+   "corpus_count": 10
+  },
+  {
+   "lemma": "matter",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 415,
+   "zipf": 5.38,
+   "synsets": {
+    "NOUN": 6,
+    "VERB": 1
+   },
+   "corpus_pos_counts": {
+    "NOUN": 31,
+    "VERB": 11
+   },
+   "corpus_count": 42
+  },
+  {
+   "lemma": "pretty",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 416,
+   "zipf": 5.38,
+   "synsets": {
+    "ADV": 1
+   },
+   "corpus_pos_counts": {
+    "ADV": 6
+   },
+   "corpus_count": 6
+  },
+  {
+   "lemma": "remember",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 417,
+   "zipf": 5.38,
+   "synsets": {
+    "VERB": 8
+   },
+   "corpus_pos_counts": {
+    "VERB": 12
+   },
+   "corpus_count": 12
+  },
+  {
+   "lemma": "air",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 418,
+   "zipf": 5.37,
+   "synsets": {
+    "NOUN": 9
+   },
+   "corpus_pos_counts": {
+    "NOUN": 52,
+    "VERB": 1
+   },
+   "corpus_count": 53
+  },
+  {
+   "lemma": "bit",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 419,
+   "zipf": 5.37,
+   "synsets": {
+    "NOUN": 11
+   },
+   "corpus_pos_counts": {
+    "NOUN": 22,
+    "VERB": 1
+   },
+   "corpus_count": 23
+  },
+  {
+   "lemma": "hit",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 421,
+   "zipf": 5.37,
+   "synsets": {
+    "NOUN": 7,
+    "VERB": 17
+   },
+   "corpus_pos_counts": {
+    "NOUN": 3,
+    "VERB": 9
+   },
+   "corpus_count": 12
+  },
+  {
+   "lemma": "nice",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 423,
+   "zipf": 5.37,
+   "synsets": {
+    "ADJ": 5
+   },
+   "corpus_pos_counts": {
+    "ADJ": 5
+   },
+   "corpus_count": 5
+  },
+  {
+   "lemma": "probably",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 425,
+   "zipf": 5.37,
+   "synsets": {
+    "ADV": 2
+   },
+   "corpus_pos_counts": {
+    "ADV": 45
+   },
+   "corpus_count": 45
+  },
+  {
+   "lemma": "understand",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 427,
+   "zipf": 5.37,
+   "synsets": {
+    "VERB": 5
+   },
+   "corpus_pos_counts": {
+    "VERB": 35
+   },
+   "corpus_count": 35
+  },
+  {
+   "lemma": "class",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 430,
+   "zipf": 5.36,
+   "synsets": {
+    "NOUN": 8
+   },
+   "corpus_pos_counts": {
+    "NOUN": 58,
+    "VERB": 2
+   },
+   "corpus_count": 60
+  },
+  {
+   "lemma": "close",
+   "class": "content",
+   "pos": [
+    "VERB",
+    "ADJ",
+    "ADV"
+   ],
+   "wordfreq_rank": 431,
+   "zipf": 5.36,
+   "synsets": {
+    "VERB": 17,
+    "ADJ": 15,
+    "ADV": 2
+   },
+   "corpus_pos_counts": {
+    "VERB": 22,
+    "ADJ": 33,
+    "ADV": 11
+   },
+   "corpus_count": 66
+  },
+  {
+   "lemma": "idea",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 434,
+   "zipf": 5.36,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 122
+   },
+   "corpus_count": 122
+  },
+  {
+   "lemma": "international",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 435,
+   "zipf": 5.36,
+   "synsets": {
+    "ADJ": 2
+   },
+   "corpus_pos_counts": {
+    "ADJ": 44
+   },
+   "corpus_count": 44
+  },
+  {
+   "lemma": "past",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "ADJ"
+   ],
+   "wordfreq_rank": 437,
+   "zipf": 5.36,
+   "synsets": {
+    "NOUN": 3,
+    "ADJ": 2
+   },
+   "corpus_pos_counts": {
+    "NOUN": 11,
+    "ADJ": 14
+   },
+   "corpus_count": 25
+  },
+  {
+   "lemma": "possible",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 438,
+   "zipf": 5.36,
+   "synsets": {
+    "ADJ": 2
+   },
+   "corpus_pos_counts": {
+    "ADJ": 70
+   },
+   "corpus_count": 70
+  },
+  {
+   "lemma": "cause",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 441,
+   "zipf": 5.35,
+   "synsets": {
+    "NOUN": 5,
+    "VERB": 2
+   },
+   "corpus_pos_counts": {
+    "NOUN": 17,
+    "VERB": 108
+   },
+   "corpus_count": 125
+  },
+  {
+   "lemma": "due",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "ADJ"
+   ],
+   "wordfreq_rank": 442,
+   "zipf": 5.35,
+   "synsets": {
+    "NOUN": 2,
+    "ADJ": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 5,
+    "ADJ": 23
+   },
+   "corpus_count": 28
+  },
+  {
+   "lemma": "happy",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 443,
+   "zipf": 5.35,
+   "synsets": {
+    "ADJ": 4
+   },
+   "corpus_pos_counts": {
+    "ADJ": 6
+   },
+   "corpus_count": 6
+  },
+  {
+   "lemma": "human",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "ADJ"
+   ],
+   "wordfreq_rank": 444,
+   "zipf": 5.35,
+   "synsets": {
+    "NOUN": 1,
+    "ADJ": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 47,
+    "ADJ": 77
+   },
+   "corpus_count": 124
+  },
+  {
+   "lemma": "member",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 445,
+   "zipf": 5.18,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 80
+   },
+   "corpus_count": 80
+  },
+  {
+   "lemma": "month",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 446,
+   "zipf": 5.25,
+   "synsets": {
+    "NOUN": 2
+   },
+   "corpus_pos_counts": {
+    "NOUN": 74
+   },
+   "corpus_count": 74
+  },
+  {
+   "lemma": "move",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 447,
+   "zipf": 5.35,
+   "synsets": {
+    "NOUN": 5,
+    "VERB": 16
+   },
+   "corpus_pos_counts": {
+    "NOUN": 104,
+    "VERB": 106
+   },
+   "corpus_count": 210
+  },
+  {
+   "lemma": "question",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 448,
+   "zipf": 5.35,
+   "synsets": {
+    "NOUN": 6,
+    "VERB": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 51,
+    "VERB": 10
+   },
+   "corpus_count": 61
+  },
+  {
+   "lemma": "series",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 450,
+   "zipf": 5.35,
+   "synsets": {
+    "NOUN": 7
+   },
+   "corpus_pos_counts": {
+    "NOUN": 42
+   },
+   "corpus_count": 42
+  },
+  {
+   "lemma": "wait",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 451,
+   "zipf": 5.35,
+   "synsets": {
+    "VERB": 4
+   },
+   "corpus_pos_counts": {
+    "VERB": 9
+   },
+   "corpus_count": 9
+  },
+  {
+   "lemma": "ask",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 453,
+   "zipf": 5.34,
+   "synsets": {
+    "VERB": 7
+   },
+   "corpus_pos_counts": {
+    "NOUN": 1,
+    "VERB": 28
+   },
+   "corpus_count": 29
+  },
+  {
+   "lemma": "community",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 454,
+   "zipf": 5.34,
+   "synsets": {
+    "NOUN": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 53
+   },
+   "corpus_count": 53
+  },
+  {
+   "lemma": "late",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 456,
+   "zipf": 5.34,
+   "synsets": {
+    "ADJ": 7
+   },
+   "corpus_pos_counts": {
+    "ADJ": 117,
+    "ADV": 7
+   },
+   "corpus_count": 124
+  },
+  {
+   "lemma": "north",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "ADJ",
+    "ADV"
+   ],
+   "wordfreq_rank": 458,
+   "zipf": 5.34,
+   "synsets": {
+    "NOUN": 7,
+    "ADJ": 1,
+    "ADV": 1
+   },
+   "corpus_pos_counts": {
+    "NOUN": 19,
+    "ADJ": 6,
+    "ADV": 4
+   },
+   "corpus_count": 29
+  },
+  {
+   "lemma": "special",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 460,
+   "zipf": 5.34,
+   "synsets": {
+    "ADJ": 7
+   },
+   "corpus_pos_counts": {
+    "ADJ": 28
+   },
+   "corpus_count": 28
+  },
+  {
+   "lemma": "watch",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 461,
+   "zipf": 5.34,
+   "synsets": {
+    "VERB": 7
+   },
+   "corpus_pos_counts": {
+    "NOUN": 2,
+    "VERB": 11
+   },
+   "corpus_count": 13
+  },
+  {
+   "lemma": "future",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "ADJ"
+   ],
+   "wordfreq_rank": 466,
+   "zipf": 5.33,
+   "synsets": {
+    "NOUN": 3,
+    "ADJ": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 12,
+    "ADJ": 21
+   },
+   "corpus_count": 33
+  },
+  {
+   "lemma": "light",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "ADJ"
+   ],
+   "wordfreq_rank": 467,
+   "zipf": 5.33,
+   "synsets": {
+    "NOUN": 15,
+    "ADJ": 25
+   },
+   "corpus_pos_counts": {
+    "NOUN": 54,
+    "VERB": 3,
+    "ADJ": 72
+   },
+   "corpus_count": 129
+  },
+  {
+   "lemma": "low",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 468,
+   "zipf": 5.33,
+   "synsets": {
+    "ADJ": 10
+   },
+   "corpus_pos_counts": {
+    "NOUN": 1,
+    "ADJ": 122,
+    "ADV": 3
+   },
+   "corpus_count": 126
+  },
+  {
+   "lemma": "morning",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 470,
+   "zipf": 5.33,
+   "synsets": {
+    "NOUN": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 8,
+    "ADJ": 1
+   },
+   "corpus_count": 9
+  },
+  {
+   "lemma": "police",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 471,
+   "zipf": 5.33,
+   "synsets": {
+    "NOUN": 1
+   },
+   "corpus_pos_counts": {
+    "NOUN": 5,
+    "VERB": 2
+   },
+   "corpus_count": 7
+  },
+  {
+   "lemma": "short",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 472,
+   "zipf": 5.33,
+   "synsets": {
+    "ADJ": 11
+   },
+   "corpus_pos_counts": {
+    "NOUN": 2,
+    "ADJ": 66,
+    "ADV": 6
+   },
+   "corpus_count": 74
+  },
+  {
+   "lemma": "stay",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 473,
+   "zipf": 5.33,
+   "synsets": {
+    "VERB": 11
+   },
+   "corpus_pos_counts": {
+    "NOUN": 2,
+    "VERB": 21
+   },
+   "corpus_count": 23
+  },
+  {
+   "lemma": "age",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 475,
+   "zipf": 5.32,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 59,
+    "VERB": 4
+   },
+   "corpus_count": 63
+  },
+  {
+   "lemma": "buy",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 476,
+   "zipf": 5.32,
+   "synsets": {
+    "VERB": 5
+   },
+   "corpus_pos_counts": {
+    "VERB": 17
+   },
+   "corpus_count": 17
+  },
+  {
+   "lemma": "deal",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 477,
+   "zipf": 5.32,
+   "synsets": {
+    "NOUN": 9,
+    "VERB": 13
+   },
+   "corpus_pos_counts": {
+    "NOUN": 8,
+    "VERB": 8
+   },
+   "corpus_count": 16
+  },
+  {
+   "lemma": "rather",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 478,
+   "zipf": 5.32,
+   "synsets": {
+    "ADV": 4
+   },
+   "corpus_pos_counts": {
+    "ADV": 70
+   },
+   "corpus_count": 70
+  },
+  {
+   "lemma": "reason",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 479,
+   "zipf": 5.32,
+   "synsets": {
+    "NOUN": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 34,
+    "VERB": 1
+   },
+   "corpus_count": 35
+  },
+  {
+   "lemma": "red",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 480,
+   "zipf": 5.32,
+   "synsets": {
+    "ADJ": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 2,
+    "ADJ": 28
+   },
+   "corpus_count": 30
+  },
+  {
+   "lemma": "report",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 481,
+   "zipf": 5.32,
+   "synsets": {
+    "NOUN": 7,
+    "VERB": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 19,
+    "VERB": 31
+   },
+   "corpus_count": 50
+  },
+  {
+   "lemma": "soon",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 482,
+   "zipf": 5.32,
+   "synsets": {
+    "ADV": 1
+   },
+   "corpus_pos_counts": {
+    "ADV": 17
+   },
+   "corpus_count": 17
+  },
+  {
+   "lemma": "turn",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 484,
+   "zipf": 5.32,
+   "synsets": {
+    "NOUN": 12,
+    "VERB": 26
+   },
+   "corpus_pos_counts": {
+    "NOUN": 28,
+    "VERB": 35
+   },
+   "corpus_count": 63
+  },
+  {
+   "lemma": "check",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 487,
+   "zipf": 5.31,
+   "synsets": {
+    "NOUN": 13,
+    "VERB": 25
+   },
+   "corpus_pos_counts": {
+    "NOUN": 23,
+    "VERB": 19
+   },
+   "corpus_count": 42
+  },
+  {
+   "lemma": "development",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 488,
+   "zipf": 5.31,
+   "synsets": {
+    "NOUN": 9
+   },
+   "corpus_pos_counts": {
+    "NOUN": 87
+   },
+   "corpus_count": 87
+  },
+  {
+   "lemma": "form",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 489,
+   "zipf": 5.31,
+   "synsets": {
+    "NOUN": 16,
+    "VERB": 7
+   },
+   "corpus_pos_counts": {
+    "NOUN": 186,
+    "VERB": 101
+   },
+   "corpus_count": 287
+  },
+  {
+   "lemma": "heart",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 491,
+   "zipf": 5.31,
+   "synsets": {
+    "NOUN": 10
+   },
+   "corpus_pos_counts": {
+    "NOUN": 14
+   },
+   "corpus_count": 14
+  },
+  {
+   "lemma": "minute",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 492,
+   "zipf": 4.98,
+   "synsets": {
+    "NOUN": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 36
+   },
+   "corpus_count": 36
+  },
+  {
+   "lemma": "act",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 497,
+   "zipf": 5.3,
+   "synsets": {
+    "NOUN": 5,
+    "VERB": 10
+   },
+   "corpus_pos_counts": {
+    "NOUN": 22,
+    "VERB": 31
+   },
+   "corpus_count": 53
+  },
+  {
+   "lemma": "fire",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 501,
+   "zipf": 5.3,
+   "synsets": {
+    "NOUN": 9
+   },
+   "corpus_pos_counts": {
+    "NOUN": 9,
+    "VERB": 2
+   },
+   "corpus_count": 11
+  },
+  {
+   "lemma": "fun",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 502,
+   "zipf": 5.3,
+   "synsets": {
+    "NOUN": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 4,
+    "ADJ": 2
+   },
+   "corpus_count": 6
+  },
+  {
+   "lemma": "major",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 504,
+   "zipf": 5.3,
+   "synsets": {
+    "ADJ": 8
+   },
+   "corpus_pos_counts": {
+    "NOUN": 5,
+    "VERB": 1,
+    "ADJ": 106
+   },
+   "corpus_count": 112
+  },
+  {
+   "lemma": "phone",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 506,
+   "zipf": 5.3,
+   "synsets": {
+    "NOUN": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 12
+   },
+   "corpus_count": 12
+  },
+  {
+   "lemma": "player",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 507,
+   "zipf": 5.19,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 264
+   },
+   "corpus_count": 264
+  },
+  {
+   "lemma": "art",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 508,
+   "zipf": 5.29,
+   "synsets": {
+    "NOUN": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 44
+   },
+   "corpus_count": 44
+  },
+  {
+   "lemma": "building",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 510,
+   "zipf": 5.29,
+   "synsets": {
+    "NOUN": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 15
+   },
+   "corpus_count": 15
+  },
+  {
+   "lemma": "easy",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 511,
+   "zipf": 5.29,
+   "synsets": {
+    "ADJ": 12
+   },
+   "corpus_pos_counts": {
+    "ADJ": 48
+   },
+   "corpus_count": 48
+  },
+  {
+   "lemma": "market",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 513,
+   "zipf": 5.29,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 37,
+    "VERB": 3
+   },
+   "corpus_count": 40
+  },
+  {
+   "lemma": "near",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 514,
+   "zipf": 5.29,
+   "synsets": {
+    "ADJ": 6
+   },
+   "corpus_pos_counts": {
+    "VERB": 1,
+    "ADJ": 6,
+    "ADV": 2
+   },
+   "corpus_count": 9
+  },
+  {
+   "lemma": "plan",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 516,
+   "zipf": 5.29,
+   "synsets": {
+    "NOUN": 3,
+    "VERB": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 21,
+    "VERB": 22
+   },
+   "corpus_count": 43
+  },
+  {
+   "lemma": "political",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 517,
+   "zipf": 5.29,
+   "synsets": {
+    "ADJ": 3
+   },
+   "corpus_pos_counts": {
+    "ADJ": 175
+   },
+   "corpus_count": 175
+  },
+  {
+   "lemma": "quite",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 518,
+   "zipf": 5.29,
+   "synsets": {
+    "ADV": 4
+   },
+   "corpus_pos_counts": {
+    "ADV": 22
+   },
+   "corpus_count": 22
+  },
+  {
+   "lemma": "west",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "ADJ"
+   ],
+   "wordfreq_rank": 521,
+   "zipf": 5.29,
+   "synsets": {
+    "NOUN": 8,
+    "ADJ": 1
+   },
+   "corpus_pos_counts": {
+    "NOUN": 8,
+    "ADJ": 3,
+    "ADV": 2
+   },
+   "corpus_count": 13
+  },
+  {
+   "lemma": "available",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 524,
+   "zipf": 5.28,
+   "synsets": {
+    "ADJ": 3
+   },
+   "corpus_pos_counts": {
+    "ADJ": 49
+   },
+   "corpus_count": 49
+  },
+  {
+   "lemma": "education",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 526,
+   "zipf": 5.28,
+   "synsets": {
+    "NOUN": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 34
+   },
+   "corpus_count": 34
+  },
+  {
+   "lemma": "final",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 527,
+   "zipf": 5.28,
+   "synsets": {
+    "ADJ": 3
+   },
+   "corpus_pos_counts": {
+    "ADJ": 28
+   },
+   "corpus_count": 28
+  },
+  {
+   "lemma": "former",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 528,
+   "zipf": 5.28,
+   "synsets": {
+    "ADJ": 4
+   },
+   "corpus_pos_counts": {
+    "ADJ": 45
+   },
+   "corpus_count": 45
+  },
+  {
+   "lemma": "front",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "ADJ"
+   ],
+   "wordfreq_rank": 529,
+   "zipf": 5.28,
+   "synsets": {
+    "NOUN": 10,
+    "ADJ": 1
+   },
+   "corpus_pos_counts": {
+    "NOUN": 14,
+    "ADJ": 18
+   },
+   "corpus_count": 32
+  },
+  {
+   "lemma": "kid",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 530,
+   "zipf": 4.99,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 5,
+    "ADJ": 1
+   },
+   "corpus_count": 6
+  },
+  {
+   "lemma": "list",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 531,
+   "zipf": 5.28,
+   "synsets": {
+    "NOUN": 2,
+    "VERB": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 112,
+    "VERB": 17
+   },
+   "corpus_count": 129
+  },
+  {
+   "lemma": "ready",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 532,
+   "zipf": 5.28,
+   "synsets": {
+    "ADJ": 5
+   },
+   "corpus_pos_counts": {
+    "ADJ": 6,
+    "ADV": 1
+   },
+   "corpus_count": 7
+  },
+  {
+   "lemma": "sometimes",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 533,
+   "zipf": 5.28,
+   "synsets": {
+    "ADV": 1
+   },
+   "corpus_pos_counts": {
+    "ADV": 89
+   },
+   "corpus_count": 89
+  },
+  {
+   "lemma": "son",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 534,
+   "zipf": 5.28,
+   "synsets": {
+    "NOUN": 2
+   },
+   "corpus_pos_counts": {
+    "NOUN": 25
+   },
+   "corpus_count": 25
+  },
+  {
+   "lemma": "street",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 535,
+   "zipf": 5.28,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 4
+   },
+   "corpus_count": 4
+  },
+  {
+   "lemma": "bring",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 537,
+   "zipf": 5.27,
+   "synsets": {
+    "VERB": 11
+   },
+   "corpus_pos_counts": {
+    "VERB": 49
+   },
+   "corpus_count": 49
+  },
+  {
+   "lemma": "college",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 538,
+   "zipf": 5.27,
+   "synsets": {
+    "NOUN": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 25
+   },
+   "corpus_count": 25
+  },
+  {
+   "lemma": "current",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 539,
+   "zipf": 5.27,
+   "synsets": {
+    "ADJ": 1
+   },
+   "corpus_pos_counts": {
+    "NOUN": 3,
+    "ADJ": 41
+   },
+   "corpus_count": 44
+  },
+  {
+   "lemma": "example",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 540,
+   "zipf": 5.27,
+   "synsets": {
+    "NOUN": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 201
+   },
+   "corpus_count": 201
+  },
+  {
+   "lemma": "experience",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 541,
+   "zipf": 5.27,
+   "synsets": {
+    "NOUN": 3,
+    "VERB": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 31,
+    "VERB": 20
+   },
+   "corpus_count": 51
+  },
+  {
+   "lemma": "hear",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 542,
+   "zipf": 5.23,
+   "synsets": {
+    "VERB": 5
+   },
+   "corpus_pos_counts": {
+    "VERB": 36
+   },
+   "corpus_count": 36
+  },
+  {
+   "lemma": "meet",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 544,
+   "zipf": 5.27,
+   "synsets": {
+    "VERB": 13
+   },
+   "corpus_pos_counts": {
+    "VERB": 36
+   },
+   "corpus_count": 36
+  },
+  {
+   "lemma": "program",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 545,
+   "zipf": 5.27,
+   "synsets": {
+    "NOUN": 8
+   },
+   "corpus_pos_counts": {
+    "NOUN": 46,
+    "VERB": 1
+   },
+   "corpus_count": 47
+  },
+  {
+   "lemma": "type",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 546,
+   "zipf": 5.27,
+   "synsets": {
+    "NOUN": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 125,
+    "VERB": 7
+   },
+   "corpus_count": 132
+  },
+  {
+   "lemma": "baby",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 547,
+   "zipf": 5.26,
+   "synsets": {
+    "NOUN": 7
+   },
+   "corpus_pos_counts": {},
+   "corpus_count": 0
+  },
+  {
+   "lemma": "chance",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 548,
+   "zipf": 5.26,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 20,
+    "VERB": 1
+   },
+   "corpus_count": 21
+  },
+  {
+   "lemma": "father",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 549,
+   "zipf": 5.26,
+   "synsets": {
+    "NOUN": 8
+   },
+   "corpus_pos_counts": {
+    "NOUN": 20,
+    "VERB": 1
+   },
+   "corpus_count": 21
+  },
+  {
+   "lemma": "process",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 551,
+   "zipf": 5.26,
+   "synsets": {
+    "NOUN": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 125,
+    "VERB": 5
+   },
+   "corpus_count": 130
+  },
+  {
+   "lemma": "song",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 553,
+   "zipf": 5.26,
+   "synsets": {
+    "NOUN": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 25,
+    "ADJ": 2
+   },
+   "corpus_count": 27
+  },
+  {
+   "lemma": "study",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 554,
+   "zipf": 5.26,
+   "synsets": {
+    "NOUN": 10,
+    "VERB": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 96,
+    "VERB": 45
+   },
+   "corpus_count": 141
+  },
+  {
+   "lemma": "word",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 555,
+   "zipf": 5.26,
+   "synsets": {
+    "NOUN": 10
+   },
+   "corpus_pos_counts": {
+    "NOUN": 171
+   },
+   "corpus_count": 171
+  },
+  {
+   "lemma": "action",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 557,
+   "zipf": 5.25,
+   "synsets": {
+    "NOUN": 10
+   },
+   "corpus_pos_counts": {
+    "NOUN": 42
+   },
+   "corpus_count": 42
+  },
+  {
+   "lemma": "clear",
+   "class": "content",
+   "pos": [
+    "VERB",
+    "ADJ"
+   ],
+   "wordfreq_rank": 558,
+   "zipf": 5.25,
+   "synsets": {
+    "VERB": 24,
+    "ADJ": 17
+   },
+   "corpus_pos_counts": {
+    "VERB": 6,
+    "ADJ": 14
+   },
+   "corpus_count": 20
+  },
+  {
+   "lemma": "outside",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "ADJ",
+    "ADV"
+   ],
+   "wordfreq_rank": 563,
+   "zipf": 5.25,
+   "synsets": {
+    "NOUN": 2,
+    "ADJ": 10,
+    "ADV": 2
+   },
+   "corpus_pos_counts": {
+    "NOUN": 6,
+    "ADJ": 3,
+    "ADV": 5
+   },
+   "corpus_count": 14
+  },
+  {
+   "lemma": "student",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 565,
+   "zipf": 5.02,
+   "synsets": {
+    "NOUN": 2
+   },
+   "corpus_pos_counts": {
+    "NOUN": 20
+   },
+   "corpus_count": 20
+  },
+  {
+   "lemma": "board",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 567,
+   "zipf": 5.24,
+   "synsets": {
+    "NOUN": 9
+   },
+   "corpus_pos_counts": {
+    "NOUN": 28
+   },
+   "corpus_count": 28
+  },
+  {
+   "lemma": "cost",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 568,
+   "zipf": 5.24,
+   "synsets": {
+    "NOUN": 3,
+    "VERB": 2
+   },
+   "corpus_pos_counts": {
+    "NOUN": 25,
+    "VERB": 11
+   },
+   "corpus_count": 36
+  },
+  {
+   "lemma": "cut",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 569,
+   "zipf": 5.24,
+   "synsets": {
+    "NOUN": 20,
+    "VERB": 41
+   },
+   "corpus_pos_counts": {
+    "NOUN": 9,
+    "VERB": 16
+   },
+   "corpus_count": 25
+  },
+  {
+   "lemma": "field",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 571,
+   "zipf": 5.24,
+   "synsets": {
+    "NOUN": 17
+   },
+   "corpus_pos_counts": {
+    "NOUN": 57,
+    "VERB": 3
+   },
+   "corpus_count": 60
+  },
+  {
+   "lemma": "hold",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 572,
+   "zipf": 5.19,
+   "synsets": {
+    "VERB": 36
+   },
+   "corpus_pos_counts": {
+    "NOUN": 3,
+    "VERB": 105
+   },
+   "corpus_count": 108
+  },
+  {
+   "lemma": "main",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 574,
+   "zipf": 5.24,
+   "synsets": {
+    "ADJ": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 1,
+    "ADJ": 59
+   },
+   "corpus_count": 60
+  },
+  {
+   "lemma": "moment",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 575,
+   "zipf": 5.24,
+   "synsets": {
+    "NOUN": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 8
+   },
+   "corpus_count": 8
+  },
+  {
+   "lemma": "mother",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 576,
+   "zipf": 5.24,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 27
+   },
+   "corpus_count": 27
+  },
+  {
+   "lemma": "road",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 577,
+   "zipf": 5.24,
+   "synsets": {
+    "NOUN": 2
+   },
+   "corpus_pos_counts": {
+    "NOUN": 17
+   },
+   "corpus_count": 17
+  },
+  {
+   "lemma": "seem",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 578,
+   "zipf": 5.08,
+   "synsets": {
+    "VERB": 4
+   },
+   "corpus_pos_counts": {
+    "VERB": 69
+   },
+   "corpus_count": 69
+  },
+  {
+   "lemma": "town",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 580,
+   "zipf": 5.24,
+   "synsets": {
+    "NOUN": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 22
+   },
+   "corpus_count": 22
+  },
+  {
+   "lemma": "department",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 583,
+   "zipf": 5.23,
+   "synsets": {
+    "NOUN": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 3
+   },
+   "corpus_count": 3
+  },
+  {
+   "lemma": "energy",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 584,
+   "zipf": 5.23,
+   "synsets": {
+    "NOUN": 7
+   },
+   "corpus_pos_counts": {
+    "NOUN": 108
+   },
+   "corpus_count": 108
+  },
+  {
+   "lemma": "fight",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 585,
+   "zipf": 5.23,
+   "synsets": {
+    "VERB": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 2,
+    "VERB": 14
+   },
+   "corpus_count": 16
+  },
+  {
+   "lemma": "fine",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "ADJ",
+    "ADV"
+   ],
+   "wordfreq_rank": 586,
+   "zipf": 5.23,
+   "synsets": {
+    "NOUN": 1,
+    "ADJ": 6,
+    "ADV": 2
+   },
+   "corpus_pos_counts": {
+    "NOUN": 3,
+    "ADJ": 18,
+    "ADV": 3
+   },
+   "corpus_count": 24
+  },
+  {
+   "lemma": "force",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 587,
+   "zipf": 5.23,
+   "synsets": {
+    "NOUN": 10,
+    "VERB": 9
+   },
+   "corpus_pos_counts": {
+    "NOUN": 49,
+    "VERB": 40
+   },
+   "corpus_count": 89
+  },
+  {
+   "lemma": "issue",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 589,
+   "zipf": 5.23,
+   "synsets": {
+    "NOUN": 11,
+    "VERB": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 36,
+    "VERB": 22
+   },
+   "corpus_count": 58
+  },
+  {
+   "lemma": "price",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 592,
+   "zipf": 5.23,
+   "synsets": {
+    "NOUN": 7
+   },
+   "corpus_pos_counts": {
+    "NOUN": 44,
+    "VERB": 2
+   },
+   "corpus_count": 46
+  },
+  {
+   "lemma": "rest",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 594,
+   "zipf": 5.23,
+   "synsets": {
+    "NOUN": 7,
+    "VERB": 11
+   },
+   "corpus_pos_counts": {
+    "NOUN": 20,
+    "VERB": 9
+   },
+   "corpus_count": 29
+  },
+  {
+   "lemma": "result",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 595,
+   "zipf": 5.18,
+   "synsets": {
+    "NOUN": 4,
+    "VERB": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 61,
+    "VERB": 89
+   },
+   "corpus_count": 150
+  },
+  {
+   "lemma": "space",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 598,
+   "zipf": 5.23,
+   "synsets": {
+    "NOUN": 9
+   },
+   "corpus_pos_counts": {
+    "NOUN": 35
+   },
+   "corpus_count": 35
+  },
+  {
+   "lemma": "summer",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 599,
+   "zipf": 5.23,
+   "synsets": {
+    "NOUN": 2
+   },
+   "corpus_pos_counts": {
+    "NOUN": 21
+   },
+   "corpus_count": 21
+  },
+  {
+   "lemma": "term",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 600,
+   "zipf": 5.23,
+   "synsets": {
+    "NOUN": 7
+   },
+   "corpus_pos_counts": {
+    "NOUN": 118,
+    "VERB": 10
+   },
+   "corpus_count": 128
+  },
+  {
+   "lemma": "wife",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 601,
+   "zipf": 5.23,
+   "synsets": {
+    "NOUN": 1
+   },
+   "corpus_pos_counts": {
+    "NOUN": 12
+   },
+   "corpus_count": 12
+  },
+  {
+   "lemma": "beautiful",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 604,
+   "zipf": 5.22,
+   "synsets": {
+    "ADJ": 2
+   },
+   "corpus_pos_counts": {
+    "ADJ": 1
+   },
+   "corpus_count": 1
+  },
+  {
+   "lemma": "date",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 605,
+   "zipf": 5.22,
+   "synsets": {
+    "NOUN": 8,
+    "VERB": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 30,
+    "VERB": 18
+   },
+   "corpus_count": 48
+  },
+  {
+   "lemma": "kill",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 607,
+   "zipf": 5.09,
+   "synsets": {
+    "VERB": 15
+   },
+   "corpus_pos_counts": {
+    "NOUN": 1,
+    "VERB": 25
+   },
+   "corpus_count": 26
+  },
+  {
+   "lemma": "land",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 608,
+   "zipf": 5.22,
+   "synsets": {
+    "NOUN": 11,
+    "VERB": 7
+   },
+   "corpus_pos_counts": {
+    "NOUN": 71,
+    "VERB": 12
+   },
+   "corpus_count": 83
+  },
+  {
+   "lemma": "miss",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 609,
+   "zipf": 5.22,
+   "synsets": {
+    "VERB": 9
+   },
+   "corpus_pos_counts": {
+    "VERB": 18
+   },
+   "corpus_count": 18
+  },
+  {
+   "lemma": "project",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 610,
+   "zipf": 5.22,
+   "synsets": {
+    "NOUN": 2,
+    "VERB": 12
+   },
+   "corpus_pos_counts": {
+    "NOUN": 54,
+    "VERB": 6
+   },
+   "corpus_count": 60
+  },
+  {
+   "lemma": "shot",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 612,
+   "zipf": 5.22,
+   "synsets": {
+    "NOUN": 17
+   },
+   "corpus_pos_counts": {
+    "NOUN": 64
+   },
+   "corpus_count": 64
+  },
+  {
+   "lemma": "site",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 613,
+   "zipf": 5.22,
+   "synsets": {
+    "NOUN": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 60
+   },
+   "corpus_count": 60
+  },
+  {
+   "lemma": "strong",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 614,
+   "zipf": 5.22,
+   "synsets": {
+    "ADJ": 10
+   },
+   "corpus_pos_counts": {
+    "ADJ": 58
+   },
+   "corpus_count": 58
+  },
+  {
+   "lemma": "account",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 616,
+   "zipf": 5.21,
+   "synsets": {
+    "NOUN": 10,
+    "VERB": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 31,
+    "VERB": 19
+   },
+   "corpus_count": 50
+  },
+  {
+   "lemma": "eye",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 619,
+   "zipf": 5.02,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 7
+   },
+   "corpus_count": 7
+  },
+  {
+   "lemma": "parent",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 622,
+   "zipf": 4.57,
+   "synsets": {
+    "NOUN": 2
+   },
+   "corpus_pos_counts": {
+    "NOUN": 12
+   },
+   "corpus_count": 12
+  },
+  {
+   "lemma": "period",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 623,
+   "zipf": 5.21,
+   "synsets": {
+    "NOUN": 7
+   },
+   "corpus_pos_counts": {
+    "NOUN": 137
+   },
+   "corpus_count": 137
+  },
+  {
+   "lemma": "position",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 624,
+   "zipf": 5.21,
+   "synsets": {
+    "NOUN": 16
+   },
+   "corpus_pos_counts": {
+    "NOUN": 84,
+    "VERB": 3
+   },
+   "corpus_count": 87
+  },
+  {
+   "lemma": "record",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 625,
+   "zipf": 5.21,
+   "synsets": {
+    "NOUN": 8,
+    "VERB": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 59,
+    "VERB": 73,
+    "ADJ": 1
+   },
+   "corpus_count": 133
+  },
+  {
+   "lemma": "similar",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 626,
+   "zipf": 5.21,
+   "synsets": {
+    "ADJ": 5
+   },
+   "corpus_pos_counts": {
+    "ADJ": 75
+   },
+   "corpus_count": 75
+  },
+  {
+   "lemma": "total",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "ADJ"
+   ],
+   "wordfreq_rank": 627,
+   "zipf": 5.21,
+   "synsets": {
+    "NOUN": 2,
+    "ADJ": 2
+   },
+   "corpus_pos_counts": {
+    "NOUN": 12,
+    "VERB": 3,
+    "ADJ": 24
+   },
+   "corpus_count": 39
+  },
+  {
+   "lemma": "club",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 630,
+   "zipf": 5.2,
+   "synsets": {
+    "NOUN": 7
+   },
+   "corpus_pos_counts": {
+    "NOUN": 26
+   },
+   "corpus_count": 26
+  },
+  {
+   "lemma": "common",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 631,
+   "zipf": 5.2,
+   "synsets": {
+    "ADJ": 9
+   },
+   "corpus_pos_counts": {
+    "ADJ": 142
+   },
+   "corpus_count": 142
+  },
+  {
+   "lemma": "die",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 632,
+   "zipf": 5.07,
+   "synsets": {
+    "VERB": 11
+   },
+   "corpus_pos_counts": {
+    "NOUN": 2,
+    "VERB": 58
+   },
+   "corpus_count": 60
+  },
+  {
+   "lemma": "film",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 633,
+   "zipf": 5.2,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 19,
+    "VERB": 1
+   },
+   "corpus_count": 20
+  },
+  {
+   "lemma": "happen",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 634,
+   "zipf": 5.19,
+   "synsets": {
+    "VERB": 5
+   },
+   "corpus_pos_counts": {
+    "VERB": 21
+   },
+   "corpus_count": 21
+  },
+  {
+   "lemma": "lead",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 636,
+   "zipf": 5.2,
+   "synsets": {
+    "VERB": 14
+   },
+   "corpus_pos_counts": {
+    "NOUN": 7,
+    "VERB": 192,
+    "ADJ": 4
+   },
+   "corpus_count": 203
+  },
+  {
+   "lemma": "likely",
+   "class": "content",
+   "pos": [
+    "ADJ",
+    "ADV"
+   ],
+   "wordfreq_rank": 637,
+   "zipf": 5.2,
+   "synsets": {
+    "ADJ": 4,
+    "ADV": 1
+   },
+   "corpus_pos_counts": {
+    "ADJ": 37,
+    "ADV": 17
+   },
+   "corpus_count": 54
+  },
+  {
+   "lemma": "military",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "ADJ"
+   ],
+   "wordfreq_rank": 638,
+   "zipf": 5.2,
+   "synsets": {
+    "NOUN": 1,
+    "ADJ": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 22,
+    "ADJ": 41
+   },
+   "corpus_count": 63
+  },
+  {
+   "lemma": "perfect",
+   "class": "content",
+   "pos": [
+    "VERB",
+    "ADJ"
+   ],
+   "wordfreq_rank": 639,
+   "zipf": 5.2,
+   "synsets": {
+    "VERB": 1,
+    "ADJ": 3
+   },
+   "corpus_pos_counts": {
+    "VERB": 3,
+    "ADJ": 12
+   },
+   "corpus_count": 15
+  },
+  {
+   "lemma": "personal",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 640,
+   "zipf": 5.2,
+   "synsets": {
+    "ADJ": 5
+   },
+   "corpus_pos_counts": {
+    "ADJ": 41
+   },
+   "corpus_count": 41
+  },
+  {
+   "lemma": "security",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 641,
+   "zipf": 5.2,
+   "synsets": {
+    "NOUN": 9
+   },
+   "corpus_pos_counts": {
+    "NOUN": 13
+   },
+   "corpus_count": 13
+  },
+  {
+   "lemma": "share",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 642,
+   "zipf": 5.2,
+   "synsets": {
+    "NOUN": 5,
+    "VERB": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 16,
+    "VERB": 42
+   },
+   "corpus_count": 58
+  },
+  {
+   "lemma": "center",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 649,
+   "zipf": 5.19,
+   "synsets": {
+    "NOUN": 18
+   },
+   "corpus_pos_counts": {
+    "NOUN": 37,
+    "VERB": 4
+   },
+   "corpus_count": 41
+  },
+  {
+   "lemma": "county",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 650,
+   "zipf": 5.19,
+   "synsets": {
+    "NOUN": 2
+   },
+   "corpus_pos_counts": {
+    "NOUN": 1
+   },
+   "corpus_count": 1
+  },
+  {
+   "lemma": "couple",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 651,
+   "zipf": 5.19,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 7,
+    "VERB": 1
+   },
+   "corpus_count": 8
+  },
+  {
+   "lemma": "dead",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 652,
+   "zipf": 5.19,
+   "synsets": {
+    "ADJ": 17
+   },
+   "corpus_pos_counts": {
+    "ADJ": 27
+   },
+   "corpus_count": 27
+  },
+  {
+   "lemma": "industry",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 656,
+   "zipf": 5.19,
+   "synsets": {
+    "NOUN": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 34
+   },
+   "corpus_count": 34
+  },
+  {
+   "lemma": "inside",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "ADV"
+   ],
+   "wordfreq_rank": 657,
+   "zipf": 5.19,
+   "synsets": {
+    "NOUN": 2,
+    "ADV": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 5,
+    "ADJ": 1,
+    "ADV": 5
+   },
+   "corpus_count": 11
+  },
+  {
+   "lemma": "online",
+   "class": "content",
+   "pos": [
+    "ADJ",
+    "ADV"
+   ],
+   "wordfreq_rank": 659,
+   "zipf": 5.19,
+   "synsets": {
+    "ADJ": 3,
+    "ADV": 0
+   },
+   "corpus_pos_counts": {
+    "NOUN": 2,
+    "ADJ": 43,
+    "ADV": 6
+   },
+   "corpus_count": 51
+  },
+  {
+   "lemma": "private",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 661,
+   "zipf": 5.19,
+   "synsets": {
+    "ADJ": 4
+   },
+   "corpus_pos_counts": {
+    "ADJ": 36
+   },
+   "corpus_count": 36
+  },
+  {
+   "lemma": "return",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 663,
+   "zipf": 5.19,
+   "synsets": {
+    "NOUN": 13,
+    "VERB": 16
+   },
+   "corpus_pos_counts": {
+    "NOUN": 20,
+    "VERB": 39,
+    "ADJ": 1
+   },
+   "corpus_count": 60
+  },
+  {
+   "lemma": "sense",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 665,
+   "zipf": 5.19,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 37,
+    "VERB": 1
+   },
+   "corpus_count": 38
+  },
+  {
+   "lemma": "star",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 666,
+   "zipf": 5.19,
+   "synsets": {
+    "NOUN": 8
+   },
+   "corpus_pos_counts": {
+    "NOUN": 7,
+    "VERB": 2
+   },
+   "corpus_count": 9
+  },
+  {
+   "lemma": "test",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 667,
+   "zipf": 5.19,
+   "synsets": {
+    "NOUN": 6,
+    "VERB": 7
+   },
+   "corpus_pos_counts": {
+    "NOUN": 14,
+    "VERB": 8
+   },
+   "corpus_count": 22
+  },
+  {
+   "lemma": "view",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 668,
+   "zipf": 5.19,
+   "synsets": {
+    "NOUN": 10,
+    "VERB": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 38,
+    "VERB": 19
+   },
+   "corpus_count": 57
+  },
+  {
+   "lemma": "break",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 670,
+   "zipf": 5.18,
+   "synsets": {
+    "NOUN": 16,
+    "VERB": 59
+   },
+   "corpus_pos_counts": {
+    "NOUN": 13,
+    "VERB": 44
+   },
+   "corpus_count": 57
+  },
+  {
+   "lemma": "event",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 673,
+   "zipf": 5.18,
+   "synsets": {
+    "NOUN": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 64
+   },
+   "corpus_count": 64
+  },
+  {
+   "lemma": "middle",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "ADJ"
+   ],
+   "wordfreq_rank": 678,
+   "zipf": 5.18,
+   "synsets": {
+    "NOUN": 4,
+    "ADJ": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 6,
+    "ADJ": 21
+   },
+   "corpus_count": 27
+  },
+  {
+   "lemma": "present",
+   "class": "content",
+   "pos": [
+    "VERB",
+    "ADJ"
+   ],
+   "wordfreq_rank": 680,
+   "zipf": 5.18,
+   "synsets": {
+    "VERB": 13,
+    "ADJ": 2
+   },
+   "corpus_pos_counts": {
+    "NOUN": 1,
+    "VERB": 27,
+    "ADJ": 35
+   },
+   "corpus_count": 63
+  },
+  {
+   "lemma": "sorry",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 682,
+   "zipf": 5.18,
+   "synsets": {
+    "ADJ": 4
+   },
+   "corpus_pos_counts": {
+    "ADJ": 1
+   },
+   "corpus_count": 1
+  },
+  {
+   "lemma": "training",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 684,
+   "zipf": 5.18,
+   "synsets": {
+    "NOUN": 2
+   },
+   "corpus_pos_counts": {
+    "NOUN": 14
+   },
+   "corpus_count": 14
+  },
+  {
+   "lemma": "wish",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 685,
+   "zipf": 5.18,
+   "synsets": {
+    "NOUN": 4,
+    "VERB": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 4,
+    "VERB": 9
+   },
+   "corpus_count": 13
+  },
+  {
+   "lemma": "answer",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 687,
+   "zipf": 5.17,
+   "synsets": {
+    "NOUN": 5,
+    "VERB": 10
+   },
+   "corpus_pos_counts": {
+    "NOUN": 15,
+    "VERB": 14
+   },
+   "corpus_count": 29
+  },
+  {
+   "lemma": "boy",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 688,
+   "zipf": 5.17,
+   "synsets": {
+    "NOUN": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 7
+   },
+   "corpus_count": 7
+  },
+  {
+   "lemma": "design",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 689,
+   "zipf": 5.17,
+   "synsets": {
+    "NOUN": 7,
+    "VERB": 7
+   },
+   "corpus_pos_counts": {
+    "NOUN": 25,
+    "VERB": 29
+   },
+   "corpus_count": 54
+  },
+  {
+   "lemma": "gold",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 692,
+   "zipf": 5.17,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 22,
+    "ADJ": 1
+   },
+   "corpus_count": 23
+  },
+  {
+   "lemma": "guess",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 694,
+   "zipf": 5.17,
+   "synsets": {
+    "VERB": 4
+   },
+   "corpus_pos_counts": {
+    "VERB": 6
+   },
+   "corpus_count": 6
+  },
+  {
+   "lemma": "interest",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 695,
+   "zipf": 5.17,
+   "synsets": {
+    "NOUN": 7
+   },
+   "corpus_pos_counts": {
+    "NOUN": 60,
+    "VERB": 3
+   },
+   "corpus_count": 63
+  },
+  {
+   "lemma": "learn",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 698,
+   "zipf": 5.17,
+   "synsets": {
+    "VERB": 6
+   },
+   "corpus_pos_counts": {
+    "VERB": 194
+   },
+   "corpus_count": 194
+  },
+  {
+   "lemma": "policy",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 699,
+   "zipf": 5.17,
+   "synsets": {
+    "NOUN": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 47
+   },
+   "corpus_count": 47
+  },
+  {
+   "lemma": "society",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 700,
+   "zipf": 5.17,
+   "synsets": {
+    "NOUN": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 47
+   },
+   "corpus_count": 47
+  },
+  {
+   "lemma": "add",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 701,
+   "zipf": 5.09,
+   "synsets": {
+    "VERB": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 1,
+    "VERB": 81
+   },
+   "corpus_count": 82
+  },
+  {
+   "lemma": "alone",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 703,
+   "zipf": 5.16,
+   "synsets": {
+    "ADV": 2
+   },
+   "corpus_pos_counts": {
+    "ADJ": 2,
+    "ADV": 21
+   },
+   "corpus_count": 23
+  },
+  {
+   "lemma": "average",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "ADJ"
+   ],
+   "wordfreq_rank": 704,
+   "zipf": 5.16,
+   "synsets": {
+    "NOUN": 3,
+    "ADJ": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 8,
+    "VERB": 5,
+    "ADJ": 43
+   },
+   "corpus_count": 56
+  },
+  {
+   "lemma": "bank",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 705,
+   "zipf": 5.16,
+   "synsets": {
+    "NOUN": 10
+   },
+   "corpus_pos_counts": {
+    "NOUN": 16
+   },
+   "corpus_count": 16
+  },
+  {
+   "lemma": "certain",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 707,
+   "zipf": 5.16,
+   "synsets": {
+    "ADJ": 7
+   },
+   "corpus_pos_counts": {
+    "ADJ": 63
+   },
+   "corpus_count": 63
+  },
+  {
+   "lemma": "church",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 708,
+   "zipf": 5.16,
+   "synsets": {
+    "NOUN": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 21
+   },
+   "corpus_count": 21
+  },
+  {
+   "lemma": "east",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "ADJ"
+   ],
+   "wordfreq_rank": 709,
+   "zipf": 5.16,
+   "synsets": {
+    "NOUN": 5,
+    "ADJ": 1
+   },
+   "corpus_pos_counts": {
+    "NOUN": 3,
+    "ADJ": 3,
+    "ADV": 1
+   },
+   "corpus_count": 7
+  },
+  {
+   "lemma": "hot",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 711,
+   "zipf": 5.16,
+   "synsets": {
+    "ADJ": 21
+   },
+   "corpus_pos_counts": {
+    "ADJ": 52
+   },
+   "corpus_count": 52
+  },
+  {
+   "lemma": "medical",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 714,
+   "zipf": 5.16,
+   "synsets": {
+    "ADJ": 3
+   },
+   "corpus_pos_counts": {
+    "ADJ": 9
+   },
+   "corpus_count": 9
+  },
+  {
+   "lemma": "movie",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 715,
+   "zipf": 5.16,
+   "synsets": {
+    "NOUN": 1
+   },
+   "corpus_pos_counts": {
+    "NOUN": 8
+   },
+   "corpus_count": 8
+  },
+  {
+   "lemma": "original",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 716,
+   "zipf": 5.16,
+   "synsets": {
+    "ADJ": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 3,
+    "ADJ": 32
+   },
+   "corpus_count": 35
+  },
+  {
+   "lemma": "park",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 717,
+   "zipf": 5.16,
+   "synsets": {
+    "NOUN": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 2,
+    "VERB": 1
+   },
+   "corpus_count": 3
+  },
+  {
+   "lemma": "performance",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 718,
+   "zipf": 5.16,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 49
+   },
+   "corpus_count": 49
+  },
+  {
+   "lemma": "press",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 719,
+   "zipf": 5.16,
+   "synsets": {
+    "NOUN": 9,
+    "VERB": 14
+   },
+   "corpus_pos_counts": {
+    "NOUN": 11,
+    "VERB": 14
+   },
+   "corpus_count": 25
+  },
+  {
+   "lemma": "receive",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 720,
+   "zipf": 4.85,
+   "synsets": {
+    "VERB": 13
+   },
+   "corpus_pos_counts": {
+    "VERB": 51
+   },
+   "corpus_count": 51
+  },
+  {
+   "lemma": "role",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 721,
+   "zipf": 5.16,
+   "synsets": {
+    "NOUN": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 47
+   },
+   "corpus_count": 47
+  },
+  {
+   "lemma": "send",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 722,
+   "zipf": 5.11,
+   "synsets": {
+    "VERB": 8
+   },
+   "corpus_pos_counts": {
+    "VERB": 30
+   },
+   "corpus_count": 30
+  },
+  {
+   "lemma": "worth",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "ADJ"
+   ],
+   "wordfreq_rank": 726,
+   "zipf": 5.16,
+   "synsets": {
+    "NOUN": 3,
+    "ADJ": 2
+   },
+   "corpus_pos_counts": {
+    "NOUN": 3,
+    "ADJ": 20
+   },
+   "corpus_count": 23
+  },
+  {
+   "lemma": "bill",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 729,
+   "zipf": 5.15,
+   "synsets": {
+    "NOUN": 10
+   },
+   "corpus_pos_counts": {
+    "NOUN": 6,
+    "VERB": 1
+   },
+   "corpus_count": 7
+  },
+  {
+   "lemma": "cool",
+   "class": "content",
+   "pos": [
+    "VERB",
+    "ADJ"
+   ],
+   "wordfreq_rank": 731,
+   "zipf": 5.15,
+   "synsets": {
+    "VERB": 3,
+    "ADJ": 6
+   },
+   "corpus_pos_counts": {
+    "VERB": 16,
+    "ADJ": 17
+   },
+   "corpus_count": 33
+  },
+  {
+   "lemma": "director",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 732,
+   "zipf": 5.15,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 18
+   },
+   "corpus_count": 18
+  },
+  {
+   "lemma": "exactly",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 733,
+   "zipf": 5.15,
+   "synsets": {
+    "ADV": 3
+   },
+   "corpus_pos_counts": {
+    "ADV": 10
+   },
+   "corpus_count": 10
+  },
+  {
+   "lemma": "ground",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 735,
+   "zipf": 5.15,
+   "synsets": {
+    "NOUN": 11
+   },
+   "corpus_pos_counts": {
+    "NOUN": 38,
+    "VERB": 1
+   },
+   "corpus_count": 39
+  },
+  {
+   "lemma": "meeting",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 736,
+   "zipf": 5.15,
+   "synsets": {
+    "NOUN": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 17
+   },
+   "corpus_count": 17
+  },
+  {
+   "lemma": "provide",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 738,
+   "zipf": 5.15,
+   "synsets": {
+    "VERB": 7
+   },
+   "corpus_pos_counts": {
+    "VERB": 112
+   },
+   "corpus_count": 112
+  },
+  {
+   "lemma": "relationship",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 740,
+   "zipf": 5.15,
+   "synsets": {
+    "NOUN": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 19
+   },
+   "corpus_count": 19
+  },
+  {
+   "lemma": "sound",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 742,
+   "zipf": 5.15,
+   "synsets": {
+    "NOUN": 8,
+    "VERB": 7
+   },
+   "corpus_pos_counts": {
+    "NOUN": 21,
+    "VERB": 18,
+    "ADJ": 4
+   },
+   "corpus_count": 43
+  },
+  {
+   "lemma": "source",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 743,
+   "zipf": 5.15,
+   "synsets": {
+    "NOUN": 9
+   },
+   "corpus_pos_counts": {
+    "NOUN": 83
+   },
+   "corpus_count": 83
+  },
+  {
+   "lemma": "usually",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 744,
+   "zipf": 5.15,
+   "synsets": {
+    "ADV": 1
+   },
+   "corpus_pos_counts": {
+    "ADV": 124
+   },
+   "corpus_count": 124
+  },
+  {
+   "lemma": "value",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 745,
+   "zipf": 5.15,
+   "synsets": {
+    "NOUN": 6,
+    "VERB": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 63,
+    "VERB": 7
+   },
+   "corpus_count": 70
+  },
+  {
+   "lemma": "evidence",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 746,
+   "zipf": 5.14,
+   "synsets": {
+    "NOUN": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 69,
+    "VERB": 2
+   },
+   "corpus_count": 71
+  },
+  {
+   "lemma": "official",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "ADJ"
+   ],
+   "wordfreq_rank": 749,
+   "zipf": 5.14,
+   "synsets": {
+    "NOUN": 2,
+    "ADJ": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 27,
+    "ADJ": 30
+   },
+   "corpus_count": 57
+  },
+  {
+   "lemma": "production",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 751,
+   "zipf": 5.14,
+   "synsets": {
+    "NOUN": 8
+   },
+   "corpus_pos_counts": {
+    "NOUN": 60
+   },
+   "corpus_count": 60
+  },
+  {
+   "lemma": "rate",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 752,
+   "zipf": 5.14,
+   "synsets": {
+    "NOUN": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 57
+   },
+   "corpus_count": 57
+  },
+  {
+   "lemma": "round",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB",
+    "ADJ"
+   ],
+   "wordfreq_rank": 754,
+   "zipf": 5.14,
+   "synsets": {
+    "NOUN": 14,
+    "VERB": 7,
+    "ADJ": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 7,
+    "VERB": 5,
+    "ADJ": 7
+   },
+   "corpus_count": 19
+  },
+  {
+   "lemma": "save",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 755,
+   "zipf": 5.14,
+   "synsets": {
+    "VERB": 11
+   },
+   "corpus_pos_counts": {
+    "VERB": 9
+   },
+   "corpus_count": 9
+  },
+  {
+   "lemma": "stand",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 756,
+   "zipf": 5.14,
+   "synsets": {
+    "VERB": 12
+   },
+   "corpus_pos_counts": {
+    "VERB": 20
+   },
+   "corpus_count": 20
+  },
+  {
+   "lemma": "stuff",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 757,
+   "zipf": 5.14,
+   "synsets": {
+    "NOUN": 7
+   },
+   "corpus_pos_counts": {
+    "NOUN": 15,
+    "VERB": 1
+   },
+   "corpus_count": 16
+  },
+  {
+   "lemma": "tax",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 758,
+   "zipf": 5.14,
+   "synsets": {
+    "NOUN": 1
+   },
+   "corpus_pos_counts": {
+    "NOUN": 32,
+    "VERB": 3
+   },
+   "corpus_count": 35
+  },
+  {
+   "lemma": "amount",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 760,
+   "zipf": 5.13,
+   "synsets": {
+    "NOUN": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 52,
+    "VERB": 2
+   },
+   "corpus_count": 54
+  },
+  {
+   "lemma": "blue",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "ADJ"
+   ],
+   "wordfreq_rank": 761,
+   "zipf": 5.13,
+   "synsets": {
+    "NOUN": 7,
+    "ADJ": 8
+   },
+   "corpus_pos_counts": {
+    "NOUN": 42,
+    "ADJ": 22
+   },
+   "corpus_count": 64
+  },
+  {
+   "lemma": "drive",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 764,
+   "zipf": 5.13,
+   "synsets": {
+    "NOUN": 12,
+    "VERB": 22
+   },
+   "corpus_pos_counts": {
+    "NOUN": 4,
+    "VERB": 34
+   },
+   "corpus_count": 38
+  },
+  {
+   "lemma": "eat",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 765,
+   "zipf": 5.13,
+   "synsets": {
+    "VERB": 6
+   },
+   "corpus_pos_counts": {
+    "VERB": 29
+   },
+   "corpus_count": 29
+  },
+  {
+   "lemma": "fall",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 766,
+   "zipf": 5.13,
+   "synsets": {
+    "NOUN": 12,
+    "VERB": 32
+   },
+   "corpus_pos_counts": {
+    "NOUN": 15,
+    "VERB": 37
+   },
+   "corpus_count": 52
+  },
+  {
+   "lemma": "fast",
+   "class": "content",
+   "pos": [
+    "ADJ",
+    "ADV"
+   ],
+   "wordfreq_rank": 767,
+   "zipf": 5.13,
+   "synsets": {
+    "ADJ": 10,
+    "ADV": 2
+   },
+   "corpus_pos_counts": {
+    "VERB": 1,
+    "ADJ": 28,
+    "ADV": 21
+   },
+   "corpus_count": 50
+  },
+  {
+   "lemma": "federal",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 768,
+   "zipf": 5.13,
+   "synsets": {
+    "ADJ": 4
+   },
+   "corpus_pos_counts": {
+    "ADJ": 6
+   },
+   "corpus_count": 6
+  },
+  {
+   "lemma": "feeling",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 769,
+   "zipf": 5.13,
+   "synsets": {
+    "NOUN": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 10
+   },
+   "corpus_count": 10
+  },
+  {
+   "lemma": "green",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 771,
+   "zipf": 5.13,
+   "synsets": {
+    "ADJ": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 3,
+    "ADJ": 54
+   },
+   "corpus_count": 57
+  },
+  {
+   "lemma": "league",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 772,
+   "zipf": 5.13,
+   "synsets": {
+    "NOUN": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 33
+   },
+   "corpus_count": 33
+  },
+  {
+   "lemma": "management",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 773,
+   "zipf": 5.13,
+   "synsets": {
+    "NOUN": 2
+   },
+   "corpus_pos_counts": {
+    "NOUN": 15
+   },
+   "corpus_count": 15
+  },
+  {
+   "lemma": "match",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 774,
+   "zipf": 5.13,
+   "synsets": {
+    "NOUN": 9,
+    "VERB": 10
+   },
+   "corpus_pos_counts": {
+    "NOUN": 37,
+    "VERB": 8
+   },
+   "corpus_count": 45
+  },
+  {
+   "lemma": "model",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 775,
+   "zipf": 5.13,
+   "synsets": {
+    "NOUN": 9
+   },
+   "corpus_pos_counts": {
+    "NOUN": 62,
+    "VERB": 4
+   },
+   "corpus_count": 66
+  },
+  {
+   "lemma": "picture",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 777,
+   "zipf": 5.13,
+   "synsets": {
+    "NOUN": 10
+   },
+   "corpus_pos_counts": {
+    "NOUN": 6
+   },
+   "corpus_count": 6
+  },
+  {
+   "lemma": "size",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 778,
+   "zipf": 5.13,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 58
+   },
+   "corpus_count": 58
+  },
+  {
+   "lemma": "step",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 779,
+   "zipf": 5.13,
+   "synsets": {
+    "NOUN": 11
+   },
+   "corpus_pos_counts": {
+    "NOUN": 39,
+    "VERB": 2
+   },
+   "corpus_count": 41
+  },
+  {
+   "lemma": "trust",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 780,
+   "zipf": 5.13,
+   "synsets": {
+    "NOUN": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 3,
+    "VERB": 2
+   },
+   "corpus_count": 5
+  },
+  {
+   "lemma": "central",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 782,
+   "zipf": 5.12,
+   "synsets": {
+    "ADJ": 2
+   },
+   "corpus_pos_counts": {
+    "ADJ": 39
+   },
+   "corpus_count": 39
+  },
+  {
+   "lemma": "forward",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "ADV"
+   ],
+   "wordfreq_rank": 785,
+   "zipf": 5.12,
+   "synsets": {
+    "NOUN": 2,
+    "ADV": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 5,
+    "VERB": 3,
+    "ADV": 24
+   },
+   "corpus_count": 32
+  },
+  {
+   "lemma": "key",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "ADJ"
+   ],
+   "wordfreq_rank": 788,
+   "zipf": 5.12,
+   "synsets": {
+    "NOUN": 15,
+    "ADJ": 1
+   },
+   "corpus_pos_counts": {
+    "NOUN": 25,
+    "ADJ": 26
+   },
+   "corpus_count": 51
+  },
+  {
+   "lemma": "mom",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 789,
+   "zipf": 5.12,
+   "synsets": {
+    "NOUN": 1
+   },
+   "corpus_pos_counts": {
+    "NOUN": 1
+   },
+   "corpus_count": 1
+  },
+  {
+   "lemma": "page",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 791,
+   "zipf": 5.12,
+   "synsets": {
+    "NOUN": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 17
+   },
+   "corpus_count": 17
+  },
+  {
+   "lemma": "range",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 793,
+   "zipf": 5.12,
+   "synsets": {
+    "NOUN": 9,
+    "VERB": 8
+   },
+   "corpus_pos_counts": {
+    "NOUN": 43,
+    "VERB": 19,
+    "ADJ": 2
+   },
+   "corpus_count": 64
+  },
+  {
+   "lemma": "review",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 794,
+   "zipf": 5.12,
+   "synsets": {
+    "NOUN": 10,
+    "VERB": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 18,
+    "VERB": 18
+   },
+   "corpus_count": 36
+  },
+  {
+   "lemma": "science",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 795,
+   "zipf": 5.12,
+   "synsets": {
+    "NOUN": 2
+   },
+   "corpus_pos_counts": {
+    "NOUN": 18
+   },
+   "corpus_count": 18
+  },
+  {
+   "lemma": "trade",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 796,
+   "zipf": 5.12,
+   "synsets": {
+    "NOUN": 7,
+    "VERB": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 60,
+    "VERB": 16
+   },
+   "corpus_count": 76
+  },
+  {
+   "lemma": "various",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 799,
+   "zipf": 5.12,
+   "synsets": {
+    "ADJ": 4
+   },
+   "corpus_pos_counts": {
+    "ADJ": 57
+   },
+   "corpus_count": 57
+  },
+  {
+   "lemma": "attention",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 800,
+   "zipf": 5.11,
+   "synsets": {
+    "NOUN": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 27
+   },
+   "corpus_count": 27
+  },
+  {
+   "lemma": "brother",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 801,
+   "zipf": 5.11,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 18
+   },
+   "corpus_count": 18
+  },
+  {
+   "lemma": "character",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 803,
+   "zipf": 5.11,
+   "synsets": {
+    "NOUN": 9
+   },
+   "corpus_pos_counts": {
+    "NOUN": 32
+   },
+   "corpus_count": 32
+  },
+  {
+   "lemma": "chief",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 804,
+   "zipf": 5.11,
+   "synsets": {
+    "ADJ": 1
+   },
+   "corpus_pos_counts": {
+    "NOUN": 2,
+    "ADJ": 7
+   },
+   "corpus_count": 9
+  },
+  {
+   "lemma": "cup",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 805,
+   "zipf": 5.11,
+   "synsets": {
+    "NOUN": 8
+   },
+   "corpus_pos_counts": {
+    "NOUN": 12
+   },
+   "corpus_count": 12
+  },
+  {
+   "lemma": "football",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 806,
+   "zipf": 5.11,
+   "synsets": {
+    "NOUN": 2
+   },
+   "corpus_pos_counts": {
+    "NOUN": 8
+   },
+   "corpus_count": 8
+  },
+  {
+   "lemma": "hate",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 807,
+   "zipf": 5.11,
+   "synsets": {
+    "NOUN": 1,
+    "VERB": 1
+   },
+   "corpus_pos_counts": {
+    "VERB": 2
+   },
+   "corpus_count": 2
+  },
+  {
+   "lemma": "natural",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 813,
+   "zipf": 5.11,
+   "synsets": {
+    "ADJ": 10
+   },
+   "corpus_pos_counts": {
+    "ADJ": 40
+   },
+   "corpus_count": 40
+  },
+  {
+   "lemma": "property",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 815,
+   "zipf": 5.11,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 50
+   },
+   "corpus_count": 50
+  },
+  {
+   "lemma": "quality",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 816,
+   "zipf": 5.11,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 39
+   },
+   "corpus_count": 39
+  },
+  {
+   "lemma": "style",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 818,
+   "zipf": 5.11,
+   "synsets": {
+    "NOUN": 9
+   },
+   "corpus_pos_counts": {
+    "NOUN": 136
+   },
+   "corpus_count": 136
+  },
+  {
+   "lemma": "vote",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 820,
+   "zipf": 5.11,
+   "synsets": {
+    "NOUN": 5,
+    "VERB": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 28,
+    "VERB": 46
+   },
+   "corpus_count": 74
+  },
+  {
+   "lemma": "amazing",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 821,
+   "zipf": 5.1,
+   "synsets": {
+    "ADJ": 2
+   },
+   "corpus_pos_counts": {
+    "ADJ": 3
+   },
+   "corpus_count": 3
+  },
+  {
+   "lemma": "blood",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 823,
+   "zipf": 5.1,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 14
+   },
+   "corpus_count": 14
+  },
+  {
+   "lemma": "complete",
+   "class": "content",
+   "pos": [
+    "VERB",
+    "ADJ"
+   ],
+   "wordfreq_rank": 825,
+   "zipf": 5.1,
+   "synsets": {
+    "VERB": 5,
+    "ADJ": 5
+   },
+   "corpus_pos_counts": {
+    "VERB": 25,
+    "ADJ": 12
+   },
+   "corpus_count": 37
+  },
+  {
+   "lemma": "dog",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 826,
+   "zipf": 5.1,
+   "synsets": {
+    "NOUN": 7
+   },
+   "corpus_pos_counts": {
+    "NOUN": 2
+   },
+   "corpus_count": 2
+  },
+  {
+   "lemma": "economic",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 827,
+   "zipf": 5.1,
+   "synsets": {
+    "ADJ": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 1,
+    "ADJ": 77
+   },
+   "corpus_count": 78
+  },
+  {
+   "lemma": "hell",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 828,
+   "zipf": 5.1,
+   "synsets": {
+    "NOUN": 6
+   },
+   "corpus_pos_counts": {},
+   "corpus_count": 0
+  },
+  {
+   "lemma": "involve",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 829,
+   "zipf": 4.28,
+   "synsets": {
+    "VERB": 7
+   },
+   "corpus_pos_counts": {
+    "VERB": 74
+   },
+   "corpus_count": 74
+  },
+  {
+   "lemma": "language",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 831,
+   "zipf": 5.1,
+   "synsets": {
+    "NOUN": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 281
+   },
+   "corpus_count": 281
+  },
+  {
+   "lemma": "oil",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 834,
+   "zipf": 5.1,
+   "synsets": {
+    "NOUN": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 25
+   },
+   "corpus_count": 25
+  },
+  {
+   "lemma": "relate",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 835,
+   "zipf": 4.24,
+   "synsets": {
+    "VERB": 5
+   },
+   "corpus_pos_counts": {
+    "VERB": 37
+   },
+   "corpus_count": 37
+  },
+  {
+   "lemma": "serious",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 836,
+   "zipf": 5.1,
+   "synsets": {
+    "ADJ": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 1,
+    "ADJ": 25
+   },
+   "corpus_count": 26
+  },
+  {
+   "lemma": "stage",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 837,
+   "zipf": 5.1,
+   "synsets": {
+    "NOUN": 8
+   },
+   "corpus_pos_counts": {
+    "NOUN": 30
+   },
+   "corpus_count": 30
+  },
+  {
+   "lemma": "title",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 839,
+   "zipf": 5.1,
+   "synsets": {
+    "NOUN": 10,
+    "VERB": 2
+   },
+   "corpus_pos_counts": {
+    "NOUN": 64,
+    "VERB": 8
+   },
+   "corpus_count": 72
+  },
+  {
+   "lemma": "article",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 841,
+   "zipf": 5.09,
+   "synsets": {
+    "NOUN": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 38
+   },
+   "corpus_count": 38
+  },
+  {
+   "lemma": "attack",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 842,
+   "zipf": 5.09,
+   "synsets": {
+    "NOUN": 9,
+    "VERB": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 27,
+    "VERB": 19
+   },
+   "corpus_count": 46
+  },
+  {
+   "lemma": "bear",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 843,
+   "zipf": 4.71,
+   "synsets": {
+    "VERB": 13
+   },
+   "corpus_pos_counts": {
+    "NOUN": 3,
+    "VERB": 45
+   },
+   "corpus_count": 48
+  },
+  {
+   "lemma": "damn",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB",
+    "ADJ",
+    "ADV"
+   ],
+   "wordfreq_rank": 845,
+   "zipf": 5.09,
+   "synsets": {
+    "NOUN": 1,
+    "VERB": 1,
+    "ADJ": 2,
+    "ADV": 1
+   },
+   "corpus_pos_counts": {},
+   "corpus_count": 0
+  },
+  {
+   "lemma": "decide",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 846,
+   "zipf": 4.78,
+   "synsets": {
+    "VERB": 4
+   },
+   "corpus_pos_counts": {
+    "VERB": 33
+   },
+   "corpus_count": 33
+  },
+  {
+   "lemma": "decision",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 847,
+   "zipf": 5.09,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 49
+   },
+   "corpus_count": 49
+  },
+  {
+   "lemma": "enjoy",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 848,
+   "zipf": 5.09,
+   "synsets": {
+    "VERB": 5
+   },
+   "corpus_pos_counts": {
+    "VERB": 25
+   },
+   "corpus_count": 25
+  },
+  {
+   "lemma": "entire",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 849,
+   "zipf": 5.09,
+   "synsets": {
+    "ADJ": 4
+   },
+   "corpus_pos_counts": {
+    "ADJ": 24
+   },
+   "corpus_count": 24
+  },
+  {
+   "lemma": "poor",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 855,
+   "zipf": 5.09,
+   "synsets": {
+    "ADJ": 6
+   },
+   "corpus_pos_counts": {
+    "NOUN": 1,
+    "ADJ": 25
+   },
+   "corpus_count": 26
+  },
+  {
+   "lemma": "release",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 856,
+   "zipf": 5.09,
+   "synsets": {
+    "NOUN": 12,
+    "VERB": 10
+   },
+   "corpus_pos_counts": {
+    "NOUN": 35,
+    "VERB": 71
+   },
+   "corpus_count": 106
+  },
+  {
+   "lemma": "situation",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 857,
+   "zipf": 5.09,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {
+    "NOUN": 15
+   },
+   "corpus_count": 15
+  },
+  {
+   "lemma": "technology",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 858,
+   "zipf": 5.09,
+   "synsets": {
+    "NOUN": 2
+   },
+   "corpus_pos_counts": {
+    "NOUN": 24
+   },
+   "corpus_count": 24
+  },
+  {
+   "lemma": "website",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 860,
+   "zipf": 5.09,
+   "synsets": {
+    "NOUN": 1
+   },
+   "corpus_pos_counts": {
+    "NOUN": 20
+   },
+   "corpus_count": 20
+  },
+  {
+   "lemma": "write",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 861,
+   "zipf": 5.03,
+   "synsets": {
+    "VERB": 10
+   },
+   "corpus_pos_counts": {
+    "VERB": 210
+   },
+   "corpus_count": 210
+  },
+  {
+   "lemma": "choice",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 862,
+   "zipf": 5.08,
+   "synsets": {
+    "NOUN": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 14
+   },
+   "corpus_count": 14
+  },
+  {
+   "lemma": "code",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 863,
+   "zipf": 5.08,
+   "synsets": {
+    "NOUN": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 56
+   },
+   "corpus_count": 56
+  },
+  {
+   "lemma": "consider",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 864,
+   "zipf": 4.99,
+   "synsets": {
+    "VERB": 9
+   },
+   "corpus_pos_counts": {
+    "VERB": 114
+   },
+   "corpus_count": 114
+  },
+  {
+   "lemma": "continue",
+   "class": "content",
+   "pos": [
+    "VERB"
+   ],
+   "wordfreq_rank": 865,
+   "zipf": 5.08,
+   "synsets": {
+    "VERB": 10
+   },
+   "corpus_pos_counts": {
+    "VERB": 87,
+    "ADJ": 1
+   },
+   "corpus_count": 88
+  },
+  {
+   "lemma": "council",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 866,
+   "zipf": 5.08,
+   "synsets": {
+    "NOUN": 3
+   },
+   "corpus_pos_counts": {
+    "NOUN": 15
+   },
+   "corpus_count": 15
+  },
+  {
+   "lemma": "cover",
+   "class": "content",
+   "pos": [
+    "NOUN",
+    "VERB"
+   ],
+   "wordfreq_rank": 867,
+   "zipf": 5.08,
+   "synsets": {
+    "NOUN": 10,
+    "VERB": 26
+   },
+   "corpus_pos_counts": {
+    "NOUN": 9,
+    "VERB": 39
+   },
+   "corpus_count": 48
+  },
+  {
+   "lemma": "currently",
+   "class": "content",
+   "pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 868,
+   "zipf": 5.08,
+   "synsets": {
+    "ADV": 1
+   },
+   "corpus_pos_counts": {
+    "ADV": 14
+   },
+   "corpus_count": 14
+  },
+  {
+   "lemma": "door",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 869,
+   "zipf": 5.08,
+   "synsets": {
+    "NOUN": 5
+   },
+   "corpus_pos_counts": {},
+   "corpus_count": 0
+  },
+  {
+   "lemma": "election",
+   "class": "content",
+   "pos": [
+    "NOUN"
+   ],
+   "wordfreq_rank": 870,
+   "zipf": 5.08,
+   "synsets": {
+    "NOUN": 4
+   },
+   "corpus_pos_counts": {
+    "NOUN": 52
+   },
+   "corpus_count": 52
+  },
+  {
+   "lemma": "financial",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 874,
+   "zipf": 5.08,
+   "synsets": {
+    "ADJ": 1
+   },
+   "corpus_pos_counts": {
+    "ADJ": 25
+   },
+   "corpus_count": 25
+  },
+  {
+   "lemma": "foreign",
+   "class": "content",
+   "pos": [
+    "ADJ"
+   ],
+   "wordfreq_rank": 875,
+   "zipf": 5.08,
+   "synsets": {
+    "ADJ": 4
+   },
+   "corpus_pos_counts": {
+    "ADJ": 26
+   },
+   "corpus_count": 26
+  }
+ ],
+ "connectors": [
+  {
+   "lemma": "because",
+   "class": "connector",
+   "pos": [
+    "CONJ"
+   ],
+   "allowed_spacy_pos": [
+    "SCONJ"
+   ],
+   "wordfreq_rank": 97,
+   "zipf": 6.03,
+   "synsets": {
+    "CONJ": 0
+   },
+   "corpus_count": 0
+  },
+  {
+   "lemma": "but",
+   "class": "connector",
+   "pos": [
+    "CONJ"
+   ],
+   "allowed_spacy_pos": [
+    "CCONJ"
+   ],
+   "wordfreq_rank": 25,
+   "zipf": 6.63,
+   "synsets": {
+    "CONJ": 1
+   },
+   "corpus_count": 1
+  },
+  {
+   "lemma": "also",
+   "class": "connector",
+   "pos": [
+    "CONJ"
+   ],
+   "allowed_spacy_pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 70,
+   "zipf": 6.19,
+   "synsets": {
+    "CONJ": 1
+   },
+   "corpus_count": 522
+  },
+  {
+   "lemma": "although",
+   "class": "connector",
+   "pos": [
+    "CONJ"
+   ],
+   "allowed_spacy_pos": [
+    "SCONJ"
+   ],
+   "wordfreq_rank": 498,
+   "zipf": 5.3,
+   "synsets": {
+    "CONJ": 0
+   },
+   "corpus_count": 0
+  },
+  {
+   "lemma": "however",
+   "class": "connector",
+   "pos": [
+    "CONJ"
+   ],
+   "allowed_spacy_pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 237,
+   "zipf": 5.58,
+   "synsets": {
+    "CONJ": 4
+   },
+   "corpus_count": 168
+  },
+  {
+   "lemma": "though",
+   "class": "connector",
+   "pos": [
+    "CONJ"
+   ],
+   "allowed_spacy_pos": [
+    "ADV",
+    "SCONJ"
+   ],
+   "wordfreq_rank": 298,
+   "zipf": 5.5,
+   "synsets": {
+    "CONJ": 1
+   },
+   "corpus_count": 16
+  },
+  {
+   "lemma": "therefore",
+   "class": "connector",
+   "pos": [
+    "CONJ"
+   ],
+   "allowed_spacy_pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 1440,
+   "zipf": 4.87,
+   "synsets": {
+    "CONJ": 2
+   },
+   "corpus_count": 31
+  },
+  {
+   "lemma": "unless",
+   "class": "connector",
+   "pos": [
+    "CONJ"
+   ],
+   "allowed_spacy_pos": [
+    "SCONJ"
+   ],
+   "wordfreq_rank": 1131,
+   "zipf": 4.98,
+   "synsets": {
+    "CONJ": 0
+   },
+   "corpus_count": 0
+  },
+  {
+   "lemma": "until",
+   "class": "connector",
+   "pos": [
+    "CONJ"
+   ],
+   "allowed_spacy_pos": [
+    "ADP",
+    "SCONJ"
+   ],
+   "wordfreq_rank": 223,
+   "zipf": 5.61,
+   "synsets": {
+    "CONJ": 0
+   },
+   "corpus_count": 0
+  },
+  {
+   "lemma": "while",
+   "class": "connector",
+   "pos": [
+    "CONJ"
+   ],
+   "allowed_spacy_pos": [
+    "SCONJ"
+   ],
+   "wordfreq_rank": 144,
+   "zipf": 5.86,
+   "synsets": {
+    "CONJ": 0
+   },
+   "corpus_count": 6
+  },
+  {
+   "lemma": "whereas",
+   "class": "connector",
+   "pos": [
+    "CONJ"
+   ],
+   "allowed_spacy_pos": [
+    "SCONJ"
+   ],
+   "wordfreq_rank": null,
+   "zipf": 4.41,
+   "synsets": {
+    "CONJ": 0
+   },
+   "corpus_count": 0
+  },
+  {
+   "lemma": "instead",
+   "class": "connector",
+   "pos": [
+    "CONJ"
+   ],
+   "allowed_spacy_pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 573,
+   "zipf": 5.24,
+   "synsets": {
+    "CONJ": 2
+   },
+   "corpus_count": 60
+  },
+  {
+   "lemma": "otherwise",
+   "class": "connector",
+   "pos": [
+    "CONJ"
+   ],
+   "allowed_spacy_pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 1401,
+   "zipf": 4.88,
+   "synsets": {
+    "CONJ": 2
+   },
+   "corpus_count": 11
+  },
+  {
+   "lemma": "meanwhile",
+   "class": "connector",
+   "pos": [
+    "CONJ"
+   ],
+   "allowed_spacy_pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": null,
+   "zipf": 4.48,
+   "synsets": {
+    "CONJ": 2
+   },
+   "corpus_count": 1
+  },
+  {
+   "lemma": "moreover",
+   "class": "connector",
+   "pos": [
+    "CONJ"
+   ],
+   "allowed_spacy_pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": null,
+   "zipf": 4.16,
+   "synsets": {
+    "CONJ": 1
+   },
+   "corpus_count": 3
+  },
+  {
+   "lemma": "nevertheless",
+   "class": "connector",
+   "pos": [
+    "CONJ"
+   ],
+   "allowed_spacy_pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": null,
+   "zipf": 4.25,
+   "synsets": {
+    "CONJ": 1
+   },
+   "corpus_count": 6
+  },
+  {
+   "lemma": "yet",
+   "class": "connector",
+   "pos": [
+    "CONJ"
+   ],
+   "allowed_spacy_pos": [
+    "ADV",
+    "CCONJ"
+   ],
+   "wordfreq_rank": 269,
+   "zipf": 5.54,
+   "synsets": {
+    "CONJ": 6
+   },
+   "corpus_count": 21
+  },
+  {
+   "lemma": "thus",
+   "class": "connector",
+   "pos": [
+    "CONJ"
+   ],
+   "allowed_spacy_pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 1323,
+   "zipf": 4.91,
+   "synsets": {
+    "CONJ": 2
+   },
+   "corpus_count": 45
+  },
+  {
+   "lemma": "hence",
+   "class": "connector",
+   "pos": [
+    "CONJ"
+   ],
+   "allowed_spacy_pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": null,
+   "zipf": 4.38,
+   "synsets": {
+    "CONJ": 3
+   },
+   "corpus_count": 5
+  },
+  {
+   "lemma": "besides",
+   "class": "connector",
+   "pos": [
+    "CONJ"
+   ],
+   "allowed_spacy_pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": null,
+   "zipf": 4.63,
+   "synsets": {
+    "CONJ": 2
+   },
+   "corpus_count": 0
+  },
+  {
+   "lemma": "anyway",
+   "class": "connector",
+   "pos": [
+    "CONJ"
+   ],
+   "allowed_spacy_pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 1293,
+   "zipf": 4.91,
+   "synsets": {
+    "CONJ": 2
+   },
+   "corpus_count": 4
+  },
+  {
+   "lemma": "finally",
+   "class": "connector",
+   "pos": [
+    "CONJ"
+   ],
+   "allowed_spacy_pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 690,
+   "zipf": 5.17,
+   "synsets": {
+    "CONJ": 3
+   },
+   "corpus_count": 17
+  },
+  {
+   "lemma": "especially",
+   "class": "connector",
+   "pos": [
+    "CONJ"
+   ],
+   "allowed_spacy_pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 618,
+   "zipf": 5.21,
+   "synsets": {
+    "CONJ": 2
+   },
+   "corpus_count": 66
+  },
+  {
+   "lemma": "perhaps",
+   "class": "connector",
+   "pos": [
+    "CONJ"
+   ],
+   "allowed_spacy_pos": [
+    "ADV"
+   ],
+   "wordfreq_rank": 854,
+   "zipf": 5.09,
+   "synsets": {
+    "CONJ": 1
+   },
+   "corpus_count": 26
+  }
+ ],
+ "phrases": [
+  {
+   "lemma": "there is",
+   "class": "phrase",
+   "pos": [
+    "PHRASE"
+   ],
+   "synsets": {},
+   "wordfreq_rank": null
+  },
+  {
+   "lemma": "there are",
+   "class": "phrase",
+   "pos": [
+    "PHRASE"
+   ],
+   "synsets": {},
+   "wordfreq_rank": null
+  },
+  {
+   "lemma": "i think",
+   "class": "phrase",
+   "pos": [
+    "PHRASE"
+   ],
+   "synsets": {},
+   "wordfreq_rank": null
+  },
+  {
+   "lemma": "of course",
+   "class": "phrase",
+   "pos": [
+    "PHRASE"
+   ],
+   "synsets": {},
+   "wordfreq_rank": null
+  },
+  {
+   "lemma": "for example",
+   "class": "phrase",
+   "pos": [
+    "PHRASE"
+   ],
+   "synsets": {},
+   "wordfreq_rank": null
+  },
+  {
+   "lemma": "thank you",
+   "class": "phrase",
+   "pos": [
+    "PHRASE"
+   ],
+   "synsets": {},
+   "wordfreq_rank": null
+  },
+  {
+   "lemma": "a lot",
+   "class": "phrase",
+   "pos": [
+    "PHRASE"
+   ],
+   "synsets": {},
+   "wordfreq_rank": null
+  },
+  {
+   "lemma": "at least",
+   "class": "phrase",
+   "pos": [
+    "PHRASE"
+   ],
+   "synsets": {},
+   "wordfreq_rank": null
+  },
+  {
+   "lemma": "in fact",
+   "class": "phrase",
+   "pos": [
+    "PHRASE"
+   ],
+   "synsets": {},
+   "wordfreq_rank": null
+  },
+  {
+   "lemma": "as well",
+   "class": "phrase",
+   "pos": [
+    "PHRASE"
+   ],
+   "synsets": {},
+   "wordfreq_rank": null
+  },
+  {
+   "lemma": "in order to",
+   "class": "phrase",
+   "pos": [
+    "PHRASE"
+   ],
+   "synsets": {},
+   "wordfreq_rank": null
+  },
+  {
+   "lemma": "at the same time",
+   "class": "phrase",
+   "pos": [
+    "PHRASE"
+   ],
+   "synsets": {},
+   "wordfreq_rank": null
+  },
+  {
+   "lemma": "on the other hand",
+   "class": "phrase",
+   "pos": [
+    "PHRASE"
+   ],
+   "synsets": {},
+   "wordfreq_rank": null
+  },
+  {
+   "lemma": "in addition",
+   "class": "phrase",
+   "pos": [
+    "PHRASE"
+   ],
+   "synsets": {},
+   "wordfreq_rank": null
+  },
+  {
+   "lemma": "as a result",
+   "class": "phrase",
+   "pos": [
+    "PHRASE"
+   ],
+   "synsets": {},
+   "wordfreq_rank": null
+  },
+  {
+   "lemma": "for instance",
+   "class": "phrase",
+   "pos": [
+    "PHRASE"
+   ],
+   "synsets": {},
+   "wordfreq_rank": null
+  },
+  {
+   "lemma": "a few",
+   "class": "phrase",
+   "pos": [
+    "PHRASE"
+   ],
+   "synsets": {},
+   "wordfreq_rank": null
+  },
+  {
+   "lemma": "a little",
+   "class": "phrase",
+   "pos": [
+    "PHRASE"
+   ],
+   "synsets": {},
+   "wordfreq_rank": null
+  },
+  {
+   "lemma": "right now",
+   "class": "phrase",
+   "pos": [
+    "PHRASE"
+   ],
+   "synsets": {},
+   "wordfreq_rank": null
+  },
+  {
+   "lemma": "each other",
+   "class": "phrase",
+   "pos": [
+    "PHRASE"
+   ],
+   "synsets": {},
+   "wordfreq_rank": null
+  },
+  {
+   "lemma": "more than",
+   "class": "phrase",
+   "pos": [
+    "PHRASE"
+   ],
+   "synsets": {},
+   "wordfreq_rank": null
+  },
+  {
+   "lemma": "less than",
+   "class": "phrase",
+   "pos": [
+    "PHRASE"
+   ],
+   "synsets": {},
+   "wordfreq_rank": null
+  },
+  {
+   "lemma": "as soon as",
+   "class": "phrase",
+   "pos": [
+    "PHRASE"
+   ],
+   "synsets": {},
+   "wordfreq_rank": null
+  },
+  {
+   "lemma": "in general",
+   "class": "phrase",
+   "pos": [
+    "PHRASE"
+   ],
+   "synsets": {},
+   "wordfreq_rank": null
+  },
+  {
+   "lemma": "at first",
+   "class": "phrase",
+   "pos": [
+    "PHRASE"
+   ],
+   "synsets": {},
+   "wordfreq_rank": null
+  },
+  {
+   "lemma": "in the end",
+   "class": "phrase",
+   "pos": [
+    "PHRASE"
+   ],
+   "synsets": {},
+   "wordfreq_rank": null
+  },
+  {
+   "lemma": "by the way",
+   "class": "phrase",
+   "pos": [
+    "PHRASE"
+   ],
+   "synsets": {},
+   "wordfreq_rank": null
+  }
+ ],
+ "meta": {
+  "top": 1500,
+  "target": 500,
+  "model": "en_core_web_md",
+  "dropped": {
+   "grammar": 99,
+   "non_alpha_or_short": 66,
+   "aux_or_misc": 116,
+   "aux_or_misc_lemma": 10,
+   "no_wordnet": 11
+  },
+  "n_content": 500,
+  "n_entries": 696
+ }
+}

@@ -1,0 +1,33 @@
+You are grading single-word (or short-phrase) substitutions made by a "diglot weave" browser extension. The extension takes an English sentence from a web page and replaces ONE English word or short span with its {LANG_NAME} equivalent, so a learner sees the {LANG_NAME} word embedded in otherwise English text. Everything outside the swapped span stays English ON PURPOSE. You are a careful bilingual editor; judge whether the swapped span is what a competent {LANG_NAME} teacher would accept as the right word in the right form for that slot.
+
+For each item you get:
+- "original": the full English sentence.
+- "swapped": the same sentence exactly as the reader would see it, with the substitution applied in place.
+- "swap": the English span and what replaced it.
+- "gloss": the lexicon entry that produced the substitution (English lemma, POS, {LANG_NAME} word, intended English sense).
+
+The test: imagine the whole sentence translated into {LANG_NAME}. Would the swapped span appear there as the rendering of the English span, in this sense and this form (gender, number, article, case, conjugation, agreement, word order inside the span)? If yes, the swap is "correct".
+
+Do NOT penalize:
+- English words around the span (prepositions such as "in/of/for/with", verbs, determiners outside the span, the rest of the clause). "in le système naturel" or "played un rôle important" are correct swaps.
+- An English preposition that would be a different preposition in {LANG_NAME}; the preposition was not swapped.
+- Minor stylistic preferences when the swap is acceptable.
+
+DO penalize (with the matching label):
+- "wrong_sense": the English span means something else here (idiom or fixed expression whose {LANG_NAME} equivalent is not this word, e.g. "in the long term" = "à long terme"; a different sense of the lemma; part of a phrasal verb or compound; a proper name; a technical use).
+- "wrong_gender": wrong article or adjective gender inside the span.
+- "wrong_number": singular/plural mismatch inside the span.
+- "wrong_case": (German) the article/adjective/noun is in the wrong case for the role the noun plays in this sentence.
+- "wrong_conjugation": wrong person, number, tense or mood for this subject/context (including a bare infinitive where a finite form is needed, or vice versa).
+- "wrong_order_or_awkward": sense and lexical choice are right but the span itself is malformed: adjective on the wrong side of the noun, elision/apocope/contraction error (l'haut, un gran casa), a missing or extra article INSIDE the span, or the span breaks a construction it sits in (e.g. "a lot of" -> "mucho of").
+- "should_not_swap_other": any other reason this span should have been left alone (inside a name/title/quotation/code, the English token is not really this word).
+
+Rules:
+- Judge only the substitution, not the rest of the sentence, and not the English prose quality.
+- When two labels could apply, prefer the more specific one (wrong_case over wrong_order_or_awkward; wrong_sense over should_not_swap_other).
+- "reason" is one short line in English.
+- Output a JSON array only, no prose, no markdown fences, one object per item, in input order:
+  [{"id": "...", "label": "...", "reason": "..."}, ...]
+
+Items (JSON):
+{ITEMS_JSON}

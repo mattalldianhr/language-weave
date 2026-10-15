@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Language Weave</title>
+<meta name="description" content="An open-source browser extension that swaps a few English words on any page for the same words in a language you are learning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+  /* ---------- one hue, three sizes ---------- */
+  :root {
+    --h: 59;
+    --paper: hsl(var(--h) 88% 58%);
+    --paper-deep: hsl(var(--h) 86% 49%);
+    --ink: hsl(var(--h) 70% 9%);
+    --ink-2: hsl(var(--h) 55% 19%);
+    --rule: hsl(var(--h) 55% 20% / .5);
+    --s1: 1rem;
+    --s2: 2rem;
+    --s4: 4rem;
+    --serif: "Noticia Text", Georgia, "Times New Roman", serif;
+    --gothic: "Archivo", "Arial Narrow", Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html { font-size: 17px; overflow-x: clip; scroll-behavior: smooth; }
+  @media (max-width: 640px) { html { font-size: 16px; } }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    line-height: 1.45;
+    overflow-x: clip;
+    -webkit-font-smoothing: antialiased;
+  }
+  /* newsprint grain, same hue, darker */
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    z-index: 40;
+    pointer-events: none;
+    opacity: .085;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .7 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+
+  ::selection { background: var(--ink); color: var(--paper); }
+  a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .18em; }
+  a:hover { text-decoration-thickness: 2px; }
+  :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+  p { margin: 0 0 1em; }
+  b, strong { font-weight: 700; }
+
+  .gothic {
+    font-family: var(--gothic);
+    font-stretch: 70%;
+    font-variation-settings: "wdth" 70;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    font-style: normal;
+  }
+
+  /* ---------- running head: date and edition ---------- */
+  .folio-bar {
+    position: sticky; top: 0; z-index: 20;
+    background: var(--paper);
+    border-bottom: 1px solid var(--ink);
+    display: flex; align-items: center; justify-content: space-between; gap: var(--s1);
+    padding: .45rem var(--s1);
+    font-size: .72rem;
+  }
+  .folio-bar .masthead-note { display: flex; gap: .6em; align-items: baseline; white-space: nowrap; }
+  .folio-bar .masthead-note time::before { content: "·"; margin-right: .6em; }
+  .edition { display: flex; align-items: center; gap: .55em; }
+  .edition .ed-label { margin-right: .2em; }
+  .edition .seg { display: inline-flex; }
+  .edition button {
+    font: inherit; font-family: var(--gothic); font-stretch: 70%; font-variation-settings: "wdth" 70;
+    font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+    background: none; color: var(--ink);
+    border: 1px solid var(--ink); margin-left: -1px;
+    padding: .3em .6em .25em; line-height: 1; cursor: pointer;
+  }
+  .edition button:first-child { margin-left: 0; }
+  .edition button:hover { background: var(--paper-deep); }
+  .edition button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+  .edition button:focus-visible { outline-offset: 1px; position: relative; z-index: 1; }
+  @media (max-width: 640px) {
+    .folio-bar .masthead-note time { display: none; }
+  }
+
+  /* ---------- the spread ---------- */
+  .spread {
+    max-width: 76rem; margin: 0 auto;
+    padding: var(--s2) var(--s2) 0;
+    scroll-margin-top: 3rem;
+  }
+  .spread-head { border-bottom: 1px solid var(--ink); padding-bottom: var(--s1); margin-bottom: var(--s2); }
+  .pages {
+    display: grid; grid-template-columns: 1fr 1fr;
+    column-gap: var(--s4);
+    position: relative;
+  }
+  .pages::after {
+    content: ""; position: absolute; top: 0; bottom: 0; left: 50%;
+    width: 1px; background: var(--ink);
+  }
+  .page { min-width: 0; position: relative; padding-bottom: var(--s4); }
+  .page .num {
+    position: absolute; bottom: var(--s1);
+    font-family: var(--gothic); font-stretch: 70%; font-variation-settings: "wdth" 70;
+    font-weight: 700; font-size: .8rem; letter-spacing: .12em;
+  }
+  .page.left .num { left: 0; }
+  .page.right .num { right: 0; }
+  @media (max-width: 900px) {
+    .pages { grid-template-columns: 1fr; }
+    .pages::after { display: none; }
+    .page { padding-bottom: var(--s2); }
+    .page.left { border-bottom: 1px solid var(--ink); margin-bottom: var(--s2); }
+    .page .num { bottom: .4rem; }
+  }
+  @media (max-width: 640px) {
+    .spread { padding: var(--s1) var(--s1) 0; }
+  }
+
+  /* ---------- type scale: 1 / 2 / 4 ---------- */
+  .cat {
+    font-family: var(--gothic); font-stretch: 62%; font-variation-settings: "wdth" 62;
+    font-weight: 800; text-transform: uppercase; letter-spacing: .05em;
+    font-size: 1.25rem; line-height: 1;
+    border-top: 4px solid var(--ink); border-bottom: 1px solid var(--ink);
+    padding: .4rem 0 .3rem; margin: 0 0 .7rem;
+  }
+  .display {
+    font-family: var(--gothic); font-stretch: 62%; font-variation-settings: "wdth" 62;
+    font-weight: 800; text-transform: uppercase; letter-spacing: .005em;
+    font-size: var(--s4); line-height: .9;
+    margin: 0; padding-top: .5rem;
+    border-top: 4px solid var(--ink);
+  }
+  .standfirst { font-style: italic; margin: .6rem 0 0; }
+
+  .lede {
+    font-size: var(--s4); line-height: 1.02; letter-spacing: -.015em;
+    margin: 0 0 var(--s2); text-wrap: balance;
+  }
+  @media (max-width: 640px) { .lede { font-size: 2.4rem; } }
+
+  .cols-2 { columns: 2; column-gap: var(--s2); column-rule: 1px solid var(--rule); }
+  .cols-2 > * { break-inside: avoid; }
+  .prose p { margin: 0 0 1em; }
+  .prose p:last-child { margin-bottom: 0; }
+  @media (max-width: 560px) { .cols-2 { columns: 1; } }
+
+  .oneliner {
+    font-size: var(--s2); line-height: 1.12; letter-spacing: -.01em;
+    margin: 0 0 var(--s2); text-wrap: pretty;
+  }
+  .oneliner strong { font-weight: 700; }
+  @media (max-width: 640px) { .oneliner { font-size: 1.6rem; } }
+
+  /* contents, with dot leaders */
+  .contents ol { list-style: none; margin: 0 0 var(--s2); padding: 0; }
+  .contents li a {
+    display: flex; align-items: baseline; gap: .6em;
+    text-decoration: none; padding: .28em 0;
+  }
+  .contents li a:hover .label { text-decoration: underline; text-decoration-thickness: 1px; }
+  .contents .leader { flex: 1; border-bottom: 2px dotted var(--ink); transform: translateY(-.32em); min-width: 2em; }
+  .contents .pg { font-family: var(--gothic); font-stretch: 75%; font-variation-settings: "wdth" 75; font-weight: 700; }
+
+  .box { border: 2px solid var(--ink); padding: var(--s1); }
+  .box .cat { border-top: 0; padding-top: 0; }
+  .box p:last-child { margin-bottom: 0; }
+
+  /* ---------- how it works ---------- */
+  .beats-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s2); }
+  @media (max-width: 560px) { .beats-2 { grid-template-columns: 1fr; } }
+  .beat .n {
+    display: block;
+    font-family: var(--gothic); font-stretch: 62%; font-variation-settings: "wdth" 62;
+    font-weight: 800; font-size: var(--s4); line-height: .82;
+    border-bottom: 2px solid var(--ink); padding-bottom: .35rem; margin-bottom: .7rem;
+  }
+  .beat h3 {
+    font-family: var(--gothic); font-stretch: 70%; font-variation-settings: "wdth" 70;
+    font-weight: 700; text-transform: uppercase; letter-spacing: .03em;
+    font-size: 1.25rem; line-height: 1.1; margin: 0 0 .6rem;
+  }
+  .beat p { margin: 0; }
+  .pull {
+    margin: 0; padding: .8rem 0 1rem;
+    border-top: 4px solid var(--ink); border-bottom: 1px solid var(--ink);
+  }
+  .pull p { font-size: var(--s2); line-height: 1.05; font-style: italic; margin: 0 0 .8rem; }
+  .pull footer { font-family: var(--gothic); font-stretch: 75%; font-variation-settings: "wdth" 75; font-size: .82rem; text-transform: uppercase; letter-spacing: .06em; line-height: 1.3; }
+
+  /* ---------- classified ---------- */
+  .ads { columns: 2; column-gap: var(--s2); column-rule: 1px solid var(--rule); }
+  .ads > section { break-inside: avoid-column; margin-bottom: var(--s1); }
+  @media (max-width: 560px) { .ads { columns: 1; } }
+  .ad {
+    font-size: .92rem; line-height: 1.38; margin: 0;
+    padding: .55rem 0; border-bottom: 1px solid var(--rule);
+    break-inside: avoid;
+  }
+  .ad b, .ad h4 {
+    font-family: var(--gothic); font-stretch: 70%; font-variation-settings: "wdth" 70;
+    font-weight: 800; text-transform: uppercase; letter-spacing: .03em; font-style: normal;
+  }
+  .ad h4 { font-size: 1.1rem; line-height: 1; margin: 0 0 .5rem; }
+  .ad .sig { display: block; text-align: right; font-style: italic; }
+  .display-ad { border: 2px solid var(--ink); padding: var(--s1); margin: .4rem 0 var(--s1); font-size: 1rem; line-height: 1.4; }
+  .display-ad.coupon { border-style: dashed; }
+  .display-ad p { margin: 0 0 .8rem; }
+  .display-ad p:last-child { margin-bottom: 0; }
+  .display-ad q { quotes: "“" "”"; }
+  .display-ad q::before, .display-ad q::after { opacity: .7; }
+  .clip {
+    font-family: var(--gothic); font-stretch: 70%; font-variation-settings: "wdth" 70;
+    font-weight: 700; text-transform: uppercase; letter-spacing: .08em; font-size: .78rem;
+    background: var(--ink); color: var(--paper); border: 2px solid var(--ink);
+    padding: .55em 1em .5em; cursor: pointer; line-height: 1;
+  }
+  .clip:hover { background: var(--ink-2); border-color: var(--ink-2); }
+  .clip[data-done="1"] { background: var(--paper); color: var(--ink); }
+  .legal .ad { border-bottom: 0; padding-top: .2rem; }
+  .editions { margin-top: var(--s2); }
+  .editions .ad { border-bottom: 0; padding-top: .2rem; }
+  .ed-list { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .ed-list button {
+    font-family: var(--gothic); font-stretch: 70%; font-variation-settings: "wdth" 70;
+    font-weight: 700; text-transform: uppercase; letter-spacing: .08em; font-size: .85rem;
+    background: none; color: var(--ink); border: 2px solid var(--ink);
+    padding: .5em .9em .45em; line-height: 1; cursor: pointer;
+  }
+  .ed-list button:hover { background: var(--paper-deep); }
+  .ed-list button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+
+  /* ---------- the back page ---------- */
+  .back {
+    max-width: 76rem; margin: 0 auto; padding: var(--s2) var(--s2) var(--s4);
+    border-top: 4px solid var(--ink);
+    scroll-margin-top: 3rem;
+  }
+  .nameplate { width: 100%; overflow: hidden; margin: 0 0 var(--s1); }
+  .nameplate .fit {
+    display: inline-block; white-space: nowrap;
+    font-family: var(--gothic); font-stretch: 62%; font-variation-settings: "wdth" 62;
+    font-weight: 900; text-transform: uppercase; letter-spacing: -.01em;
+    font-size: clamp(2rem, 11vw, 12rem); line-height: .82;
+    transform: translateX(-.02em);
+  }
+  .colophon {
+    display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5em var(--s2);
+    border-top: 1px solid var(--ink); padding-top: var(--s1);
+    font-size: .92rem;
+  }
+  .colophon p { margin: 0; }
+  @media (max-width: 640px) { .back { padding: var(--s2) var(--s1) var(--s4); } }
+
+  /* ---------- the woven words ---------- */
+  .lw {
+    position: relative;
+    font-style: italic;
+    cursor: help;
+    white-space: nowrap;
+    border-bottom: 1px dotted currentColor;
+    padding: 0 .04em 1px;
+    margin: 0 -.04em;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .lw:hover, .lw:focus-visible { background: var(--paper-deep); }
+  .lw.flipped { font-style: normal; border-bottom-style: solid; }
+  .lw::after {
+    content: attr(data-gloss);
+    position: absolute; left: 50%; bottom: calc(100% + .4em);
+    transform: translate(-50%, 3px);
+    background: var(--ink); color: var(--paper);
+    font-family: var(--gothic); font-stretch: 75%; font-variation-settings: "wdth" 75;
+    font-style: normal; font-weight: 700; font-size: .7rem; letter-spacing: .08em;
+    text-transform: uppercase; line-height: 1;
+    padding: .45em .65em .4em;
+    white-space: nowrap;
+    opacity: 0; visibility: hidden;
+    transition: opacity .12s ease, transform .12s ease, visibility 0s .12s;
+    z-index: 5; pointer-events: none;
+  }
+  .lw:hover::after, .lw:focus-visible::after, .lw.peek::after {
+    opacity: 1; visibility: visible; transform: translate(-50%, 0);
+    transition-delay: 0s;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .lw::after { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="folio-bar gothic">
+  <div class="masthead-note">
+    <span>The reading pages</span>
+    <time id="today" datetime=""></time>
+  </div>
+  <div class="edition" role="group" aria-label="Edition language">
+    <span class="ed-label">Edition</span>
+    <span class="seg">
+      <button type="button" data-lang="es" aria-pressed="true" title="Español" lang="es">es</button>
+      <button type="button" data-lang="fr" aria-pressed="false" title="Français" lang="fr">fr</button>
+      <button type="button" data-lang="de" aria-pressed="false" title="Deutsch" lang="de">de</button>
+      <button type="button" data-lang="it" aria-pressed="false" title="Italiano" lang="it">it</button>
+      <button type="button" data-lang="pt" aria-pressed="false" title="Português" lang="pt">pt</button>
+    </span>
+  </div>
+</header>
+
+<main>
+
+  <!-- pp. 2–3: the opening -->
+  <section class="spread" id="opening" aria-label="Opening">
+    <div class="pages">
+      <div class="page left">
+        <h2 class="cat">Reading, as usual</h2>
+        <p class="lede">Most of what you read in a day is not a book. It is a tab.</p>
+        <div class="cols-2 prose">
+          <p>A recipe, a thread, a long article you will probably not finish, something about <span class="lw" data-en="the city" data-lang="es" lang="es" tabindex="0" role="button">la ciudad</span> you might visit next spring. You read it quickly, and then you read the next one. Nothing much happens to you.</p>
+          <p>But it adds up: a few thousand words before lunch, a few thousand more after, <span class="lw" data-en="every day" data-lang="es" lang="es" tabindex="0" role="button">cada día</span>, without really meaning to. If a few of those words came back <span class="lw" data-en="a little" data-lang="es" lang="es" tabindex="0" role="button">un poco</span> different, you would hardly notice. <span class="lw" data-en="maybe" data-cap data-lang="es" lang="es" tabindex="0" role="button">Quizás</span> that is the point.</p>
+        </div>
+        <span class="num" aria-hidden="true">2</span>
+      </div>
+
+      <div class="page right">
+        <h2 class="cat">Notice to readers</h2>
+        <p class="oneliner"><strong>Language Weave</strong> is an open-source browser extension that swaps a few English words on any web page for the same words in a language you are learning.</p>
+
+        <nav class="contents" aria-label="In this issue">
+          <h2 class="cat">In this issue</h2>
+          <ol>
+            <li><a href="#how"><span class="label">How it works</span><span class="leader" aria-hidden="true"></span><span class="pg">4</span></a></li>
+            <li><a href="#classified"><span class="label">Classified</span><span class="leader" aria-hidden="true"></span><span class="pg">6</span></a></li>
+            <li><a href="#services"><span class="label">Services</span><span class="leader" aria-hidden="true"></span><span class="pg">7</span></a></li>
+            <li><a href="#legal"><span class="label">Legal notices</span><span class="leader" aria-hidden="true"></span><span class="pg">7</span></a></li>
+            <li><a href="#back"><span class="label">Back page</span><span class="leader" aria-hidden="true"></span><span class="pg">8</span></a></li>
+          </ol>
+        </nav>
+
+        <aside class="box" aria-label="Correction">
+          <h2 class="cat">Correction</h2>
+          <p>In an earlier edition, every word on this page was English. We regret <span class="lw" data-en="nothing" data-lang="es" lang="es" tabindex="0" role="button">nada</span>.</p>
+        </aside>
+        <span class="num" aria-hidden="true">3</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- pp. 4–5: how it works -->
+  <section class="spread" id="how" aria-labelledby="how-h">
+    <header class="spread-head">
+      <h2 id="how-h" class="display">How it works</h2>
+      <p class="standfirst">Three beats, and that is the whole trick.</p>
+    </header>
+    <div class="pages">
+      <div class="page left">
+        <div class="beats-2">
+          <article class="beat">
+            <span class="n" aria-hidden="true">1</span>
+            <h3>Rare, and only where it is obvious.</h3>
+            <p>One word in fifty, at first. <span class="lw" data-en="never" data-cap data-lang="es" lang="es" tabindex="0" role="button">Nunca</span> more than one in twenty. Each swap lands where the sentence already tells you what it means, so you keep reading at full speed.</p>
+          </article>
+          <article class="beat">
+            <span class="n" aria-hidden="true">2</span>
+            <h3>Hover for English. Click to flip.</h3>
+            <p>Hover <span class="lw" data-en="the word" data-lang="es" lang="es" tabindex="0" role="button">la palabra</span> and the English appears. Click, and it flips back and stays flipped. Nouns bring their article along.</p>
+          </article>
+        </div>
+        <span class="num" aria-hidden="true">4</span>
+      </div>
+      <div class="page right">
+        <div class="beats-2">
+          <article class="beat">
+            <span class="n" aria-hidden="true">3</span>
+            <h3>It comes back until it sticks.</h3>
+            <p>A word you met in <span class="lw" data-en="the morning" data-lang="es" lang="es" tabindex="0" role="button">la mañana</span> returns on later days, at wider and wider gaps, about ten meetings in all. Then it is yours, and a <span class="lw" data-en="new" data-lang="es" lang="es" tabindex="0" role="button">nuevo</span> one takes its place.</p>
+          </article>
+          <blockquote class="pull">
+            <p><i lang="es">la casa</i><br><i lang="de">das Haus</i></p>
+            <footer>Nouns arrive with their article, so gender comes for free.</footer>
+          </blockquote>
+        </div>
+        <span class="num" aria-hidden="true">5</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- pp. 6–7: classified -->
+  <section class="spread" id="classified" aria-labelledby="cl-h">
+    <header class="spread-head">
+      <h2 id="cl-h" class="display">Classified</h2>
+      <p class="standfirst">The evidence, filed under the usual headings. Numbers as measured; the workings are in the research folder.</p>
+    </header>
+    <div class="pages">
+      <div class="page left">
+        <div class="ads">
+          <section aria-labelledby="c-wanted">
+            <h3 class="cat" id="c-wanted">Wanted</h3>
+            <p class="ad"><b>Wanted</b> — A useful word list. The 100 most common English words cover 46% of web text, <span class="lw" data-en="but" data-lang="es" lang="es" tabindex="0" role="button">pero</span> they are almost all grammar words you can’t swap. A useful list starts around 300 words and is mostly nouns and connectors. Serious inquiries only.</p>
+          </section>
+
+          <section aria-labelledby="c-lost">
+            <h3 class="cat" id="c-lost">Lost &amp; found</h3>
+            <p class="ad"><b>Lost</b> — One word, met fewer than 8 times. <span class="lw" data-en="nothing" data-cap data-lang="es" lang="es" tabindex="0" role="button">Nada</span> was recalled three months later. A word needs about 8–12 meetings before it stays. If found, please return on a later day.</p>
+            <p class="ad"><b>Found</b> — One word, met <span class="lw" data-en="often" data-lang="es" lang="es" tabindex="0" role="button">a menudo</span>: about twelve meetings, spaced over a few weeks. It stayed. Owner may keep it.</p>
+          </section>
+
+          <section aria-labelledby="c-sale">
+            <h3 class="cat" id="c-sale">For sale</h3>
+            <p class="ad"><b>For sale</b> — Naive word-for-word swapping. Right only 63% of the time. <span class="lw" data-en="very" data-cap data-lang="es" lang="es" tabindex="0" role="button">Muy</span> cheap. As is.</p>
+            <p class="ad"><b>Also available</b> — Part-of-speech checks and a sense whitelist. <span class="lw" data-en="together" data-cap data-lang="es" lang="es" tabindex="0" role="button">Juntos</span>, they lift that to 82%. The remaining errors are idioms and senses; a verifier catches those.</p>
+          </section>
+
+          <section aria-labelledby="c-notice">
+            <h3 class="cat" id="c-notice">Notices</h3>
+            <p class="ad"><b>Notice</b> — Keep foreign words <span class="lw" data-en="always" data-lang="es" lang="es" tabindex="0" role="button">siempre</span> under 1 in 20 of the text, nearer 1 in 50, so comprehension stays above 95%. <span class="sig">— The Management</span></p>
+          </section>
+
+          <section aria-labelledby="c-personals">
+            <h3 class="cat" id="c-personals">Personals</h3>
+            <p class="ad"><b>Noun seeks article</b> — Learning a noun without its article makes learning its gender harder later. Seeking <span class="lw" data-en="a friend" data-lang="es" lang="es" tabindex="0" role="button">un amigo</span> for life. Must agree in gender and number.</p>
+          </section>
+        </div>
+        <span class="num" aria-hidden="true">6</span>
+      </div>
+
+      <div class="page right">
+        <section id="services" aria-labelledby="c-services">
+          <h3 class="cat" id="c-services">Services</h3>
+          <article class="ad display-ad coupon">
+            <h4>Agents available</h4>
+            <p>Tell your coding agent: <q id="prompt">Set up Language Weave from github.com/mattalldian/language-weave</q></p>
+            <p><button class="clip" type="button" id="copy-btn" aria-describedby="prompt">Clip &amp; copy</button></p>
+          </article>
+          <article class="ad display-ad">
+            <h4>Do it yourself</h4>
+            <p>Load the extension folder unpacked in Chrome.</p>
+          </article>
+        </section>
+
+        <section id="legal" class="legal" aria-labelledby="c-legal">
+          <h3 class="cat" id="c-legal">Legal notices</h3>
+          <p class="ad">Page text stays on your machine. On-device models do the work when <span class="lw" data-en="the browser" data-lang="es" lang="es" tabindex="0" role="button">el navegador</span> has them. A cloud key is used only if you add one, and then only sentence fragments are sent.</p>
+        </section>
+
+        <section id="editions" class="editions" aria-labelledby="c-editions">
+          <h3 class="cat" id="c-editions">Editions</h3>
+          <p class="ad">Printed in five editions. Choose one, and every borrowed word on the page changes with it.</p>
+          <div class="ed-list" role="group" aria-label="Edition language">
+            <button type="button" data-lang="es" aria-pressed="true" lang="es">Español</button>
+            <button type="button" data-lang="fr" aria-pressed="false" lang="fr">Français</button>
+            <button type="button" data-lang="de" aria-pressed="false" lang="de">Deutsch</button>
+            <button type="button" data-lang="it" aria-pressed="false" lang="it">Italiano</button>
+            <button type="button" data-lang="pt" aria-pressed="false" lang="pt">Português</button>
+          </div>
+        </section>
+        <span class="num" aria-hidden="true">7</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- p. 8: back page -->
+<footer class="back" id="back">
+  <div class="nameplate"><span class="fit">Language Weave</span></div>
+  <div class="colophon">
+    <p>Open source. MIT license.</p>
+    <p><a href="https://github.com/mattalldian/language-weave/tree/main/research">Research folder</a> · <a href="https://github.com/mattalldian/language-weave">https://github.com/mattalldian/language-weave</a></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  var DICT = {
+    "because":     { es: "porque",       fr: "parce que",     de: "weil",          it: "perché",       pt: "porque" },
+    "but":         { es: "pero",         fr: "mais",          de: "aber",          it: "ma",           pt: "mas" },
+    "also":        { es: "también",      fr: "aussi",         de: "auch",          it: "anche",        pt: "também" },
+    "always":      { es: "siempre",      fr: "toujours",      de: "immer",         it: "sempre",       pt: "sempre" },
+    "never":       { es: "nunca",        fr: "jamais",        de: "nie",           it: "mai",          pt: "nunca" },
+    "now":         { es: "ahora",        fr: "maintenant",    de: "jetzt",         it: "adesso",       pt: "agora" },
+    "already":     { es: "ya",           fr: "déjà",          de: "schon",         it: "già",          pt: "já" },
+    "maybe":       { es: "quizás",       fr: "peut-être",     de: "vielleicht",    it: "forse",        pt: "talvez" },
+    "very":        { es: "muy",          fr: "très",          de: "sehr",          it: "molto",        pt: "muito" },
+    "a little":    { es: "un poco",      fr: "un peu",        de: "ein bisschen",  it: "un po'",       pt: "um pouco" },
+    "without":     { es: "sin",          fr: "sans",          de: "ohne",          it: "senza",        pt: "sem" },
+    "together":    { es: "juntos",       fr: "ensemble",      de: "zusammen",      it: "insieme",      pt: "juntos" },
+    "slowly":      { es: "despacio",     fr: "lentement",     de: "langsam",       it: "lentamente",   pt: "devagar" },
+    "often":       { es: "a menudo",     fr: "souvent",       de: "oft",           it: "spesso",       pt: "muitas vezes" },
+    "nothing":     { es: "nada",         fr: "rien",          de: "nichts",        it: "niente",       pt: "nada" },
+    "new":         { es: "nuevo",        fr: "nouveau",       de: "neu",           it: "nuovo",        pt: "novo" },
+    "the word":    { es: "la palabra",   fr: "le mot",        de: "das Wort",      it: "la parola",    pt: "a palavra" },
+    "the words":   { es: "las palabras", fr: "les mots",      de: "die Wörter",    it: "le parole",    pt: "as palavras" },
+    "the page":    { es: "la página",    fr: "la page",       de: "die Seite",     it: "la pagina",    pt: "a página" },
+    "the book":    { es: "el libro",     fr: "le livre",      de: "das Buch",      it: "il libro",     pt: "o livro" },
+    "the house":   { es: "la casa",      fr: "la maison",     de: "das Haus",      it: "la casa",      pt: "a casa" },
+    "the city":    { es: "la ciudad",    fr: "la ville",      de: "die Stadt",     it: "la città",     pt: "a cidade" },
+    "the morning": { es: "la mañana",    fr: "le matin",      de: "der Morgen",    it: "la mattina",   pt: "a manhã" },
+    "the browser": { es: "el navegador", fr: "le navigateur", de: "der Browser",   it: "il browser",   pt: "o navegador" },
+    "a friend":    { es: "un amigo",     fr: "un ami",        de: "ein Freund",    it: "un amico",     pt: "um amigo" },
+    "every day":   { es: "cada día",     fr: "chaque jour",   de: "jeden Tag",     it: "ogni giorno",  pt: "todos os dias" }
+  };
+  var NAMES = { es: "Spanish", fr: "French", de: "German", it: "Italian", pt: "Portuguese" };
+  var LANGS = ["es", "fr", "de", "it", "pt"];
+
+  var lang = LANGS[0];
+
+  var words = Array.prototype.slice.call(document.querySelectorAll(".lw"));
+  var buttons = Array.prototype.slice.call(document.querySelectorAll("button[data-lang]"));
+
+  function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+
+  function render(el) {
+    var en = el.getAttribute("data-en");
+    var pair = DICT[en];
+    if (!pair) return;
+    var foreign = pair[lang];
+    var wantsCap = el.hasAttribute("data-cap");
+    var flipped = el.classList.contains("flipped");
+    var shown = flipped ? en : foreign;
+    el.textContent = wantsCap ? cap(shown) : shown;
+    el.setAttribute("data-gloss", flipped ? foreign : en);
+    el.setAttribute("data-lang", lang);
+    el.setAttribute("lang", flipped ? "en" : lang);
+    el.setAttribute("aria-pressed", flipped ? "true" : "false");
+    el.setAttribute("aria-label", flipped
+      ? en + ". " + NAMES[lang] + ": " + foreign
+      : foreign + ". " + NAMES[lang] + " for " + en);
+  }
+
+  function flip(el) {
+    el.classList.toggle("flipped");
+    render(el);
+  }
+
+  function setLang(next) {
+    lang = next;
+    words.forEach(function (el) { el.classList.remove("flipped"); render(el); });
+    buttons.forEach(function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-lang") === lang ? "true" : "false");
+    });
+  }
+
+  words.forEach(function (el) {
+    el.addEventListener("click", function () { flip(el); });
+    el.addEventListener("keydown", function (ev) {
+      if (ev.key === "Enter" || ev.key === " " || ev.key === "Spacebar") {
+        ev.preventDefault();
+        flip(el);
+      }
+    });
+  });
+
+  buttons.forEach(function (b) {
+    b.addEventListener("click", function () { setLang(b.getAttribute("data-lang")); });
+  });
+
+  setLang(lang);
+
+  /* a one-time peek at the first woven word, so the gloss teaches itself */
+  var touched = false;
+  document.addEventListener("pointerover", function (ev) {
+    if (ev.target && ev.target.closest && ev.target.closest(".lw")) touched = true;
+  });
+  document.addEventListener("focusin", function (ev) {
+    if (ev.target && ev.target.classList && ev.target.classList.contains("lw")) touched = true;
+  });
+  setTimeout(function () {
+    if (touched || !words.length) return;
+    var first = words[0];
+    var r = first.getBoundingClientRect();
+    if (r.top < 48 || r.bottom > window.innerHeight) return;
+    first.classList.add("peek");
+    setTimeout(function () { first.classList.remove("peek"); }, 2400);
+  }, 1500);
+
+  /* clip & copy */
+  var copyBtn = document.getElementById("copy-btn");
+  var promptEl = document.getElementById("prompt");
+  if (copyBtn && promptEl) {
+    var label = copyBtn.textContent;
+    var timer = null;
+    function done(ok) {
+      copyBtn.textContent = ok ? "Copied" : "Select and copy";
+      copyBtn.setAttribute("data-done", ok ? "1" : "0");
+      clearTimeout(timer);
+      timer = setTimeout(function () {
+        copyBtn.textContent = label;
+        copyBtn.removeAttribute("data-done");
+      }, 1800);
+    }
+    copyBtn.addEventListener("click", function () {
+      var text = promptEl.textContent;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function () { done(true); }, function () { fallback(text); });
+      } else {
+        fallback(text);
+      }
+    });
+    function fallback(text) {
+      var sel = window.getSelection();
+      var range = document.createRange();
+      range.selectNodeContents(promptEl);
+      sel.removeAllRanges();
+      sel.addRange(range);
+      var ok = false;
+      try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+      done(ok);
+    }
+  }
+
+  /* today's date in the running head */
+  var today = document.getElementById("today");
+  if (today) {
+    var now = new Date();
+    try {
+      today.textContent = new Intl.DateTimeFormat("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric" }).format(now);
+    } catch (e) {
+      today.textContent = now.toDateString();
+    }
+    today.setAttribute("datetime", now.getFullYear() + "-" + String(now.getMonth() + 1).padStart(2, "0") + "-" + String(now.getDate()).padStart(2, "0"));
+  }
+
+  /* fit the nameplate to the width of the back page */
+  var plate = document.querySelector(".nameplate");
+  var fitEl = plate && plate.querySelector(".fit");
+  function fit() {
+    if (!fitEl) return;
+    fitEl.style.fontSize = "100px";
+    var w = fitEl.getBoundingClientRect().width;
+    var target = plate.clientWidth;
+    if (w > 0 && target > 0) fitEl.style.fontSize = (100 * target / w) + "px";
+  }
+  var rt = null;
+  window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(fit, 80); });
+  window.addEventListener("load", fit);
+  if (document.fonts) {
+    if (document.fonts.ready) document.fonts.ready.then(fit);
+    if (document.fonts.addEventListener) document.fonts.addEventListener("loadingdone", fit);
+    if (document.fonts.load) document.fonts.load("900 100px Archivo").then(fit, function () {});
+  }
+  if (window.ResizeObserver && plate) {
+    new ResizeObserver(function () { clearTimeout(rt); rt = setTimeout(fit, 40); }).observe(plate);
+  }
+  fit();
+})();
+</script>
+</body>
+</html>
