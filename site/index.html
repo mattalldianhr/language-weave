@@ -132,7 +132,6 @@ h1, h2, h3 { margin: 0; font-weight: inherit; font-size: inherit; }
   .sheet--2 { order: 5; }
   .rail--2 { order: 6; }
   .sheet--3 { order: 7; }
-  .rail--3 { order: 8; }
   .sheet { margin: 1.75rem 0; }
 }
 
@@ -352,7 +351,7 @@ sup.ref {
 }
 .label__prov .k { color: var(--ink); margin-right: .35rem; }
 
-/* 4. wall captions: matte white, hairline, crisp shadow, one width */
+/* 4. wall captions: hidden until a footnote in the text is hovered, focused, or tapped */
 .captions { display: grid; gap: 1.5rem; align-content: start; list-style: none; margin: 0; padding: 0; }
 .caption {
   width: 100%;
@@ -361,8 +360,27 @@ sup.ref {
   box-shadow: none;
   padding: .9rem 1rem .95rem;
   min-width: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity .18s ease, transform .18s ease, visibility 0s linear .18s;
 }
+.caption.is-shown { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
 @media (min-width: 64em) { .rail--2 { padding-top: 6.5rem; } }  /* caption 2 meets "one word in fifty" */
+@media (max-width: 63.99em) {
+  .caption { display: none; }
+  .caption.is-shown {
+    display: block;
+    position: fixed;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 30;
+    box-shadow: 0 14px 28px -12px rgba(40, 20, 50, .5);
+  }
+}
+sup.ref { cursor: pointer; text-decoration: underline dotted; text-decoration-color: var(--ink-3); text-underline-offset: .18em; }
+sup.ref:hover, sup.ref:focus-visible, sup.ref.is-active { color: var(--ink); text-decoration-color: var(--ink); }
 .caption__num { display: block; font-weight: 300; font-size: 1.4rem; line-height: 1; color: var(--ink-2); margin-bottom: .4rem; }
 .caption__title { font-weight: 500; font-size: .95rem; line-height: 1.3; }
 .caption__source { font-style: italic; font-size: .8rem; color: var(--ink-2); margin: .15rem 0 .5rem; }
@@ -372,46 +390,26 @@ sup.ref {
   .rail--2 .captions > .caption:nth-child(4) { margin-top: 2rem; }   /* beside the aside */
 }
 
-/* 5. take-one: one card standing in a wall pocket */
-.stack { position: relative; width: 100%; }
-.holder {
-  /* the pocket's front: 12px wider than the card, covering the card's bottom edge */
-  position: absolute;
-  left: -6px;
-  right: -6px;
-  bottom: 0;
-  height: 1.6rem;
-  background: color-mix(in srgb, var(--ink) 78%, var(--wall));
-  border-top: 1px solid rgba(255, 255, 255, .18);
-  box-shadow: 0 -8px 10px -8px rgba(0, 0, 0, .55), var(--shadow-crisp);
-  z-index: 2;
-  pointer-events: none;
-}
-.take-one {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  gap: .55rem;
-  justify-items: start;
-  background-color: var(--paper);
-  background-image: var(--grain-paper);
+/* the install prompt, inline in the passage */
+.inline-prompt {
+  font-family: var(--mono);
+  font-size: .82em;
+  line-height: 1.5;
+  background: var(--label);
   border: 1px solid var(--edge-dark);
-  border-bottom: 0;
-  padding: .95rem 1.05rem 2.9rem;
+  padding: .08em .45em .12em;
+  overflow-wrap: break-word;
 }
-.take-one__k { font-size: .8rem; color: var(--ink-2); margin: 0; }
-.take-one code { font-family: var(--mono); font-size: .85rem; line-height: 1.5; overflow-wrap: normal; }
-.take-one code .url { display: block; word-break: keep-all; }
-.take-one code .nb { white-space: nowrap; }
+.inline-prompt .nb { white-space: nowrap; }
 .copy {
   appearance: none;
   -webkit-appearance: none;
   position: relative;
-  z-index: 3;
+  vertical-align: .15em;
   background: var(--paper);
   border: 1px solid var(--ink);
-  padding: .35em .7em .3em;
-  margin: .1rem 0 0;
+  padding: .3em .6em .25em;
+  margin: 0 0 0 .3rem;
   font: inherit;
   font-size: .74rem;
   text-transform: uppercase;
@@ -426,7 +424,7 @@ sup.ref {
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .lw::after, .tag, .copy, .lw { transition: none; }
+  .lw::after, .tag, .copy, .lw, .caption { transition: none; }
 }
 </style>
 </head>
@@ -441,7 +439,7 @@ sup.ref {
       <p class="running-head sc"><span>Language Weave, 2026</span><span>Reading</span></p>
       <div class="sheet__body">
         <p class="lede">You read more than you think. A recipe, a thread, a chapter of <span class="lw" data-en="the book" data-lang="es" tabindex="0" role="button">el libro</span> you keep not finishing. The long article you saved for <span class="lw" data-en="the morning" data-lang="es" tabindex="0" role="button">la mañana</span>.</p>
-        <p>Somewhere in the middle of all that reading there is a small gap, and one word from another language could sit in it <span class="lw" data-en="very" data-lang="es" tabindex="0" role="button">muy</span> comfortably. Not a lesson. Not a flashcard. Just one word<sup class="ref" aria-label="see wall caption 1">1</sup>, <span class="lw" data-en="a little" data-lang="es" tabindex="0" role="button">un poco</span> strange, inside a sentence that already tells you what it means.</p>
+        <p>Somewhere in the middle of all that reading there is a small gap, and one word from another language could sit in it <span class="lw" data-en="very" data-lang="es" tabindex="0" role="button">muy</span> comfortably. Not a lesson. Not a flashcard. Just one word<sup class="ref" data-ref="1" tabindex="0" role="button" aria-expanded="false" aria-controls="note-1" aria-label="Show note 1">1</sup>, <span class="lw" data-en="a little" data-lang="es" tabindex="0" role="button">un poco</span> strange, inside a sentence that already tells you what it means.</p>
         <p>Tomorrow the word returns. It comes back the day after, and again next week, until <span class="lw" data-en="the word" data-lang="es" tabindex="0" role="button">la palabra</span> is simply yours. Nothing else about the page changes. The recipe is still the recipe. The thread is still too long, <span class="lw" data-en="but" data-lang="es" tabindex="0" role="button">pero</span> the new word stays.</p>
       </div>
       <p class="sheet__foot sc">1 / 3</p>
@@ -463,7 +461,7 @@ sup.ref {
       </section>
 
       <ol class="captions" aria-label="Wall captions">
-        <li class="caption">
+        <li class="caption" id="note-1" data-ref="1">
           <span class="caption__num" aria-hidden="true">1</span>
           <h2 class="caption__title">The hundred most common words</h2>
           <p class="caption__source">Frequency corpora, eight languages</p>
@@ -479,7 +477,7 @@ sup.ref {
         <p class="how__head sc" id="how-title">How it works</p>
         <article class="beat">
           <h2 class="beat__title">Rare, and placed well.</h2>
-          <p>Swaps are rare. One word in fifty at first, <span class="lw" data-en="never" data-lang="es" tabindex="0" role="button">nunca</span> more than one in twenty<sup class="ref" aria-label="see wall caption 2">2</sup>. The extension picks the places where the sentence already does the work, so the strange word is the one you can guess. Nouns arrive holding their article, like <span class="lw" data-en="the house" data-lang="es" tabindex="0" role="button">la casa</span>, so gender comes for free<sup class="ref" aria-label="see wall caption 3">3</sup>.</p>
+          <p>Swaps are rare. One word in fifty at first, <span class="lw" data-en="never" data-lang="es" tabindex="0" role="button">nunca</span> more than one in twenty<sup class="ref" data-ref="2" tabindex="0" role="button" aria-expanded="false" aria-controls="note-2" aria-label="Show note 2">2</sup>. The extension picks the places where the sentence already does the work, so the strange word is the one you can guess. Nouns arrive holding their article, like <span class="lw" data-en="the house" data-lang="es" tabindex="0" role="button">la casa</span>, so gender comes for free<sup class="ref" data-ref="3" tabindex="0" role="button" aria-expanded="false" aria-controls="note-3" aria-label="Show note 3">3</sup>.</p>
         </article>
         <article class="beat">
           <h2 class="beat__title">Hover, click, flip.</h2>
@@ -487,34 +485,34 @@ sup.ref {
         </article>
         <article class="beat">
           <h2 class="beat__title">It comes back.</h2>
-          <p>A word needs about ten meetings before it stays<sup class="ref" aria-label="see wall caption 4">4</sup>. So the word comes back, spaced out: tomorrow, then in a few days, then next week, <span class="lw" data-en="always" data-lang="es" tabindex="0" role="button">siempre</span> in a fresh sentence. After enough meetings it stops being strange. By then it is simply a word you know, and <span class="lw" data-en="nothing" data-lang="es" tabindex="0" role="button">nada</span> about it feels borrowed.</p>
+          <p>A word needs about ten meetings before it stays<sup class="ref" data-ref="4" tabindex="0" role="button" aria-expanded="false" aria-controls="note-4" aria-label="Show note 4">4</sup>. So the word comes back, spaced out: tomorrow, then in a few days, then next week, <span class="lw" data-en="always" data-lang="es" tabindex="0" role="button">siempre</span> in a fresh sentence. After enough meetings it stops being strange. By then it is simply a word you know, and <span class="lw" data-en="nothing" data-lang="es" tabindex="0" role="button">nada</span> about it feels borrowed.</p>
         </article>
-        <p class="aside-line">The numbers on the wall are measured, not quoted: frequency corpora for eight languages, the vocabulary-acquisition literature, <span class="lw" data-en="together" data-lang="es" tabindex="0" role="button">juntos</span> with one precision experiment<sup class="ref" aria-label="see wall caption 5">5</sup>. The workings are in the research folder.</p>
+        <p class="aside-line">The numbers on the wall are measured, not quoted: frequency corpora for eight languages, the vocabulary-acquisition literature, <span class="lw" data-en="together" data-lang="es" tabindex="0" role="button">juntos</span> with one precision experiment<sup class="ref" data-ref="5" tabindex="0" role="button" aria-expanded="false" aria-controls="note-5" aria-label="Show note 5">5</sup>. The workings are in the research folder.</p>
       </div>
       <p class="sheet__foot sc">2 / 3</p>
     </section>
 
     <aside class="rail rail--2 r2" aria-label="On the wall beside sheet two">
       <ol class="captions" aria-label="Wall captions">
-        <li class="caption">
+        <li class="caption" id="note-2" data-ref="2">
           <span class="caption__num" aria-hidden="true">2</span>
           <h2 class="caption__title">One in twenty, nearer one in fifty</h2>
           <p class="caption__source">Vocabulary-acquisition literature</p>
           <p class="caption__text">Keep foreign words under 1 in 20 of the text, nearer 1 in 50, so comprehension stays above 95%.</p>
         </li>
-        <li class="caption">
+        <li class="caption" id="note-3" data-ref="3">
           <span class="caption__num" aria-hidden="true">3</span>
           <h2 class="caption__title">The article comes along</h2>
           <p class="caption__source">Vocabulary-acquisition literature</p>
           <p class="caption__text">Learning a noun <span class="lw" data-en="without" data-lang="es" tabindex="0" role="button">sin</span> its article makes learning its gender harder later.</p>
         </li>
-        <li class="caption">
+        <li class="caption" id="note-4" data-ref="4">
           <span class="caption__num" aria-hidden="true">4</span>
           <h2 class="caption__title">Eight to twelve meetings</h2>
           <p class="caption__source">Vocabulary-acquisition literature</p>
           <p class="caption__text">A word needs about 8–12 meetings before it stays. Fewer than 8, and nothing was recalled three months later.</p>
         </li>
-        <li class="caption">
+        <li class="caption" id="note-5" data-ref="5">
           <span class="caption__num" aria-hidden="true">5</span>
           <h2 class="caption__title">Sixty-three, then eighty-two</h2>
           <p class="caption__source">Precision experiment, measured</p>
@@ -529,7 +527,7 @@ sup.ref {
       <div class="sheet__body">
         <div class="install" id="install">
           <p class="install__head sc" id="install-title">Install</p>
-          <p class="way"><span class="k">Tell your coding agent.</span> The prompt is printed on the card beside this sheet; take one, and paste it into Claude Code or Codex. The agent does the rest.</p>
+          <p class="way"><span class="k">Tell your coding agent.</span> Paste this into Claude Code or Codex and it does the rest: <code id="prompt" class="inline-prompt">Set up the Language Weave browser extension from github.com/mattalldianhr/<wbr><span class="nb">language-weave</span></code> <button type="button" class="copy" id="copy" aria-label="Copy the prompt">Copy</button></p>
           <p class="way"><span class="k">Or by hand.</span> Load the extension folder unpacked in Chrome, <span class="lw" data-en="without" data-lang="es" tabindex="0" role="button">sin</span> an agent: <a href="https://github.com/mattalldianhr/language-weave">github.com/mattalldianhr/language-weave</a>, then chrome://extensions, Developer mode, Load unpacked.</p>
         </div>
         <div class="privacy" id="privacy">
@@ -549,17 +547,6 @@ sup.ref {
       </div>
       <p class="sheet__foot sc">3 / 3</p>
     </section>
-
-    <aside class="rail rail--3 r3" aria-label="On the wall beside sheet three">
-      <div class="stack">
-        <div class="take-one">
-          <p class="take-one__k sc">Take one</p>
-          <code id="prompt">Set up the Language Weave browser extension from <span class="url">github.com/mattalldianhr/<wbr><span class="nb">language-weave</span></span></code>
-          <button type="button" class="copy" id="copy" aria-label="Copy the prompt">Copy</button>
-        </div>
-        <div class="holder" aria-hidden="true"></div>
-      </div>
-    </aside>
 
   </div>
 </div>
@@ -739,6 +726,55 @@ sup.ref {
     peek(words[0], 1400, 2000);
     peek(words[1], 4600, 1800);
   }
+
+  // Footnotes load the wall captions: hover or focus shows a note; click or Enter pins it;
+  // Escape or a click elsewhere clears a pinned one.
+  var refs = Array.prototype.slice.call(document.querySelectorAll("sup.ref"));
+  var pinnedRef = null;
+  var hideTimer = null;
+  function noteFor(ref) { return document.getElementById("note-" + ref.getAttribute("data-ref")); }
+  function setNote(ref, on) {
+    var cap = noteFor(ref);
+    if (cap) cap.classList.toggle("is-shown", on);
+    ref.classList.toggle("is-active", on);
+    ref.setAttribute("aria-expanded", on ? "true" : "false");
+  }
+  function showNote(ref) {
+    clearTimeout(hideTimer);
+    refs.forEach(function (r) { if (r !== ref && r !== pinnedRef) setNote(r, false); });
+    setNote(ref, true);
+  }
+  function hideNote(ref, delay) {
+    if (ref === pinnedRef) return;
+    clearTimeout(hideTimer);
+    hideTimer = setTimeout(function () { setNote(ref, false); }, delay || 0);
+  }
+  function unpin() {
+    if (!pinnedRef) return;
+    var r = pinnedRef;
+    pinnedRef = null;
+    setNote(r, false);
+  }
+  refs.forEach(function (ref) {
+    ref.addEventListener("mouseenter", function () { showNote(ref); });
+    ref.addEventListener("mouseleave", function () { hideNote(ref, 250); });
+    ref.addEventListener("focus", function () { showNote(ref); });
+    ref.addEventListener("blur", function () { hideNote(ref, 0); });
+    var toggle = function (ev) {
+      ev.preventDefault();
+      ev.stopPropagation();
+      if (pinnedRef === ref) { unpin(); return; }
+      unpin();
+      pinnedRef = ref;
+      showNote(ref);
+    };
+    ref.addEventListener("click", toggle);
+    ref.addEventListener("keydown", function (ev) { if (ev.key === "Enter" || ev.key === " ") toggle(ev); });
+  });
+  document.addEventListener("click", function (ev) {
+    if (pinnedRef && !(ev.target.closest && ev.target.closest("sup.ref, .caption"))) unpin();
+  });
+  document.addEventListener("keydown", function (ev) { if (ev.key === "Escape") unpin(); });
 })();
 </script>
 </body>
