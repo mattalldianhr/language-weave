@@ -85,8 +85,12 @@ function adjacent(text, a, b) {
 }
 
 export function findCandidates(pack, tagged, text, settings = {}) {
+  // Tiers: 'llm' takes every candidate (the model judges sense); 'translator' needs the
+  // dominant-sense flag (the experiment's F3 = F2 + translation check) but can resolve listed
+  // alternatives; 'none' needs the flag and never emits a candidate that needs a verifier.
   const tier = settings.tier || 'none';
-  const strict = tier === 'none';
+  const dominantOnly = tier !== 'llm';
+  const noVerifier = tier === 'none';
   const excluded = buildExclusions(tagged, text);
   const { tokens, phrases } = tagged;
   const out = [];
@@ -95,10 +99,11 @@ export function findCandidates(pack, tagged, text, settings = {}) {
 
   const push = (c) => {
     if (overlapsBlocklist(text, c.start, c.end, blocklist)) return;
-    if (strict && c.needsVerifier) return;
-    if (strict && !c.entries.every((e) => e.dominant)) return;
+    const dominant = c.entries.every((e) => e.dominant);
+    if (noVerifier && c.needsVerifier) return;
+    if (dominantOnly && !dominant) return;
     const { entries, ...rest } = c;
-    out.push(rest);
+    out.push({ ...rest, dominant });
   };
 
   // Connectors and adverbs: single tokens. compromise tags some adverbs as conjunctions ("now"),
