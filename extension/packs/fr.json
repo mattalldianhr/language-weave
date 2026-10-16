@@ -1575,7 +1575,7 @@
   "close|ADV": {
    "target": "près",
    "sense": "near, at small distance",
-   "dominant": true,
+   "dominant": false,
    "note": "",
    "class": "adv",
    "tier": 3,
@@ -4420,7 +4420,7 @@
   "inside|ADV": {
    "target": "dedans",
    "sense": "within, in the interior",
-   "dominant": true,
+   "dominant": false,
    "note": "",
    "class": "adv",
    "tier": 3,
@@ -6552,7 +6552,7 @@
   "outside|ADV": {
    "target": "dehors",
    "sense": "out of doors, not inside",
-   "dominant": true,
+   "dominant": false,
    "note": "",
    "class": "adv",
    "tier": 3,
@@ -10323,7 +10323,7 @@
   "well|ADV": {
    "target": "bien",
    "sense": "in a good manner",
-   "dominant": true,
+   "dominant": false,
    "note": "",
    "class": "adv",
    "tier": 3,

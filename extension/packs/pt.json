@@ -1570,7 +1570,7 @@
   "close|ADV": {
    "target": "perto",
    "sense": "near, nearby",
-   "dominant": true,
+   "dominant": false,
    "note": "",
    "class": "adv",
    "tier": 3,
@@ -4402,7 +4402,7 @@
   "inside|ADV": {
    "target": "dentro",
    "sense": "in or into the interior",
-   "dominant": true,
+   "dominant": false,
    "note": "",
    "class": "adv",
    "tier": 3,
@@ -6542,7 +6542,7 @@
   "outside|ADV": {
    "target": "fora",
    "sense": "out of doors; not inside",
-   "dominant": true,
+   "dominant": false,
    "note": "",
    "class": "adv",
    "tier": 3,
@@ -10286,7 +10286,7 @@
   "well|ADV": {
    "target": "bem",
    "sense": "in a good manner",
-   "dominant": true,
+   "dominant": false,
    "note": "",
    "class": "adv",
    "tier": 3,

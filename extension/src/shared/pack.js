@@ -64,11 +64,27 @@ export function keyOf(entry) {
   return entry.key;
 }
 
+// German weak masculine nouns (n-declension: Name, Mensch, Junge, Student) take -(e)n in every
+// singular case but the nominative. Recognised from the genitive: "Namens", "Menschen" rather
+// than a strong "-(e)s" genitive like "Hundes".
+function deWeakMasculine(f) {
+  if (f.gender !== 'm' || !f.gen_sg) return null;
+  const g = f.gen_sg;
+  if (/(en|ens)$/.test(g) && !/[^e]s$/.test(g.replace(/ens$/, 'x')) && g !== f.sg + 's' && g !== f.sg + 'es') {
+    return g.replace(/s$/, '');
+  }
+  return null;
+}
+
 function nounForm(lang, e, number, kase) {
   const f = e.forms;
   if (lang === 'de') {
     if (number === 'sg' && kase === 'gen') return f.gen_sg || f.sg;
     if (number === 'pl' && kase === 'dat') return f.dat_pl || f.pl;
+    if (number === 'sg' && (kase === 'acc' || kase === 'dat')) {
+      const weak = deWeakMasculine(f);
+      if (weak) return weak;
+    }
   }
   return number === 'pl' ? f.pl : f.sg;
 }

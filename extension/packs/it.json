@@ -1575,7 +1575,7 @@
   "close|ADV": {
    "target": "vicino",
    "sense": "near, at a short distance",
-   "dominant": true,
+   "dominant": false,
    "note": "",
    "class": "adv",
    "tier": 3,
@@ -4400,7 +4400,7 @@
   "inside|ADV": {
    "target": "dentro",
    "sense": "within, indoors",
-   "dominant": true,
+   "dominant": false,
    "note": "",
    "class": "adv",
    "tier": 3,
@@ -6532,7 +6532,7 @@
   "outside|ADV": {
    "target": "fuori",
    "sense": "out of doors, not inside",
-   "dominant": true,
+   "dominant": false,
    "note": "",
    "class": "adv",
    "tier": 3,
@@ -10281,7 +10281,7 @@
   "well|ADV": {
    "target": "bene",
    "sense": "in a good manner",
-   "dominant": true,
+   "dominant": false,
    "note": "",
    "class": "adv",
    "tier": 3,

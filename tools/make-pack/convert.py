@@ -29,7 +29,9 @@ ALWAYS_DROP = ["long|ADV", "too|ADV", "ago|ADV", "yet|ADV", "yet|CONJ", "even|AD
                "since|CONJ", "since|ADV"]
 # Entries whose dominant-sense flag is forced off: the model's flag was optimistic on real pages
 # ("while" concessive vs temporal, "still" = "even more" after a comparative).
-NON_DOMINANT = {"while|CONJ", "still|ADV", "rather|ADV", "so|ADV", "once|CONJ"}
+NON_DOMINANT = {"while|CONJ", "still|ADV", "rather|ADV", "so|ADV", "once|CONJ",
+                # adverb entries whose preposition-like uses dominate on real pages ("hard to", "inside of")
+                "hard|ADV", "inside|ADV", "outside|ADV", "right|ADV", "well|ADV", "close|ADV"}
 # Multiword expressions the experiment blocklist lacks; a swap may not overlap them.
 EXTRA_BLOCK = ["because of", "as well", "as well as", "so that", "even though", "even if", "as if", "such as",
                "rather than", "more than", "less than", "at least", "at most", "in order to", "as long as",

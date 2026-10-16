@@ -1627,7 +1627,7 @@
   "close|ADV": {
    "target": "nahe",
    "sense": "near, nearby",
-   "dominant": true,
+   "dominant": false,
    "note": "",
    "class": "adv",
    "tier": 3,
@@ -4000,7 +4000,7 @@
   "hard|ADV": {
    "target": "hart",
    "sense": "with great effort",
-   "dominant": true,
+   "dominant": false,
    "note": "",
    "class": "adv",
    "tier": 1,
@@ -4536,7 +4536,7 @@
   "inside|ADV": {
    "target": "drinnen",
    "sense": "within a building or place",
-   "dominant": true,
+   "dominant": false,
    "note": "",
    "class": "adv",
    "tier": 3,
@@ -6699,7 +6699,7 @@
   "outside|ADV": {
    "target": "draußen",
    "sense": "out of doors, not inside",
-   "dominant": true,
+   "dominant": false,
    "note": "",
    "class": "adv",
    "tier": 3,
@@ -10602,7 +10602,7 @@
   "well|ADV": {
    "target": "gut",
    "sense": "in a good manner",
-   "dominant": true,
+   "dominant": false,
    "note": "",
    "class": "adv",
    "tier": 3,

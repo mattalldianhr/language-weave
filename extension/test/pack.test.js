@@ -82,6 +82,26 @@ test('nounPhrase builds article plus noun with agreement and case', () => {
   assert.equal(nounPhrase(de, d, { number: 'pl', definite: 'indef', case: 'nom' }), null);
 });
 
+test('German weak masculine nouns take -n in the accusative and dative singular', () => {
+  const weak = { ...de, entries: { ...de.entries,
+    'name|NOUN': { target: 'Name', sense: 'what something is called', dominant: true, note: '', class: 'noun', tier: 1, rank: 200,
+      forms: { gender: 'm', sg: 'Name', pl: 'Namen', gen_sg: 'Namens', dat_pl: 'Namen' } },
+    'person|NOUN': { target: 'Mensch', sense: 'human being', dominant: true, note: '', class: 'noun', tier: 1, rank: 210,
+      forms: { gender: 'm', sg: 'Mensch', pl: 'Menschen', gen_sg: 'Menschen', dat_pl: 'Menschen' } },
+  } };
+  const name = lookup(weak, 'name', 'NOUN');
+  assert.equal(nounPhrase(weak, name, { number: 'sg', definite: 'def', case: 'nom' }), 'der Name');
+  assert.equal(nounPhrase(weak, name, { number: 'sg', definite: 'def', case: 'dat' }), 'dem Namen');
+  assert.equal(nounPhrase(weak, name, { number: 'sg', definite: 'def', case: 'acc' }), 'den Namen');
+  assert.equal(nounPhrase(weak, name, { number: 'sg', definite: 'def', case: 'gen' }), 'des Namens');
+  const mensch = lookup(weak, 'person', 'NOUN');
+  assert.equal(nounPhrase(weak, mensch, { number: 'sg', definite: 'indef', case: 'acc' }), 'einen Menschen');
+  assert.equal(nounPhrase(weak, mensch, { number: 'sg', definite: 'def', case: 'nom' }), 'der Mensch');
+  // strong nouns are untouched
+  assert.equal(nounPhrase(weak, lookup(weak, 'dog', 'NOUN'), { number: 'sg', definite: 'def', case: 'dat' }), 'dem Hund');
+  assert.ok(formsOf(weak, name).includes('den Namen'));
+});
+
 test('nounPhrase places an adjective with agreement, apocope, and German endings', () => {
   const q = lookup(es, 'question', 'NOUN');
   assert.equal(nounPhrase(es, q, { number: 'sg', definite: 'def', adjective: lookup(es, 'important', 'ADJ') }), 'la pregunta importante');
