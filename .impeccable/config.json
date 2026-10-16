@@ -29,6 +29,24 @@
         ],
         "createdAt": "2026-10-15T20:03:50.538Z",
         "reason": "agent decided: both findings persist in a scratch copy with every letter-spacing in the file capped at .05em (sed test, 2026-10-15), so they are not produced by the page's tracking rules"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "extension/src/popup/popup.html"
+        ],
+        "createdAt": "2026-10-16T18:22:34.637Z",
+        "reason": "project palette: paper #F7F3EC, ink #25172F, violet #6427FA from site/index.html and .impeccable.md design context; the popup matches the homepage"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "extension/src/options/options.html"
+        ],
+        "createdAt": "2026-10-16T18:22:34.654Z",
+        "reason": "project palette: paper #F7F3EC, ink #25172F, violet #6427FA from site/index.html and .impeccable.md design context; the options page matches the homepage"
       }
     ]
   }

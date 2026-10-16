@@ -1,7 +1,7 @@
 :root {
   --paper: #f7f3ec;
   --ink: #25172f;
-  --ink-soft: color-mix(in oklab, var(--ink) 62%, var(--paper));
+  --ink-soft: color-mix(in oklab, var(--ink) 76%, var(--paper));
   --violet: #6427fa;
   --line: color-mix(in oklab, var(--ink) 14%, var(--paper));
   --serif: "Literata", Georgia, "Times New Roman", serif;
