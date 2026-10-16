@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Feed fixture</title></head>
+<body><main id="feed"><p>The feed starts with the question, but the answer comes later, and the city waits for the company and the people.</p></main>
+<script>
+let n = 0;
+const add = () => { const p = document.createElement('p'); p.id = 'late' + (++n); p.textContent = 'The question was simple, but the answer took the city a long time, and the company built the bridge across the river, and the people watched the water from the house.'; document.getElementById('feed').appendChild(p); if (n < 3) setTimeout(add, 300); };
+setTimeout(add, 500);
+</script></body></html>

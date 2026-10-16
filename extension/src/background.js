@@ -23,6 +23,7 @@ const service = createService({
 });
 
 const ready = service.init().catch((e) => console.error('[language-weave] init failed', e));
+globalThis.lwService = service; // reachable from the extension's own pages and the browser tests
 
 api.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   ready
