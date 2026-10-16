@@ -245,3 +245,19 @@ By rule, connectors run 96–100% in every language and article-plus-noun 84–9
 **Real pages** (`test/browser/real.mjs`, Spanish, French, German): Wikipedia "Volcano" paints 70–92 swaps over the parts scrolled into view with zero console errors and no page damage; reading them, about nine in ten are right in each language, and the misses fed the pack fixes above. MDN and text.npr.org paint nothing, correctly: their readable text outside links and code is too short per block.
 
 **Follow-ups.** German rule-only tier below the gate: either route German article-plus-noun swaps through the verifier only, or gather a larger German sample with an Opus judge to settle the case noise. LLM tier: a larger verified sample and an idiom hint in the prompt. Adverbs: a per-lemma adverb blocklist built from these samples would lift es and de by a few points.
+
+### Round two (2026-10-16, later the same day)
+
+Changes since round one: German noun phrases always go through a verifier (the case cue only orders the alternatives); idiom blocklist and non-dominant flags from the round-one error lists; touch handling; Firefox build and smoke test. Judge: Claude Opus, 120 items per rules-only sample (the stratified order means article-plus-adjective items fell outside the cut and are not in the rules-only rows), full verified sample for the LLM tier. Verifier for the LLM tier: Claude Sonnet through `claude -p`, 100 random blocks (es) and 70 (de), zero failed calls.
+
+| language | tier | correct, weighted by rule share | candidates / 100 words | painted / 100 at 1 in 33 | gate |
+|---|---|---|---|---|---|
+| es | rules only | 95.0% [90–98] | 1.87 | 1.26 | pass (90%) |
+| fr | rules only | 91.8% [85–95] | 1.80 | 1.21 | pass (90%) |
+| de | rules only (connectors and adverbs) | 97.6% [93–99] | 0.87 | 0.68 | pass (90%) |
+| es | LLM, Sonnet verifier (116 items) | 94.0% [88–97] | 2.88 | 1.62 | fail (95%), by one point |
+| de | LLM, Sonnet verifier (94 items) | 95.7% [90–98] | 3.23 | 1.86 | pass (95%) |
+
+Opus judges a few points more leniently than Sonnet, as the experiment also found, so the round-one and round-two figures are not the same scale; the experiment's headline numbers were Opus-judged too. Every remaining error but two is `wrong_sense` on an idiom or a second sense; forms, gender, number, and case are essentially solved. The LLM tier's density is about 1 in 60 at the default setting, the rules-only tier about 1 in 80 (es, fr) and 1 in 150 (de, now nouns need a verifier).
+
+**Still open.** The Spanish LLM tier sits one point under its gate on a sample of 116; the next lever is the verifier prompt (an explicit idiom check) rather than the rule layer. German rules-only density is low by design; a German reader without any verifier gets connectors and adverbs only.
