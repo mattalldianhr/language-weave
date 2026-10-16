@@ -69,16 +69,44 @@ def load_ranks(lexicon: dict) -> dict[str, int]:
     return ranks
 
 
-def load_drop(per_lemma: Path) -> list[str]:
-    out = []
-    with per_lemma.open(encoding="utf-8") as f:
+CONSERVATIVE_RULES = {"CONN-tok", "ADV-tok", "N-det", "N-adj"}
+
+
+def load_drop(exp: Path, lang: str) -> list[str]:
+    """Entries to hide from the rule layer.
+
+    Two sources. (1) per-lemma.csv, computed over every experiment rule, for classes the rule layer
+    never uses (verbs, adjectives on their own): those entries reach the page only as verifier
+    extras, so a lemma that failed under half the time anywhere is not worth offering. (2) The
+    judged files restricted to the conservative rules, for every class: nouns like "part" or "way"
+    fail as bare nouns (N-bare, not shipped) but hold up with their article (N-det), so the rule
+    layer's own record decides for them.
+    """
+    out: set[str] = set()
+    with (exp / "per-lemma.csv").open(encoding="utf-8") as f:
         for row in csv.DictReader(f):
-            n, rate = int(row["n"]), float(row["rate"])
             cls = row["class"].upper()
-            pos = "CONJ" if cls == "CONN" else cls
-            if n >= 5 and rate < 0.5:
-                out.append(f"{row['lemma']}|{pos}")
-    return out
+            if cls not in ("VERB", "ADJ"):
+                continue
+            if int(row["n"]) >= 5 and float(row["rate"]) < 0.5:
+                out.add(f"{row['lemma']}|{cls}")
+    stats: dict[str, list[int]] = {}
+    for name in (f"{lang}.jsonl", f"cons-opus-{lang}.jsonl"):
+        path = exp / "judged" / name
+        if not path.exists():
+            continue
+        for line in path.read_text(encoding="utf-8").splitlines():
+            r = json.loads(line)
+            if r.get("rule") not in CONSERVATIVE_RULES or not r.get("f2"):
+                continue
+            for key in r.get("pack_keys", []):
+                s = stats.setdefault(key, [0, 0])
+                s[0] += 1
+                s[1] += r.get("label") == "correct"
+    for key, (n, c) in stats.items():
+        if n >= 4 and c / n < 0.5:
+            out.add(key)
+    return sorted(out)
 
 
 def load_blocklist(path: Path) -> list[str]:
@@ -151,7 +179,7 @@ def main() -> None:
     raw = json.loads(src.read_text(encoding="utf-8"))
     lexicon = json.loads((exp / "lexicon.json").read_text(encoding="utf-8"))
     ranks = load_ranks(lexicon)
-    drop = sorted(set(load_drop(exp / "per-lemma.csv")) | set(ALWAYS_DROP))
+    drop = sorted(set(load_drop(exp, a.lang)) | set(ALWAYS_DROP))
     blocklist = load_blocklist(exp / "mwe_blocklist.txt")
 
     entries = {}

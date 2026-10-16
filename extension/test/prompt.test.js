@@ -71,6 +71,22 @@ test('parseVerdicts keeps only extras that are learning words with a pack form f
   assert.deepEqual(r.extras, [{ sentence: 0, start: 3, end: 8, english: 'think', key: 'think|VERB', form: 'pensamos', extra: true }]);
 });
 
+test('a verdict may pick a form from the candidate alternatives, and nothing else', () => {
+  const de = { ...pack, lang: 'de', name: 'German', entries: { 'dog|NOUN': { target: 'Hund', sense: 'the animal', dominant: true, note: '', class: 'noun', tier: 2, rank: 900, forms: { gender: 'm', sg: 'Hund', pl: 'Hunde', gen_sg: 'Hundes', dat_pl: 'Hunden' } } } };
+  const s = ['He fed the dog in the house.'];
+  const c = [{ id: 'c1', sentence: 0, start: 7, end: 14, english: 'the dog', key: 'dog|NOUN', form: 'der Hund', alternatives: ['der Hund', 'den Hund', 'dem Hund', 'des Hundes'], needsVerifier: true }];
+  const p = buildVerifyPrompt({ pack: de, sentences: s, candidates: c, learning: [] });
+  const marker = 'Input (JSON):\n';
+  const input = JSON.parse(p.slice(p.indexOf(marker) + marker.length));
+  assert.deepEqual(input.candidates[0].alternatives, c[0].alternatives);
+  let r = parseVerdicts('{"verdicts":[{"id":"c1","ok":true,"form":"den Hund"}],"extras":[]}', { pack: de, sentences: s, candidates: c, learning: [] });
+  assert.deepEqual(r.verdicts, [{ id: 'c1', ok: true, form: 'den Hund' }]);
+  r = parseVerdicts('{"verdicts":[{"id":"c1","ok":true,"form":"die Hund"}],"extras":[]}', { pack: de, sentences: s, candidates: c, learning: [] });
+  assert.deepEqual(r.verdicts, [{ id: 'c1', ok: false }]);
+  r = parseVerdicts('{"verdicts":[{"id":"c1","ok":true}],"extras":[]}', { pack: de, sentences: s, candidates: c, learning: [] });
+  assert.deepEqual(r.verdicts, [{ id: 'c1', ok: false }], 'an ambiguous candidate needs a chosen form');
+});
+
 test('parseVerdicts matches extras as whole words, case-insensitively', () => {
   const text = JSON.stringify({ verdicts: [{ id: 'c1', ok: true }, { id: 'c2', ok: true }, { id: 'c3', ok: true }], extras: [{ sentence: 0, english: 'Think', key: 'think|VERB', form: 'piensan' }] });
   const r = parseVerdicts(text, { pack, sentences, candidates, learning });

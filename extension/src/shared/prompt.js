@@ -7,10 +7,12 @@ const INSTRUCTIONS = `You are checking word swaps for a "diglot weave" reading t
 
 For each candidate, decide whether the replacement is what a competent {LANG} teacher would accept as the right word in the right form for that slot: imagine the whole sentence translated into {LANG}; would the replacement appear there as the rendering of the English span, in this sense and this form (gender, number, article, case, conjugation, agreement)? Reject idioms and fixed expressions whose {LANG} equivalent is not this word, other senses of the lemma, phrasal verbs, names, titles, quotations, and technical uses. Do not penalise the English words around the span.
 
+When a candidate lists "alternatives", the right form depends on the sentence (for German, the case): answer with "form" set to the one alternative that fits, or reject it.
+
 You may also add swaps from "extras_allowed": words the learner is studying that were not proposed. Add one only when the English word appears in the sentence in exactly that sense, and choose the form from the listed "forms" that fits the slot (for a verb, the form matching the subject and tense; for a noun, include the article if the English has one). Never add a word whose form is not listed.
 
 Answer with JSON only, no prose, no code fences:
-{"verdicts":[{"id":"c1","ok":true},{"id":"c2","ok":false,"why":"short reason"}],
+{"verdicts":[{"id":"c1","ok":true},{"id":"c2","ok":false,"why":"short reason"},{"id":"c3","ok":true,"form":"den Hund"}],
  "extras":[{"sentence":0,"english":"think","key":"think|VERB","form":"pensamos"}]}
 
 Input (JSON):
@@ -29,7 +31,9 @@ export function buildVerifyPrompt({ pack, sentences, candidates, learning = [] }
     sentences,
     candidates: candidates.map((c) => {
       const e = pack.entries[c.key] || {};
-      return { id: c.id, sentence: c.sentence, english: c.english, replacement: c.form, sense: e.sense || '', note: e.note || '' };
+      const item = { id: c.id, sentence: c.sentence, english: c.english, replacement: c.form, sense: e.sense || '', note: e.note || '' };
+      if (c.alternatives?.length) item.alternatives = c.alternatives;
+      return item;
     }),
     extras_allowed: extrasAllowed,
   };
@@ -74,12 +78,22 @@ export function parseVerdicts(text, { pack, sentences, candidates, learning = []
   const data = extractJson(text);
   if (!data || !Array.isArray(data.verdicts)) return rejectAll();
   const byId = new Map();
-  for (const v of data.verdicts) if (v && typeof v.id === 'string') byId.set(v.id, v.ok === true);
-  const verdicts = candidates.map((c) => ({ id: c.id, ok: byId.get(c.id) === true }));
+  for (const v of data.verdicts) if (v && typeof v.id === 'string') byId.set(v.id, v);
+  const verdicts = candidates.map((c) => {
+    const v = byId.get(c.id);
+    if (!v || v.ok !== true) return { id: c.id, ok: false };
+    if (c.alternatives?.length) {
+      // The model must choose one listed form; anything else is a rejection.
+      if (typeof v.form !== 'string' || !c.alternatives.includes(v.form)) return { id: c.id, ok: false };
+      return { id: c.id, ok: true, form: v.form };
+    }
+    return { id: c.id, ok: true };
+  });
+  const accepted = new Set(verdicts.filter((v) => v.ok).map((v) => v.id));
 
   const taken = new Map(); // sentence index -> [[start, end]]
   for (const c of candidates) {
-    if (!byId.get(c.id)) continue;
+    if (!accepted.has(c.id)) continue;
     if (!taken.has(c.sentence)) taken.set(c.sentence, []);
     taken.get(c.sentence).push([c.start, c.end]);
   }
