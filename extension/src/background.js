@@ -12,6 +12,12 @@ async function loadPack(lang) {
   return res.json();
 }
 
+async function loadSeed() {
+  const res = await fetch(api.runtime.getURL('seed.json'));
+  if (!res.ok) return null;
+  return res.json();
+}
+
 const service = createService({
   chrome: api,
   providers: {
@@ -20,6 +26,7 @@ const service = createService({
     cloud: (cfg) => createCloudProvider(cfg),
   },
   loadPack,
+  loadSeed,
 });
 
 const ready = service.init().catch((e) => console.error('[language-weave] init failed', e));

@@ -177,6 +177,45 @@ try {
   check('feed: blocks added later are painted', late > 0, String(late));
   await page.close();
 
+  // 8. popup and options pages
+  const extId = new URL(sw.url()).host;
+  page = await context.newPage();
+  await page.goto(`${base}/prose.html`);
+  await waitForSpans(page, 1);
+  const popup = await context.newPage();
+  await popup.goto(`chrome-extension://${extId}/src/popup/popup.html`);
+  await sleep(600);
+  const tierText = await popup.$eval('#tier', (e) => e.textContent);
+  check('popup: shows the checker in use', /word rules only/.test(tierText), tierText);
+  check('popup: density reads 1 in 33', (await popup.$eval('#ratio-out', (e) => e.textContent)) === '1 word in 33');
+  await popup.click('#enabled');
+  await sleep(700);
+  check('popup: the global switch restores the page', (await page.$$eval('.lw-swap', (e) => e.length)) === 0);
+  await popup.click('#enabled');
+  n = await waitForSpans(page, 1);
+  check('popup: switching back repaints', n > 0);
+  await popup.$eval('#ratio', (el) => { el.value = '1'; el.dispatchEvent(new Event('change', { bubbles: true })); });
+  await sleep(500);
+  st = await svc({ type: 'state' });
+  check('popup: slider writes the ratio (sparse end = 1 in 100)', st.settings.ratio === 100, String(st.settings.ratio));
+  await svc({ type: 'settings', patch: { ratio: 33 } });
+  await popup.close();
+  const options = await context.newPage();
+  await options.goto(`chrome-extension://${extId}/src/options/options.html`);
+  await sleep(600);
+  check('options: shows the current language and density', (await options.$eval('#lang', (e) => e.value)) === 'es' && (await options.$eval('#ratio', (e) => e.value)) === '33');
+  await options.$eval('#ratio', (el) => { el.value = '50'; el.dispatchEvent(new Event('change', { bubbles: true })); });
+  await sleep(400);
+  st = await svc({ type: 'state' });
+  check('options: a density change persists', st.settings.ratio === 50, String(st.settings.ratio));
+  await options.click('[data-seed="40"]');
+  await sleep(400);
+  st = await svc({ type: 'state' });
+  check('options: seeding marks known words (never lowering learning or shaky ones)', st.summary.known + st.summary.learning + st.summary.shaky >= 40 && st.summary.known >= 35, `${st.summary.known} known, ${st.summary.learning} learning, ${st.summary.shaky} shaky`);
+  await svc({ type: 'settings', patch: { ratio: 33 } });
+  await options.close();
+  await page.close();
+
   check('no console errors', errors.length === 0, errors.slice(0, 3).join(' | '));
 } finally {
   await context.close().catch(() => {});

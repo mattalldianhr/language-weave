@@ -5,7 +5,9 @@
   "type": "module",
   "description": "Language Weave browser extension. No build step; plain ES modules.",
   "scripts": {
-    "test": "node --test"
+    "test": "node --test test/*.test.js",
+    "test:browser": "node test/browser/run.mjs",
+    "test:real": "node test/browser/real.mjs"
   },
   "license": "MIT"
 }

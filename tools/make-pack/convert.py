@@ -24,7 +24,18 @@ NAMES = {"es": "Spanish", "fr": "French", "de": "German", "it": "Italian", "pt":
 CLASS_OF_POS = {"CONJ": "conn", "ADV": "adv", "NOUN": "noun", "ADJ": "adj", "VERB": "verb", "PHRASE": "phrase"}
 # Adverbs and connectors the experiment found wrong more often than not (experiment §Decision 3).
 ALWAYS_DROP = ["long|ADV", "too|ADV", "ago|ADV", "yet|ADV", "yet|CONJ", "even|ADV", "especially|ADV",
-               "especially|CONJ", "anyway|ADV", "anyway|CONJ"]
+               "especially|CONJ", "anyway|ADV", "anyway|CONJ",
+               # temporal and causal senses split evenly; one target cannot serve both (seen on real pages)
+               "since|CONJ", "since|ADV"]
+# Entries whose dominant-sense flag is forced off: the model's flag was optimistic on real pages
+# ("while" concessive vs temporal, "still" = "even more" after a comparative).
+NON_DOMINANT = {"while|CONJ", "still|ADV", "rather|ADV", "so|ADV", "once|CONJ"}
+# Multiword expressions the experiment blocklist lacks; a swap may not overlap them.
+EXTRA_BLOCK = ["because of", "as well", "as well as", "so that", "even though", "even if", "as if", "such as",
+               "rather than", "more than", "less than", "at least", "at most", "in order to", "as long as",
+               "as soon as", "so far", "up to", "due to", "instead of", "in spite of", "on the other hand",
+               "in fact", "of course", "no longer", "not only", "as much", "as many", "only if", "the only",
+               "the very", "as far as", "as though", "now that", "so as", "in case"]
 PRENOMINAL = {
     "es": {"big", "good", "bad", "new", "old", "great", "small", "little", "young", "long", "first", "last", "only",
            "same", "other", "such", "next", "whole", "main", "high", "low", "best", "worst", "own"},
@@ -153,7 +164,7 @@ def convert_entry(lang: str, key: str, e: dict, ranks: dict[str, int]) -> dict |
     out = {
         "target": target,
         "sense": (e.get("english_sense") or "").strip() or lemma,
-        "dominant": bool(e.get("dominant_sense_covers_90pct")),
+        "dominant": bool(e.get("dominant_sense_covers_90pct")) and key not in NON_DOMINANT,
         "note": (e.get("ambiguity_note") or "").strip(),
         "class": cls,
         "tier": tier,
@@ -180,7 +191,7 @@ def main() -> None:
     lexicon = json.loads((exp / "lexicon.json").read_text(encoding="utf-8"))
     ranks = load_ranks(lexicon)
     drop = sorted(set(load_drop(exp, a.lang)) | set(ALWAYS_DROP))
-    blocklist = load_blocklist(exp / "mwe_blocklist.txt")
+    blocklist = sorted(set(load_blocklist(exp / "mwe_blocklist.txt")) | set(EXTRA_BLOCK))
 
     entries = {}
     skipped = 0

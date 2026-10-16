@@ -152,6 +152,25 @@ test('toggle and settings bump the generation and notify every tab', async () =>
   assert.equal(chrome._store.settings.enabled, true);
 });
 
+test('a seed file is applied once on first run', async () => {
+  const chrome = fakeChrome();
+  let loads = 0;
+  const make = () => createService({ chrome, providers: providers(), loadPack: async () => pack, loadSeed: async () => { loads++; return { lang: 'es', known: 2, ratio: 20, sites: { mode: 'ask', allow: ['news.example'] } }; }, now: () => new Date(NOW) });
+  let svc = make();
+  await svc.init();
+  let st = await svc.handle({ type: 'state' }, {});
+  assert.equal(st.settings.ratio, 20);
+  assert.equal(st.settings.sites.mode, 'ask');
+  assert.equal(st.summary.known, 2);
+  assert.equal(chrome._store.seedApplied, true);
+  await svc.handle({ type: 'settings', patch: { ratio: 40 } }, {});
+  svc = make();
+  await svc.init();
+  st = await svc.handle({ type: 'state' }, {});
+  assert.equal(st.settings.ratio, 40, 'the seed is not applied again');
+  assert.equal(loads, 1);
+});
+
 test('seed marks known words; export omits the key; the daily alarm promotes', async () => {
   const { svc, chrome } = await boot();
   await svc.handle({ type: 'setKey', key: 'secret' }, {});

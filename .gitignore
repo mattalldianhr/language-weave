@@ -15,3 +15,6 @@ node_modules/
 .wrangler/
 .DS_Store
 *.log
+
+# per-user first-run seed written by tools/seed.mjs
+extension/seed.json

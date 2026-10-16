@@ -124,6 +124,10 @@ export function findCandidates(pack, tagged, text, settings = {}) {
       continue;
     }
     if (t.degree || t.particle || t.phrasal || inPhraseBody.has(t.i)) continue;
+    // "the only product", "the very idea": an adverb-tagged word right after a determiner is an
+    // adjective in disguise.
+    const prev = tokens[t.i - 1];
+    if (prev && prev.pos === 'DET' && prev.sentence === t.sentence) continue;
     const adv = lookup(pack, t.normal, 'ADV') || (t.pos === 'ADV' ? lookup(pack, t.lemma, 'ADV') : null);
     if (!adv) continue;
     if (t.pos !== 'ADV' && lookup(pack, t.normal, 'ADJ')) continue; // ambiguous without a tagger vote

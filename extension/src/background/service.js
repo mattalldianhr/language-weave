@@ -24,7 +24,7 @@ const CACHE_MAX = 5000;
 const AVAILABILITY_TTL_MS = 60000;
 const EVENTS = new Set(['seen', 'peek', 'flip']);
 
-export function createService({ chrome, providers = {}, loadPack, now = () => new Date() }) {
+export function createService({ chrome, providers = {}, loadPack, loadSeed = null, now = () => new Date() }) {
   const store = chrome.storage.local;
   let settings = { ...DEFAULT_SETTINGS };
   let cloudKey = '';
@@ -59,7 +59,7 @@ export function createService({ chrome, providers = {}, loadPack, now = () => ne
 
   async function init() {
     if (store.setAccessLevel) await store.setAccessLevel({ accessLevel: 'TRUSTED_CONTEXTS' });
-    const data = await store.get(['settings', 'cloudKey', 'generation', 'quota', 'cache']);
+    const data = await store.get(['settings', 'cloudKey', 'generation', 'quota', 'cache', 'seedApplied']);
     settings = mergeSettings(DEFAULT_SETTINGS, data.settings || {});
     cloudKey = data.cloudKey || '';
     generation = Number(data.generation) || 1;
@@ -67,6 +67,30 @@ export function createService({ chrome, providers = {}, loadPack, now = () => ne
     if (data.cache) cache.fromJSON(data.cache);
     await store.set({ settings, generation });
     await chrome.alarms.create('daily', { periodInMinutes: 60 });
+    if (!data.seedApplied) await applySeed();
+  }
+
+  // First run only: an installer (see INSTALL-FOR-AGENTS.md) may leave seed.json next to the
+  // manifest with the language, density, site mode, and how many top words are already known.
+  async function applySeed() {
+    const seed = loadSeed ? await loadSeed().catch(() => null) : null;
+    if (seed && typeof seed === 'object') {
+      const patch = {};
+      for (const k of ['lang', 'ratio', 'perSentence', 'perDay', 'tier', 'skipSensitive']) if (k in seed) patch[k] = seed[k];
+      if (seed.sites) patch.sites = seed.sites;
+      settings = mergeSettings(settings, patch);
+      await store.set({ settings });
+      const n = Number(seed.known) || 0;
+      if (n > 0) {
+        const pack = await packFor(settings.lang).catch(() => null);
+        if (pack) {
+          const state = await stateFor(settings.lang);
+          seedKnown(state, pack, n, nowIso());
+          await saveState(settings.lang);
+        }
+      }
+    }
+    await store.set({ seedApplied: true });
   }
 
   async function bump() {

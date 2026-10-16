@@ -3,6 +3,13 @@
   "name": "Language Weave",
   "version": "0.1.0",
   "description": "Swaps a few English words on any page for the language you are learning. Offline by default; smarter with an on-device model or your own key.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "language-weave@language-weave.pages.dev",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": { "required": ["none"] }
+    }
+  },
   "permissions": ["storage", "alarms"],
   "optional_host_permissions": ["https://*/*"],
   "background": {

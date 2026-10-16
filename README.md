@@ -7,8 +7,12 @@ later days until it sticks.
 
 Spanish, French, German, Italian and Portuguese to start.
 
-**Status (October 2026):** research and design are done; the extension is not built yet. What exists today is
-the homepage (which demonstrates the method on its own copy) and the evidence behind the design.
+**Status (October 2026):** v0.1 of the Chrome extension is built and tested, with packs for all five
+languages. It loads unpacked; there is no Web Store listing. Safari and Firefox packaging are next.
+
+**Install.** Tell your coding agent: *"Set up the Language Weave browser extension from
+github.com/mattalldianhr/language-weave"*; it follows [`INSTALL-FOR-AGENTS.md`](INSTALL-FOR-AGENTS.md).
+By hand: clone, then `chrome://extensions` → Developer mode → Load unpacked → the `extension/` folder.
 
 ## Why build it from first principles
 
@@ -45,13 +49,47 @@ inspirations, this project measured the premises:
    first meeting and after a short retrieval pause from the second.
 4. **Portable by construction**: the WebExtensions common subset, state in extension storage, no native host.
 
+## How the extension works
+
+Plain ES modules, no bundler, no dependencies at run time beyond a vendored copy of the
+[compromise](https://github.com/spencermountain/compromise) tagger.
+
+- `extension/src/weave/` reads the page: which blocks, flattened text with a map back to text nodes, the tagger,
+  the rule layer (`candidates.js`), the painter, and the hover/flip/seen events.
+- `extension/src/background/` owns everything else: settings, the cloud key, word state, the daily quota, the
+  verifier chain with its cache, and selection against the density budget.
+- `extension/src/providers/` are the verifiers behind one interface: Chrome's Translator API, the Prompt API
+  (Gemini Nano), and cloud adapters for Anthropic, Gemini, and OpenAI-compatible endpoints.
+- `extension/src/shared/` is pure and runs in every context: pack schema and article rules, the scheduler
+  (progression and selection), the verifier prompt contract, site rules, text utilities.
+- `extension/packs/` holds one JSON pack per language; `tools/make-pack/convert.py` builds them from the
+  experiment's lexicon and judged results.
+
+Density is a reader setting with no ceiling. The default is 1 word in 33 and at most one per sentence; the
+extension honours whatever is set, and precision never drops to meet the number: only verified candidates
+are painted.
+
+### Tests
+
+```sh
+cd extension
+npm test            # unit tests, pack validation, rule-layer regression against the judged corpus
+npm run test:browser   # Playwright: loads the extension into Chromium and checks fixture pages
+```
+
+The browser run needs Playwright with Chromium (`npm i -D playwright && npx playwright install chromium`, or
+point `PW_DIR` at a folder that has it).
+
 ## Repository layout
 
 ```
+extension/   the browser extension (load unpacked)
+tools/       pack converter, first-run seed writer, precision eval
 site/        the homepage (static; deploys as-is)
 research/    coverage data, literature review, product landscape, platform feasibility,
              and the precision experiment, with every script and judged sample
 design/      the content brief and the two unchosen homepage drafts
+docs/        the design spec and the implementation plan
 ```
 
 ### Reproducing the research
