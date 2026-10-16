@@ -10,10 +10,16 @@ const SIMPLE_DETS = new Set(['the', 'a', 'an']);
 const COPULAS = new Set(['is', 'are', 'was', 'were', 'be', 'been', 'being', 'am', 'become', 'becomes', 'became', 'seem', 'seems', 'seemed', 'remain', 'remains', 'remained']);
 // English preposition -> German case it governs; null = two-way (accusative or dative).
 const DE_PREP = {
-  with: 'dat', for: 'acc', from: 'dat', to: 'dat', about: 'acc', after: 'dat', before: 'dat', between: 'dat', at: 'dat',
-  of: 'gen', in: null, on: null, over: null, under: null, into: 'acc', through: 'acc', without: 'acc', against: 'acc',
-  during: 'gen', since: 'dat', by: 'dat', among: 'dat', behind: null, across: 'acc', despite: 'gen', within: 'dat',
+  with: 'dat', for: 'acc', from: 'dat', about: 'acc', after: 'dat', before: 'dat', between: 'dat', at: 'dat',
+  of: 'gen', into: 'acc', through: 'acc', without: 'acc', against: 'acc',
+  during: 'gen', since: 'dat', among: 'dat', across: 'acc', despite: 'gen', within: 'dat',
+  // two-way, or English prepositions whose German rendering varies by verb ("move to" = in + acc,
+  // "central to" = für + acc, "by a process" = durch + acc): the verifier chooses
+  in: null, on: null, over: null, under: null, behind: null, to: null, by: null,
 };
+// Connectors that must not open a sentence in a language: Romance languages say "Como / Comme /
+// Siccome" for a causal opener, and "Aussi," / "Auch," do not mean "Furthermore,".
+const NO_SENTENCE_START = { es: ['because'], fr: ['because', 'also'], it: ['because'], pt: ['because'], de: ['also'] };
 const CASES = ['nom', 'acc', 'dat', 'gen'];
 
 const ALPHA = /^\p{L}+(?:['’]\p{L}+)?$/u;
@@ -119,10 +125,8 @@ export function findCandidates(pack, tagged, text, settings = {}) {
     if (t.pos === 'NOUN' || t.pos === 'VERB' || t.pos === 'PRON' || t.pos === 'DET' || t.pos === 'AUX' || t.pos === 'NUM') continue;
     const conn = lookup(pack, t.normal, 'CONJ');
     if (conn) {
-      // Romance languages open a causal sentence with "Como / Comme / Siccome / Como", not
-      // "Porque / Parce que"; a sentence-initial "Because" is left alone there.
       const sentenceStart = tagged.sentences[t.sentence]?.start === t.start;
-      if (t.normal === 'because' && sentenceStart && ['es', 'fr', 'it', 'pt'].includes(pack.lang)) continue;
+      if (sentenceStart && (NO_SENTENCE_START[pack.lang] || []).includes(t.normal)) continue;
       usedTokens.add(t.i);
       push({ start: t.start, end: t.end, sentence: t.sentence, english: t.text, key: conn.key, keys: [conn.key], lemma: t.normal, pos: 'CONJ', form: capLike(t.text, conn.forms.word), rule: 'conn', entries: [conn] });
       continue;

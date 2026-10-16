@@ -35,6 +35,19 @@ test('connectors swap by surface word, with capitalisation copied', () => {
   assert.equal(cs.find((c) => c.key === 'but|CONJ').sentence, 0);
 });
 
+test('sentence-initial "Because" is skipped for Romance languages, "Also" for French and German', () => {
+  const es = mini('es');
+  const text = 'Because the plan failed, we left. Also, the system was slow.';
+  const esKeys = run(es, text).map((c) => `${c.english}:${c.key}`);
+  assert.ok(!esKeys.includes('Because:because|CONJ'));
+  assert.ok(esKeys.includes('Also:also|CONJ'));
+  const fr = mini('fr');
+  const frKeys = run(fr, text).map((c) => `${c.english}:${c.key}`);
+  assert.ok(!frKeys.includes('Also:also|CONJ'));
+  const de = { ...dePack, entries: { ...dePack.entries, 'because|CONJ': { target: 'weil', sense: 'for the reason that', dominant: true, note: '', class: 'conn', tier: 1, rank: 90, forms: { word: 'weil' } } } };
+  assert.ok(run(de, text).some((c) => c.english === 'Because'));
+});
+
 test('connectors tagged as adverbs or prepositions still match the pack', () => {
   const pack = mini('es');
   const text = 'We also think so.';
@@ -141,6 +154,10 @@ test('German: fixed-case prepositions and direct objects get a case; two-way pre
   assert.ok(inQ.alternatives.includes('der Frage'));
   assert.ok(inQ.alternatives.includes('die Frage'));
   assert.deepEqual(run(dePack, text, { tier: 'none' }).map((c) => c.needsVerifier), [undefined, undefined]);
+  // "to" and "by" vary by verb in German, so they are left to the verifier
+  const t2 = 'He moved to the question by the dog.';
+  for (const c of run(dePack, t2, { tier: 'llm' })) assert.equal(c.needsVerifier, true, c.english);
+  assert.deepEqual(run(dePack, t2, { tier: 'none' }), []);
 });
 
 test('German: adjective endings follow the article and case', () => {

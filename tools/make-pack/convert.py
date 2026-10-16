@@ -33,9 +33,18 @@ NON_DOMINANT = {"while|CONJ", "still|ADV", "rather|ADV", "so|ADV", "once|CONJ", 
                 # adverb entries whose preposition-like uses dominate on real pages ("hard to", "inside of")
                 "hard|ADV", "inside|ADV", "outside|ADV", "right|ADV", "well|ADV", "close|ADV", "alone|ADV",
                 "away|ADV", "likely|ADV",
-                # nouns and adjectives the Spanish judge sample caught in a second sense
+                # nouns and adjectives the judge samples caught in a second sense
                 "people|NOUN", "part|NOUN", "bank|NOUN", "side|NOUN", "body|NOUN", "site|NOUN", "kind|NOUN",
-                "next|ADJ", "past|ADJ", "general|ADJ", "common|ADJ", "moment|NOUN"}
+                "next|ADJ", "past|ADJ", "general|ADJ", "common|ADJ", "moment|NOUN", "work|NOUN", "right|NOUN",
+                "vote|NOUN", "together|ADV", "then|ADV", "far|ADV"}
+# Per language. German subordinating conjunctions send the verb to the end of the clause, which an
+# English clause cannot show, so a teacher reads "weil I was in the US" as broken; they stay available
+# to the model tier only. "Serie" is television, "Arbeit" is labour, "dann" is sequence only.
+NON_DOMINANT_BY_LANG = {
+    "de": {"because|CONJ", "although|CONJ", "unless|CONJ", "until|CONJ", "whereas|CONJ", "while|CONJ",
+           "series|NOUN", "total|NOUN", "history|NOUN", "fast|ADJ", "black|ADJ"},
+    "fr": {"although|CONJ"},  # bien que + subjunctive
+}
 # Multiword expressions the experiment blocklist lacks; a swap may not overlap them.
 EXTRA_BLOCK = ["because of", "as well", "as well as", "so that", "even though", "even if", "as if", "such as",
                "rather than", "more than", "less than", "at least", "at most", "in order to", "as long as",
@@ -44,7 +53,9 @@ EXTRA_BLOCK = ["because of", "as well", "as well as", "so that", "even though", 
                "the very", "as far as", "as though", "now that", "so as", "in case",
                "but also", "just because", "inside of", "outside of", "a part in", "on the side of",
                "at the moment", "a bad name", "a good name", "most often", "a year", "a day", "a week",
-               "a month", "an hour", "at the time", "the time", "in time", "on time", "the general will"]
+               "a month", "an hour", "at the time", "the time", "in time", "on time", "the general will",
+               "very much", "all but", "from now on", "half an hour", "thanks again", "fast food",
+               "black market", "a night", "the word", "far from", "but then", "its very", "the very"]
 PRENOMINAL = {
     # "large" joins the apocope group ("una gran cantidad"); "main" leaves it ("la idea principal").
     "es": {"big", "large", "good", "bad", "new", "old", "great", "small", "little", "young", "long", "first", "last",
@@ -174,7 +185,8 @@ def convert_entry(lang: str, key: str, e: dict, ranks: dict[str, int]) -> dict |
     out = {
         "target": target,
         "sense": (e.get("english_sense") or "").strip() or lemma,
-        "dominant": bool(e.get("dominant_sense_covers_90pct")) and key not in NON_DOMINANT,
+        "dominant": bool(e.get("dominant_sense_covers_90pct")) and key not in NON_DOMINANT
+        and key not in NON_DOMINANT_BY_LANG.get(lang, set()),
         "note": (e.get("ambiguity_note") or "").strip(),
         "class": cls,
         "tier": tier,
