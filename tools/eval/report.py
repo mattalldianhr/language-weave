@@ -40,6 +40,10 @@ def main() -> None:
         if not path.exists():
             continue
         rows = [json.loads(l) for l in path.read_text(encoding="utf-8").splitlines() if l.strip()]
+        if not rows:
+            print(f"\n{a.lang} tier={tier}: no judged items (judging failed or has not run)")
+            ok_all = False
+            continue
         by_rule: dict[str, list[int]] = defaultdict(lambda: [0, 0])
         errors: dict[str, int] = defaultdict(int)
         for r in rows:
