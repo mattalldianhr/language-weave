@@ -222,3 +222,26 @@ Commit: `Extension: v1 verified on real pages`.
 ## Order and parallelism
 
 Phases 1 and 2 are independent of each other and of pack conversion (5.3). Phase 3 needs 1.3, 1.4, 2.x. Phase 4 needs 2.1, 1.5, and 3. Phase 5.1 needs 4. Phase 6 needs everything. Run 5.3 and 5.4 early so the rule-layer regression test in 1.5 can use real packs.
+
+## Results (2026-10-16)
+
+Every task above is done. Deviations from the plan: the plan was written by hand (no `writing-plans` skill on the machine); the first-run seed became `extension/seed.json`, read once by the background, because a script cannot write browser storage; `tools/eval` judges with `claude -p` and can also run the LLM tier through `claude -p` as the verifier.
+
+**Tests.** `npm test`: 111 unit tests pass, including pack validation for all five packs and the regression against the judged corpus (the rule layer reproduces 79% of judged-correct Spanish and French swaps and 85% of German; the gap is tagger limits and deliberate blocklist hits). `npm run test:browser`: 37 Playwright checks pass in Chromium with the extension loaded, zero console errors. `web-ext lint`: 0 errors, 4 warnings (Chrome service worker ignored by Firefox, which uses the `scripts` entry; the dynamic import in the loader).
+
+**Precision eval** (`tools/eval`, research corpus of 27 documents, 200-item samples stratified by rule, judged by Claude Sonnet with the experiment's judge prompt, pooled by each rule's share of candidates, 95% Wilson intervals):
+
+| language | tier | correct | candidates / 100 words | painted / 100 at 1 in 33 | gate |
+|---|---|---|---|---|---|
+| es | rules only | 90.6% [86–94] | 1.94 | 1.29 | pass (90%) |
+| fr | rules only | 93.1% [89–96] | 1.80 | 1.22 | pass (90%) |
+| de | rules only | 85.3% [80–90] | 1.22 | 0.91 | fail (90%) |
+| es | LLM (Claude Sonnet as verifier, 60 blocks, 75 items) | 92.0% [84–96] | 3.23 | 1.72 | fail (95%) |
+
+By rule, connectors run 96–100% in every language and article-plus-noun 84–92%; adverbs are the weak class (78–84% in es and de). German's shortfall is adverbs and case: five of eleven German noun "case errors" carry a judge reason that says the form is correct, so the true German figure sits above 85%, but it does not reach 90%. The LLM tier's 92% is on a small sample; its errors are idioms the verifier let through ("a book a year", "not just X but Y").
+
+**Density at the default setting is supply-limited.** With 1 in 33 requested, the rule-only tier paints about 1 in 75 (es), because candidates are rarer than the budget. The reader setting is honoured exactly whenever supply allows (browser checks at 1 in 33, 1 in 100, and everything).
+
+**Real pages** (`test/browser/real.mjs`, Spanish, French, German): Wikipedia "Volcano" paints 70–92 swaps over the parts scrolled into view with zero console errors and no page damage; reading them, about nine in ten are right in each language, and the misses fed the pack fixes above. MDN and text.npr.org paint nothing, correctly: their readable text outside links and code is too short per block.
+
+**Follow-ups.** German rule-only tier below the gate: either route German article-plus-noun swaps through the verifier only, or gather a larger German sample with an Opus judge to settle the case noise. LLM tier: a larger verified sample and an idiom hint in the prompt. Adverbs: a per-lemma adverb blocklist built from these samples would lift es and de by a few points.
