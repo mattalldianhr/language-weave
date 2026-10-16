@@ -1,6 +1,6 @@
 # Language Weave extension: design
 
-Date: 2026-10-16. Status: draft for review.
+Date: 2026-10-16. Status: approved by Matt 2026-10-16 (density made a reader setting with no ceiling).
 
 Language Weave is a browser extension that swaps a few English words on any page for a target language. It is a diglot weave: the reader keeps reading English and meets the same foreign words again and again until they stick. This document fixes the v1 design. Every rule below cites the research in `research/` rather than the inspirations (`french-weave`, Ferriss).
 
@@ -129,7 +129,7 @@ Per page, in the content script:
 5. **Schedule.** Pure selection over verified candidates (see §6). It decides which words and how many.
 6. **Paint.** Each swap replaces text inside one text node only, never across element boundaries, preserving whitespace. The span holds the English original, the lemma, and the sense. Pause or disable restores every original in place.
 
-Density, from literature items 1 and 2: at most one swap per sentence, and a page ratio between 1 in 50 and 1 in 20 running words. Default is 1 in 33. Density is counted per block, not as a page percentage, because percent sliders are the most complained-about control in the market (`research/landscape.md` §4 item 2).
+Density is the reader's setting, with no ceiling. The default is 1 swap in 33 running words and at most one swap per sentence, inside the literature's comfort band of 1 in 50 to 1 in 20 (items 1, 2). The reader can set it anywhere from 1 in 100 up to every eligible word, and can lift the one-per-sentence cap. The settings page shows the research band and what leaving it costs to comprehension, and does not stop the reader. The setting is honoured exactly: the schedule counts swaps per block against the ratio rather than estimating a page percentage, because ignored density sliders are the most complained-about control in the market (`research/landscape.md` §3 Q2 item 2). At high settings the limit becomes supply: only verified candidates are painted, so precision never drops to meet the number. When the learning set cannot fill the budget, the schedule draws on known words and then on queue words as extras that do not enter the learning window, so intake and promotion rules are unchanged.
 
 ## 6. Progression
 
@@ -148,7 +148,7 @@ Only `isTrusted` events on spans the extension made produce events, so pages can
 
 ## 7. Settings and surfaces
 
-Popup: global on/off, this-site on/off, target language, density (light or normal), new words per day, provider status (on-device available or not, cloud key set or not), and today's learning words with status. Options page: cloud provider and key, site allow and deny lists, sensitive-topic skips, export and import of progress as JSON, a reset per language.
+Popup: global on/off, this-site on/off, target language, density (a slider from 1 in 100 to everything, default 1 in 33, with the research band marked), new words per day, provider status (on-device available or not, cloud key set or not), and today's learning words with status. Options page: cloud provider and key, the one-swap-per-sentence cap, site allow and deny lists, sensitive-topic skips, export and import of progress as JSON, a reset per language.
 
 Keyboard: one command toggles the extension off and restores every page. Nuenki and Toucan reviewers asked for a fast off switch (`research/landscape.md` §3 Q2 item 5).
 
@@ -167,8 +167,8 @@ Cloud keys live only in `storage.local`. The host permission for a provider's en
 ## 9. Testing
 
 - **Unit** (`node --test`): rules, schedule, pack validation, prompt output parsing, text utilities. Pure modules, no browser.
-- **Precision eval** (`tools/eval`): replays the 27-document research corpus through the real `candidates.js` and a chosen verifier, judged with the experiment's judge prompt via `claude -p`. Gates: conservative set at or above 90% correct; LLM tier at or above 95%; density within bounds. The harness is how a new language or a changed rule gets accepted.
-- **Browser integration** (Playwright, Chromium with the extension loaded): fixture pages for prose, forms, code, links, a dynamic feed, and a non-English page. Checks: no swap inside excluded nodes, one text node per swap, originals restored on pause and on the keyboard toggle, density within bounds, events only from trusted input, zero console errors.
+- **Precision eval** (`tools/eval`): replays the 27-document research corpus through the real `candidates.js` and a chosen verifier, judged with the experiment's judge prompt via `claude -p`. Gates: conservative set at or above 90% correct; LLM tier at or above 95%; painted density matches the setting at the default, at 1 in 100, and at the maximum. The harness is how a new language or a changed rule gets accepted.
+- **Browser integration** (Playwright, Chromium with the extension loaded): fixture pages for prose, forms, code, links, a dynamic feed, and a non-English page. Checks: no swap inside excluded nodes, one text node per swap, originals restored on pause and on the keyboard toggle, density matching the setting at three values including the maximum, events only from trusted input, zero console errors.
 - **Cross-browser lint**: `web-ext lint` for Firefox and a manifest check against the Safari subset, so the common-subset promise holds without shipping those builds yet.
 
 ## 10. Install
@@ -185,5 +185,5 @@ Cloud keys live only in `storage.local`. The host permission for a provider's en
 
 ## 12. Open questions for v1
 
-- The 700 ms dwell and the 1-in-33 default density are guesses inside the research bounds. Both are settings and the eval harness will report them, not the literature.
+- The 700 ms dwell and the 1-in-33 default density are guesses inside the research bounds. Both are settings, density without a ceiling, and the eval harness will report them, not the literature.
 - German case without a dependency parser: v1 relies on the verifier for everything except sentence-initial nominatives. The eval will report German density in the no-verifier tier.
