@@ -7,8 +7,9 @@ later days until it sticks.
 
 Spanish, French, German, Italian and Portuguese to start.
 
-**Status (October 2026):** v0.1 of the Chrome extension is built and tested, with packs for all five
-languages. It loads unpacked; there is no Web Store listing. Safari and Firefox packaging are next.
+**Status (October 2026):** v0.1 is built and tested, with packs for all five languages. It loads
+unpacked in Chrome and as a temporary add-on in Firefox; there is no store listing yet. Safari needs the
+App Store packager (see `docs/packaging.md`).
 
 **Install.** Tell your coding agent: *"Set up the Language Weave browser extension from
 github.com/mattalldianhr/language-weave"*; it follows [`INSTALL-FOR-AGENTS.md`](INSTALL-FOR-AGENTS.md).
@@ -78,7 +79,10 @@ npm run test:browser   # Playwright: loads the extension into Chromium and check
 ```
 
 The browser run needs Playwright with Chromium (`npm i -D playwright && npx playwright install chromium`, or
-point `PW_DIR` at a folder that has it).
+point `PW_DIR` at a folder that has it). `npm run smoke:firefox` loads the extension into a headless
+Firefox through `web-ext` and checks that it paints. `docs/packaging.md` covers the Firefox zip
+(`npm run build:firefox`) and the Safari routes; touch devices get a tap-to-gloss, tap-again-to-flip
+behaviour.
 
 ## Repository layout
 

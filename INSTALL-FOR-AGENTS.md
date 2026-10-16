@@ -62,6 +62,12 @@ Tell the person, with the real absolute path filled in:
 > meaning, click to put the English back. The toolbar icon turns it off everywhere or on one site, and sets
 > how dense the swaps are. Alt+Shift+W turns it off from the keyboard.
 
+If they use Firefox instead of Chrome:
+
+> Open `about:debugging#/runtime/this-firefox`, click **Load Temporary Add-on**, and choose
+> `<absolute path>/language-weave/extension/manifest.json`. Firefox forgets temporary add-ons when it
+> closes; a signed build for keeps is described in `docs/packaging.md`.
+
 If they answered yes to a cloud model:
 
 > In the extension's **Settings** (link at the bottom of the popup), choose the provider, paste the key, and
