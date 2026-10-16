@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Language Weave",
+  "version": "0.1.0",
+  "description": "Swaps a few English words on any page for the language you are learning. Offline by default; smarter with an on-device model or your own key.",
+  "permissions": ["storage", "alarms"],
+  "optional_host_permissions": ["https://*/*"],
+  "background": {
+    "service_worker": "src/background.js",
+    "scripts": ["src/background.js"],
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["src/content-loader.js"],
+      "css": ["src/weave/weave.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["src/*.js", "src/*/*.js", "vendor/*", "packs/*"],
+      "matches": ["http://*/*", "https://*/*"]
+    }
+  ],
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_title": "Language Weave"
+  },
+  "options_ui": {
+    "page": "src/options/options.html",
+    "open_in_tab": true
+  },
+  "commands": {
+    "toggle": {
+      "suggested_key": { "default": "Alt+Shift+W" },
+      "description": "Turn Language Weave off or on everywhere"
+    }
+  }
+}
