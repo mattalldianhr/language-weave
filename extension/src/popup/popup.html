@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Language Weave</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<main id="app" class="app" aria-busy="true">
+  <header class="head">
+    <h1 class="title">Language <em>Weave</em></h1>
+    <label class="lang">
+      <span class="vh">Language</span>
+      <select id="lang" aria-label="Language">
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+        <option value="de">German</option>
+        <option value="it">Italian</option>
+        <option value="pt">Portuguese</option>
+      </select>
+    </label>
+  </header>
+
+  <section class="switches" aria-label="Where it runs">
+    <label class="row"><span>On everywhere</span><input id="enabled" type="checkbox" class="switch"></label>
+    <label class="row"><span id="site-label">On this site</span><input id="site" type="checkbox" class="switch"></label>
+    <p id="reason" class="note" hidden></p>
+  </section>
+
+  <section class="density" aria-label="Density">
+    <div class="row">
+      <label for="ratio">Density</label>
+      <output id="ratio-out" for="ratio">1 word in 33</output>
+    </div>
+    <input id="ratio" type="range" min="1" max="100" step="1" value="68" aria-describedby="band">
+    <p id="band" class="note">Comfortable reading keeps it between 1 in 50 and 1 in 20. Go past that if you want; the page will do exactly what you ask.</p>
+    <div class="row">
+      <label for="perday">New words a day</label>
+      <input id="perday" type="number" min="1" max="5" step="1" value="3">
+    </div>
+  </section>
+
+  <section class="status" aria-label="Checking">
+    <h2 class="h2">Checking swaps with</h2>
+    <p id="tier" class="tier">…</p>
+    <p id="providers" class="note"></p>
+  </section>
+
+  <section class="today" aria-label="Today">
+    <h2 class="h2">Today</h2>
+    <p id="counts" class="note"></p>
+    <ol id="words" class="words"></ol>
+  </section>
+
+  <footer class="foot">
+    <a id="options" href="#">Settings and privacy</a>
+    <span id="version" class="note"></span>
+  </footer>
+</main>
+<script type="module" src="popup.js"></script>
+</body>
+</html>

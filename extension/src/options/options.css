@@ -1,0 +1,47 @@
+:root {
+  --paper: #f7f3ec;
+  --ink: #25172f;
+  --ink-soft: color-mix(in oklab, var(--ink) 62%, var(--paper));
+  --violet: #6427fa;
+  --line: color-mix(in oklab, var(--ink) 14%, var(--paper));
+  --card: color-mix(in oklab, var(--paper) 92%, white);
+  --serif: "Literata", Georgia, "Times New Roman", serif;
+  --sans: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 15px/1.5 var(--sans); }
+.page { max-width: 64ch; margin: 0 auto; padding: 32px 16px 64px; display: grid; gap: 20px; }
+.head { display: grid; gap: 8px; margin-bottom: 8px; }
+.title { margin: 0; font: 400 clamp(28px, 4vw, 36px)/1.1 var(--serif); letter-spacing: 0; }
+.title em { font-style: italic; color: var(--violet); }
+.title .sub { font: 400 0.5em/1 var(--sans); color: var(--ink-soft); margin-left: 8px; text-transform: uppercase; letter-spacing: .04em; }
+.lede { margin: 0; color: var(--ink-soft); max-width: 60ch; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px 18px; display: grid; gap: 10px; }
+.card h2 { margin: 0 0 2px; font: 400 20px/1.2 var(--serif); }
+.card p { margin: 0; }
+.note { font-size: 13px; color: var(--ink-soft); }
+.row { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 32px; }
+.col { display: grid; gap: 6px; }
+select, input[type="number"], input[type="text"], input[type="url"], input[type="password"], textarea {
+  font: 14px var(--sans); color: var(--ink); background: var(--paper);
+  border: 1px solid var(--line); border-radius: 6px; padding: 6px 8px; min-width: 0;
+}
+input[type="number"] { width: 90px; text-align: center; }
+input[type="text"], input[type="url"], input[type="password"] { width: 60%; }
+textarea { width: 100%; resize: vertical; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 13px; }
+input[type="checkbox"] { width: 18px; height: 18px; accent-color: var(--violet); margin: 0; }
+.buttons { display: flex; flex-wrap: wrap; gap: 8px; }
+button, .button {
+  font: 500 14px var(--sans); color: var(--paper); background: var(--ink);
+  border: 1px solid var(--ink); border-radius: 6px; padding: 7px 12px; cursor: pointer;
+}
+button:hover, .button:hover { background: color-mix(in oklab, var(--ink) 85%, var(--violet)); }
+button:focus-visible, .button:focus-within { outline: 2px solid var(--violet); outline-offset: 2px; }
+.quiet { background: transparent; color: var(--ink); }
+.danger { background: transparent; color: #8a1c1c; border-color: #8a1c1c; }
+.danger:hover { background: #8a1c1c; color: var(--paper); }
+@media (max-width: 480px) {
+  .row { flex-direction: column; align-items: flex-start; }
+  input[type="text"], input[type="url"], input[type="password"] { width: 100%; }
+}

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Language Weave settings</title>
+<link rel="stylesheet" href="options.css">
+</head>
+<body>
+<main class="page">
+  <header class="head">
+    <h1 class="title">Language <em>Weave</em> <span class="sub">settings</span></h1>
+    <p class="lede">Everything here lives in your browser's extension storage. Nothing is sent anywhere unless you add a cloud key, and then only the sentences being checked.</p>
+  </header>
+
+  <section class="card" aria-labelledby="h-reading">
+    <h2 id="h-reading">Reading</h2>
+    <label class="row"><span>Language</span>
+      <select id="lang"><option value="es">Spanish</option><option value="fr">French</option><option value="de">German</option><option value="it">Italian</option><option value="pt">Portuguese</option></select></label>
+    <label class="row"><span>Density, one word in</span><input id="ratio" type="number" min="1" max="1000" step="1"></label>
+    <p class="note">Research puts comfortable reading between 1 in 50 and 1 in 20. The default is 1 in 33. Any value is honoured exactly; 1 means every eligible word.</p>
+    <label class="row"><span>At most one swap per sentence</span><input id="perSentence" type="checkbox"></label>
+    <label class="row"><span>New words a day (1 to 5)</span><input id="perDay" type="number" min="1" max="5" step="1"></label>
+    <label class="row"><span>Skip pages about health, money, and mail</span><input id="skipSensitive" type="checkbox"></label>
+  </section>
+
+  <section class="card" aria-labelledby="h-level">
+    <h2 id="h-level">How much do you already know?</h2>
+    <p class="note">Marks the most common words as known so they stop being introduced. Never lowers progress you already have.</p>
+    <div class="buttons">
+      <button type="button" data-seed="0">Nothing yet</button>
+      <button type="button" data-seed="40">A few basic words</button>
+      <button type="button" data-seed="150">I can read simple text</button>
+    </div>
+    <p id="seed-out" class="note" aria-live="polite"></p>
+  </section>
+
+  <section class="card" aria-labelledby="h-sites">
+    <h2 id="h-sites">Sites</h2>
+    <label class="row"><span>Mode</span>
+      <select id="siteMode"><option value="all">Every site, except the ones I turn off</option><option value="ask">Only sites I turn on</option></select></label>
+    <label class="col"><span id="siteListLabel">Turned off</span><textarea id="siteList" rows="3" placeholder="one hostname per line"></textarea></label>
+    <p class="note">Sign-in, checkout, billing, and account pages are always skipped.</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-check">
+    <h2 id="h-check">Checking swaps</h2>
+    <p class="note">Without anything set up, swaps come from word rules that were right about nine times in ten in testing. Chrome's on-device model or translator, when present, check sense and form. A cloud key does the same on any machine.</p>
+    <label class="row"><span>Use</span>
+      <select id="tier"><option value="auto">The best checker available</option><option value="none">Word rules only, never a model</option></select></label>
+    <label class="row"><span>Cloud provider</span>
+      <select id="cloudProvider"><option value="">None</option><option value="anthropic">Anthropic</option><option value="gemini">Google Gemini</option><option value="openai">OpenAI-compatible</option></select></label>
+    <label class="row"><span>Model (optional)</span><input id="cloudModel" type="text" placeholder="provider default"></label>
+    <label class="row" id="baseRow" hidden><span>Base URL</span><input id="cloudBase" type="url" placeholder="https://api.openai.com/v1"></label>
+    <label class="row"><span>API key</span><input id="cloudKey" type="password" autocomplete="off" placeholder="paste here, never in chat"></label>
+    <div class="buttons"><button type="button" id="saveKey">Save key</button><button type="button" id="clearKey" class="quiet">Remove key</button></div>
+    <label class="row"><span>Daily cloud call limit</span><input id="cloudLimit" type="number" min="1" max="100000" step="1"></label>
+    <p id="key-out" class="note" aria-live="polite"></p>
+  </section>
+
+  <section class="card" aria-labelledby="h-data">
+    <h2 id="h-data">Your progress</h2>
+    <div class="buttons">
+      <button type="button" id="export">Export JSON</button>
+      <label class="button">Import JSON<input id="import" type="file" accept="application/json" hidden></label>
+      <button type="button" id="reset" class="danger">Reset this language</button>
+    </div>
+    <p id="data-out" class="note" aria-live="polite"></p>
+  </section>
+
+  <section class="card" aria-labelledby="h-privacy">
+    <h2 id="h-privacy">Privacy</h2>
+    <p>Pages are read and rewritten inside your browser. Progress, settings, and any key stay in extension storage on this device. There is no account, no analytics, and no server of ours. With a cloud key, the sentences that contain a candidate word are sent to that provider and nothing else; the daily limit above caps those calls.</p>
+  </section>
+</main>
+<script type="module" src="options.js"></script>
+</body>
+</html>
