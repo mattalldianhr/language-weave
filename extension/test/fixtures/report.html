@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Report fixture</title></head>
+<body>
+<article>
+<p>The question was simple, but the answer took the city a long time. The company had built a bridge across the river, and the people who lived near the water were not sure it was a good idea. The mayor said the problem was money, but the engineers said the problem was the ground under the bridge. Nobody wanted to say the project was a mistake, because the work had already started.</p>
+<p>In the morning the family walked to the market with the children, and the father bought bread and the mother bought fish. The market was busy because the weather was good, and the music from the square made the morning feel like a holiday. The children wanted the same thing every week, so the parents also bought fruit.</p>
+<p>The teacher asked the students a question about the war, and the students gave the same answer. The history of the country was long, so the teacher chose the part about the king and the church. The book on the table was open at the page about the castle, and the picture of the castle showed the river and the bridge.</p>
+</article>
+<script>
+// Reports what the extension painted, so a browser run that only sees stdout can read it.
+let ticks = 0;
+const t = setInterval(() => {
+  const n = document.querySelectorAll('.lw-swap').length;
+  if (n > 0 || ++ticks >= 40) {
+    clearInterval(t);
+    console.log('LW_SWAPS=' + n);
+    fetch('/lw-report?n=' + n, { method: 'POST' }).catch(() => {});
+  }
+}, 250);
+</script>
+</body></html>

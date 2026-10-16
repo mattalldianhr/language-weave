@@ -219,9 +219,55 @@ try {
   check('no console errors', errors.length === 0, errors.slice(0, 3).join(' | '));
 } finally {
   await context.close().catch(() => {});
-  server.close();
-  fs.rmSync(userDataDir, { recursive: true, force: true });
 }
+
+// 9. touch: first tap shows the gloss, second tap flips, a tap elsewhere closes it
+{
+  const touchDir = fs.mkdtempSync(path.join(os.tmpdir(), 'lw-pw-touch-'));
+  const touch = await chromium.launchPersistentContext(touchDir, {
+    headless: true, channel: 'chromium', hasTouch: true, isMobile: true, viewport: { width: 390, height: 844 },
+    args: [`--disable-extensions-except=${extDir}`, `--load-extension=${extDir}`],
+  });
+  try {
+    let [tsw] = touch.serviceWorkers();
+    if (!tsw) tsw = await touch.waitForEvent('serviceworker', { timeout: 15000 });
+    await sleep(400);
+    await tsw.evaluate(async () => globalThis.lwService.handle({ type: 'reset', lang: 'es' }, {}));
+    const page = await touch.newPage();
+    await page.goto(`${base}/prose.html`);
+    await waitForSpans(page, 1);
+    const span = await page.$('.lw-swap');
+    const key = await span.getAttribute('data-key');
+    await tsw.evaluate(async (k) => globalThis.lwService.handle({ type: 'event', key: k, event: 'seen' }, { tab: { id: 1 } }), key);
+    await page.reload();
+    await waitForSpans(page, 1);
+    const later = await page.$(`.lw-swap[data-key="${key}"]`);
+    await later.tap();
+    await sleep(150);
+    const afterFirstTap = await later.evaluate((e) => ({ tip: e.classList.contains('lw-tip'), flipped: e.classList.contains('lw-flipped') }));
+    check('touch: first tap shows the gloss without flipping', afterFirstTap.tip && !afterFirstTap.flipped, JSON.stringify(afterFirstTap));
+    const st = await tsw.evaluate(async () => (await chrome.storage.local.get('state:es'))['state:es']);
+    check('touch: that tap counts as a peek', st?.words?.[key]?.lastPeek != null);
+    await later.tap();
+    await sleep(150);
+    const afterSecond = await later.evaluate((e) => ({ flipped: e.classList.contains('lw-flipped'), text: e.textContent, en: e.dataset.en }));
+    check('touch: second tap flips to English', afterSecond.flipped && afterSecond.text === afterSecond.en, JSON.stringify(afterSecond));
+    const other = (await page.$$('.lw-swap'))[1];
+    if (other) {
+      await other.tap();
+      await sleep(150);
+      await page.touchscreen.tap(5, 5);
+      await sleep(150);
+      check('touch: a tap elsewhere closes the gloss', !(await other.evaluate((e) => e.classList.contains('lw-tip'))));
+    }
+    await page.close();
+  } finally {
+    await touch.close().catch(() => {});
+    fs.rmSync(touchDir, { recursive: true, force: true });
+  }
+}
+server.close();
+fs.rmSync(userDataDir, { recursive: true, force: true });
 const failed = results.filter((r) => !r.ok);
 console.log(`\n${results.length - failed.length}/${results.length} checks passed`);
 process.exit(failed.length ? 1 : 0);

@@ -55,11 +55,27 @@ export function createInteraction({ doc, send, delay = TIP_DELAY_MS }) {
     send({ type: 'event', key: span.getAttribute('data-key'), event: 'flip' });
   }
 
+  // Touch (Safari on iOS, Firefox for Android): there is no hover, so the first tap shows the
+  // gloss and counts as a peek; the second tap flips. A pointerdown from a touch marks the span,
+  // and the click that follows is read against that mark.
+  let touched = null;
+  function pointerdown(e) {
+    if (e.pointerType !== 'touch') return;
+    const span = spanOf(e);
+    touched = span && span !== tipped ? span : null;
+  }
+
   function click(e) {
     const span = spanOf(e);
     if (!span) return;
     e.preventDefault();
     e.stopPropagation();
+    if (touched === span) {
+      touched = null;
+      showTip(span, { peek: !span.hasAttribute('data-first') });
+      return;
+    }
+    touched = null;
     flip(span);
   }
 
@@ -87,11 +103,19 @@ export function createInteraction({ doc, send, delay = TIP_DELAY_MS }) {
     visible.observe(span);
   }
 
+  // A tap elsewhere closes an open gloss.
+  function outside(e) {
+    if (!tipped || !e.isTrusted) return;
+    if (!e.target?.closest?.(`.${SWAP_CLASS}`)) hideTip();
+  }
+
   function attach() {
     doc.addEventListener('mouseover', enter, true);
     doc.addEventListener('focusin', enter, true);
     doc.addEventListener('mouseout', leave, true);
     doc.addEventListener('focusout', leave, true);
+    doc.addEventListener('pointerdown', pointerdown, true);
+    doc.addEventListener('pointerdown', outside, true);
     doc.addEventListener('click', click, true);
     doc.addEventListener('keydown', key, true);
   }
@@ -101,6 +125,8 @@ export function createInteraction({ doc, send, delay = TIP_DELAY_MS }) {
     doc.removeEventListener('focusin', enter, true);
     doc.removeEventListener('mouseout', leave, true);
     doc.removeEventListener('focusout', leave, true);
+    doc.removeEventListener('pointerdown', pointerdown, true);
+    doc.removeEventListener('pointerdown', outside, true);
     doc.removeEventListener('click', click, true);
     doc.removeEventListener('keydown', key, true);
     hideTip();

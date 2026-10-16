@@ -18,3 +18,6 @@ node_modules/
 
 # per-user first-run seed written by tools/seed.mjs
 extension/seed.json
+
+# packaged builds
+extension/dist/
