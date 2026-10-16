@@ -21,7 +21,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from exp_common import extract_json  # noqa: E402
 
-LANG_NAME = {"es": "Spanish", "fr": "French", "de": "German"}
+LANG_NAME = {"es": "Spanish", "fr": "French", "de": "German", "it": "Italian", "pt": "Portuguese"}
 PRESENT_KEYS = ("1sg", "2sg", "3sg", "1pl", "2pl", "3pl")
 
 
