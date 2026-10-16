@@ -24,7 +24,9 @@ def main() -> None:
     sys.path.insert(0, str(a.experiment.resolve()))
     import exp_common  # noqa: E402
 
-    docs = exp_common.load_corpus(a.wiki_dir, a.pages_dir, tokenize=None)
+    import re
+
+    docs = exp_common.load_corpus(a.wiki_dir, a.pages_dir, tokenize=lambda s: re.findall(r"\w+", s))
     a.out.parent.mkdir(parents=True, exist_ok=True)
     with a.out.open("w", encoding="utf-8") as f:
         for d in docs:
