@@ -119,6 +119,10 @@ export function findCandidates(pack, tagged, text, settings = {}) {
     if (t.pos === 'NOUN' || t.pos === 'VERB' || t.pos === 'PRON' || t.pos === 'DET' || t.pos === 'AUX' || t.pos === 'NUM') continue;
     const conn = lookup(pack, t.normal, 'CONJ');
     if (conn) {
+      // Romance languages open a causal sentence with "Como / Comme / Siccome / Como", not
+      // "Porque / Parce que"; a sentence-initial "Because" is left alone there.
+      const sentenceStart = tagged.sentences[t.sentence]?.start === t.start;
+      if (t.normal === 'because' && sentenceStart && ['es', 'fr', 'it', 'pt'].includes(pack.lang)) continue;
       usedTokens.add(t.i);
       push({ start: t.start, end: t.end, sentence: t.sentence, english: t.text, key: conn.key, keys: [conn.key], lemma: t.normal, pos: 'CONJ', form: capLike(t.text, conn.forms.word), rule: 'conn', entries: [conn] });
       continue;
@@ -128,6 +132,8 @@ export function findCandidates(pack, tagged, text, settings = {}) {
     // adjective in disguise.
     const prev = tokens[t.i - 1];
     if (prev && prev.pos === 'DET' && prev.sentence === t.sentence) continue;
+    // "most often", "more likely", "less often": the degree word changes the target.
+    if (prev && prev.sentence === t.sentence && ['most', 'more', 'less', 'least'].includes(prev.normal)) continue;
     const adv = lookup(pack, t.normal, 'ADV') || (t.pos === 'ADV' ? lookup(pack, t.lemma, 'ADV') : null);
     if (!adv) continue;
     if (t.pos !== 'ADV' && lookup(pack, t.normal, 'ADJ')) continue; // ambiguous without a tagger vote
@@ -143,6 +149,10 @@ export function findCandidates(pack, tagged, text, settings = {}) {
     if (!SIMPLE_DETS.has(det.normal)) continue;
     if (noun.pos !== 'NOUN' || noun.possessive || excluded(noun)) continue;
     if (p.others.length || p.adjs.length > 1) continue;
+    // "the political decision making", "the south bank holiday": a noun or gerund right after the
+    // head continues a compound, so the phrase we would swap is not the real phrase.
+    const next = tokens[noun.i + 1];
+    if (next && next.sentence === noun.sentence && adjacent(text, noun, next) && (next.pos === 'NOUN' || next.tags.includes('Gerund'))) continue;
     const entry = lookup(pack, noun.lemma, 'NOUN');
     if (!entry) continue;
     const number = noun.number;

@@ -29,18 +29,26 @@ ALWAYS_DROP = ["long|ADV", "too|ADV", "ago|ADV", "yet|ADV", "yet|CONJ", "even|AD
                "since|CONJ", "since|ADV"]
 # Entries whose dominant-sense flag is forced off: the model's flag was optimistic on real pages
 # ("while" concessive vs temporal, "still" = "even more" after a comparative).
-NON_DOMINANT = {"while|CONJ", "still|ADV", "rather|ADV", "so|ADV", "once|CONJ",
+NON_DOMINANT = {"while|CONJ", "still|ADV", "rather|ADV", "so|ADV", "once|CONJ", "once|ADV", "though|CONJ",
                 # adverb entries whose preposition-like uses dominate on real pages ("hard to", "inside of")
-                "hard|ADV", "inside|ADV", "outside|ADV", "right|ADV", "well|ADV", "close|ADV"}
+                "hard|ADV", "inside|ADV", "outside|ADV", "right|ADV", "well|ADV", "close|ADV", "alone|ADV",
+                "away|ADV", "likely|ADV",
+                # nouns and adjectives the Spanish judge sample caught in a second sense
+                "people|NOUN", "part|NOUN", "bank|NOUN", "side|NOUN", "body|NOUN", "site|NOUN", "kind|NOUN",
+                "next|ADJ", "past|ADJ", "general|ADJ", "common|ADJ", "moment|NOUN"}
 # Multiword expressions the experiment blocklist lacks; a swap may not overlap them.
 EXTRA_BLOCK = ["because of", "as well", "as well as", "so that", "even though", "even if", "as if", "such as",
                "rather than", "more than", "less than", "at least", "at most", "in order to", "as long as",
                "as soon as", "so far", "up to", "due to", "instead of", "in spite of", "on the other hand",
                "in fact", "of course", "no longer", "not only", "as much", "as many", "only if", "the only",
-               "the very", "as far as", "as though", "now that", "so as", "in case"]
+               "the very", "as far as", "as though", "now that", "so as", "in case",
+               "but also", "just because", "inside of", "outside of", "a part in", "on the side of",
+               "at the moment", "a bad name", "a good name", "most often", "a year", "a day", "a week",
+               "a month", "an hour", "at the time", "the time", "in time", "on time", "the general will"]
 PRENOMINAL = {
-    "es": {"big", "good", "bad", "new", "old", "great", "small", "little", "young", "long", "first", "last", "only",
-           "same", "other", "such", "next", "whole", "main", "high", "low", "best", "worst", "own"},
+    # "large" joins the apocope group ("una gran cantidad"); "main" leaves it ("la idea principal").
+    "es": {"big", "large", "good", "bad", "new", "old", "great", "small", "little", "young", "long", "first", "last",
+           "only", "same", "other", "such", "next", "whole", "high", "low", "best", "worst", "own"},
     "fr": {"big", "good", "bad", "new", "old", "beautiful", "young", "small", "little", "long", "great", "first",
            "last", "only", "same", "other", "next", "whole", "main", "best", "worst", "own", "high", "large"},
     "it": {"big", "good", "bad", "new", "old", "beautiful", "young", "small", "little", "great", "first", "last",

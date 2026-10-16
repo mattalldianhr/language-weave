@@ -54,7 +54,10 @@ function claudeVerify(sentences, candidates, learning) {
   return { accepted, extras: r.extras };
 }
 
-const density = {};
+const densityPath = path.join(outDir, `${lang}-density.json`);
+let existingDensity = {};
+try { existingDensity = JSON.parse(readFileSync(densityPath, 'utf8')); } catch { /* first run */ }
+const density = { ...existingDensity };
 for (const tier of ['llm', 'translator', 'none']) {
   const items = [];
   let words = 0;
@@ -107,7 +110,13 @@ for (const tier of ['llm', 'translator', 'none']) {
       }
     }
   }
-  density[tier] = { words, candidates: items.length, painted, per100: Number(((painted / words) * 100).toFixed(2)), ratio, candidatesPer100: Number(((items.length / words) * 100).toFixed(2)), blocks: blocks.length, verifiedBlocks, verifyFailures, verifier: verifying ? `claude -p (${model})` : null };
+  const byRuleCount = {};
+  for (const it of items) byRuleCount[it.rule] = (byRuleCount[it.rule] || 0) + 1;
+  if (tier === 'llm' && !verifying && existingDensity.llm?.verifier) {
+    // keep the verified run's numbers; this pass only refreshes the samples
+  } else {
+    density[tier] = { words, candidates: items.length, painted, per100: Number(((painted / words) * 100).toFixed(2)), ratio, candidatesPer100: Number(((items.length / words) * 100).toFixed(2)), blocks: blocks.length, verifiedBlocks, verifyFailures, verifier: verifying ? `claude -p (${model})` : null, byRule: byRuleCount };
+  }
   // Stratified-ish random sample by rule.
   const byRule = new Map();
   for (const it of items) { if (!byRule.has(it.rule)) byRule.set(it.rule, []); byRule.get(it.rule).push(it); }
@@ -117,7 +126,9 @@ for (const tier of ['llm', 'translator', 'none']) {
     const shuffled = [...list].sort(() => rand() - 0.5);
     sample.push(...shuffled.slice(0, per));
   }
-  writeFileSync(path.join(outDir, `${lang}-${tier}.jsonl`), sample.map((s) => JSON.stringify(s)).join('\n') + '\n');
-  console.log(`${lang} ${tier}: ${items.length} candidates over ${words} words (${density[tier].candidatesPer100}/100), ${painted} painted at 1 in ${ratio} (${density[tier].per100}/100); sampled ${sample.length}`);
+  if (!(tier === 'llm' && !verifying && existingDensity.llm?.verifier)) {
+    writeFileSync(path.join(outDir, `${lang}-${tier}.jsonl`), sample.map((s) => JSON.stringify(s)).join('\n') + '\n');
+  }
+  console.log(`${lang} ${tier}: ${items.length} candidates over ${words} words (${((items.length / words) * 100).toFixed(2)}/100), ${painted} painted at 1 in ${ratio} (${((painted / words) * 100).toFixed(2)}/100); sampled ${sample.length}`);
 }
-writeFileSync(path.join(outDir, `${lang}-density.json`), JSON.stringify(density, null, 2) + '\n');
+writeFileSync(densityPath, JSON.stringify(density, null, 2) + '\n');

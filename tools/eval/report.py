@@ -52,18 +52,31 @@ def main() -> None:
         k = sum(v[1] for v in by_rule.values())
         lo, hi = wilson(k, n)
         d = density.get(tier, {})
-        print(f"\n{a.lang} tier={tier}: {k}/{n} correct = {100*k/n:.1f}% [{100*lo:.0f}-{100*hi:.0f}]  "
+        # The sample is stratified by rule (equal counts), so the pooled figure that matters is the
+        # per-rule precision weighted by each rule's share of the candidate population.
+        pop = d.get("byRule") or {}
+        total_pop = sum(pop.values())
+        weighted = None
+        if total_pop and all(r in pop for r in by_rule):
+            weighted = sum((rk / rn) * (pop[r] / total_pop) for r, (rn, rk) in by_rule.items())
+            w_n = n  # effective sample size for the interval, conservative
+            w_lo, w_hi = wilson(round(weighted * w_n), w_n)
+        print(f"\n{a.lang} tier={tier}: {k}/{n} correct in the stratified sample = {100*k/n:.1f}% [{100*lo:.0f}-{100*hi:.0f}]  "
               f"candidates {d.get('candidatesPer100')}/100 words, painted {d.get('per100')}/100 at 1 in {d.get('ratio')}")
+        if weighted is not None:
+            print(f"  weighted by rule share of candidates: {100*weighted:.1f}% [{100*w_lo:.0f}-{100*w_hi:.0f}]")
         for rule, (rn, rk) in sorted(by_rule.items()):
             rlo, rhi = wilson(rk, rn)
-            print(f"  {rule:9s} {rk:4d}/{rn:<4d} {100*rk/rn:5.1f}% [{100*rlo:.0f}-{100*rhi:.0f}]")
+            share = f" share {100*pop[rule]/total_pop:4.1f}%" if total_pop and rule in pop else ""
+            print(f"  {rule:9s} {rk:4d}/{rn:<4d} {100*rk/rn:5.1f}% [{100*rlo:.0f}-{100*rhi:.0f}]{share}")
         if errors:
             print("  errors: " + ", ".join(f"{lab} {cnt}" for lab, cnt in sorted(errors.items(), key=lambda x: -x[1])))
         gate = a.gate_none if tier == "none" else a.gate_llm if tier == "llm" else None
         if gate is not None:
-            passed = k / n >= gate
+            rate = weighted if weighted is not None else k / n
+            passed = rate >= gate
             ok_all &= passed
-            print(f"  gate {gate:.0%}: {'PASS' if passed else 'FAIL'}")
+            print(f"  gate {gate:.0%} on the weighted rate: {'PASS' if passed else 'FAIL'}")
     print("\nOVERALL:", "PASS" if ok_all else "FAIL")
 
 
