@@ -136,24 +136,26 @@ const dePack = {
   },
 };
 
-test('German: sentence-initial subject is nominative and needs no verifier', () => {
+test('German: every noun phrase needs a verifier; the case cue orders the alternatives', () => {
   const text = 'The dog sleeps.';
-  const cs = run(dePack, text, { tier: 'none' });
+  const cs = run(dePack, text, { tier: 'llm' });
   assert.deepEqual(spans(text, cs), ['The dog→Der Hund']);
-  assert.equal(cs[0].needsVerifier, undefined);
+  assert.equal(cs[0].needsVerifier, true);
+  assert.equal(cs[0].case, 'nom');
+  assert.deepEqual(cs[0].alternatives, ['Der Hund', 'Den Hund', 'Dem Hund', 'Des Hundes']);
+  assert.deepEqual(run(dePack, text, { tier: 'none' }), [], 'rules-only German paints no nouns');
 });
 
-test('German: fixed-case prepositions and direct objects get a case; two-way prepositions get alternatives', () => {
+test('German: prepositions and direct objects order the cases; two-way prepositions start ambiguous', () => {
   const text = 'He walked with the dog and saw the question in the question.';
   const cs = run(dePack, text, { tier: 'llm' });
   const s = spans(text, cs);
   assert.ok(s.includes('the dog→dem Hund'), s.join(', '));
   assert.ok(s.includes('the question→die Frage'), s.join(', '));
   const inQ = cs.find((c) => c.start > text.indexOf(' in '));
-  assert.equal(inQ.needsVerifier, true);
-  assert.ok(inQ.alternatives.includes('der Frage'));
-  assert.ok(inQ.alternatives.includes('die Frage'));
-  assert.deepEqual(run(dePack, text, { tier: 'none' }).map((c) => c.needsVerifier), [undefined, undefined]);
+  assert.equal(inQ.case, null);
+  assert.deepEqual(inQ.alternatives.slice(0, 2), ['die Frage', 'der Frage']);
+  assert.ok(cs.every((c) => c.needsVerifier));
   // "to" and "by" vary by verb in German, so they are left to the verifier
   const t2 = 'He moved to the question by the dog.';
   for (const c of run(dePack, t2, { tier: 'llm' })) assert.equal(c.needsVerifier, true, c.english);
@@ -166,6 +168,8 @@ test('German: adjective endings follow the article and case', () => {
   const s = spans(text, cs);
   assert.ok(s.includes('The big dog→Der große Hund'), s.join(', '));
   assert.ok(s.includes('a big question→eine große Frage'), s.join(', '));
+  assert.ok(cs.find((c) => c.english === 'a big question').alternatives.includes('einen großen Hund') === false);
+  assert.ok(cs.find((c) => c.english === 'a big question').alternatives.includes('einer großen Frage'));
 });
 
 // Regression against the judged experiment items (research/experiment/judged/*.jsonl): the rule layer

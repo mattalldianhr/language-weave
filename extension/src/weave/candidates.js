@@ -182,15 +182,14 @@ export function findCandidates(pack, tagged, text, settings = {}) {
       if (form) push({ ...base, form });
       continue;
     }
+    // German noun phrases always go through a verifier: the case depends on the verb or
+    // preposition, and surface cues alone judged below the bar (plan §Results, 2026-10-16).
+    // The cue's guess goes first so a form-checking verifier tries it before the others.
     const gc = germanCase(tagged, p);
-    if (gc.case) {
-      const form = build(gc.case);
-      if (form) push({ ...base, form, case: gc.case });
-      continue;
-    }
-    const alternatives = [...new Set(gc.ambiguous.map(build).filter(Boolean))];
+    const order = gc.case ? [gc.case, ...CASES.filter((c) => c !== gc.case)] : gc.ambiguous.concat(CASES.filter((c) => !gc.ambiguous.includes(c)));
+    const alternatives = [...new Set(order.map(build).filter(Boolean))];
     if (!alternatives.length) continue;
-    push({ ...base, form: alternatives[0], alternatives, needsVerifier: true });
+    push({ ...base, form: alternatives[0], alternatives, needsVerifier: true, case: gc.case || null });
   }
 
   out.sort((a, b) => a.start - b.start);
